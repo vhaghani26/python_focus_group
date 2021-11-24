@@ -8,12 +8,12 @@ Modern bioinformatics primarily uses Unix or a Unix-based operating system. Navi
 
 ## Opening the Terminal
 ### Mac OS
-(1) Click the Launchpad icon in the Dock, type Terminal in the search field, then click Terminal
-(2) In the Finder, open the /Applications/Utilities folder, then double-click Terminal
+(1) Click the Launchpad icon in the Dock, type Terminal in the search field, then click Terminal  
+(2) In the Finder, open the /Applications/Utilities folder, then double-click Terminal  
 [Source](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac)
 
 ### Linux
-This may vary depending on the Linux distribution being used, but at its simplest, you can open the terminal by directly pressing ctrl+alt+T or searching it up by clicking the "Dash" icon, typing "terminal" in the search box, and opening the Terminal application.
+This may vary depending on the Linux distribution being used, but at its simplest, you can open the terminal by directly pressing ctrl+alt+T or searching it up by clicking the "Dash" icon, typing "terminal" in the search box, and opening the Terminal application.  
 [Source](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955)
 
 ### Windows
