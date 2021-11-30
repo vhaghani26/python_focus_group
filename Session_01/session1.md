@@ -38,7 +38,15 @@ This created a directory called `new_dir` in your profile. To enter this directo
 cd new_dir
 ```
 
-Now if we use `pwd`, it will show that you are in `new_dir/`. Note that directory notation typically uses forward slashes. 
+Now if we use `pwd`, it will show that you are in `new_dir/`. Note that directory notation typically uses forward slashes. Often times, we will have to navigate directories. Since we are in a child directory now, we are going to navigate back to your parent directory, aka the directory you were in before changing into `new_dir/`. To do this, we can use `..`, which is used to symbolize the parent directory/directory above where you are.
+
+```
+cd ..
+```
+
+Now try `pwd` again. You will see that we are in the original directory we started in. 
+
+## Files
 
 
 
@@ -63,6 +71,8 @@ Now if we use `pwd`, it will show that you are in `new_dir/`. Note that director
 
 
 ## Unix Cheat Sheet
+
+Made by: Ian Korf
 
 | Token   | Function
 |:--------|:-------------------------------------|
