@@ -49,7 +49,7 @@ Now try `pwd` again. You will see that we are in the original directory we start
 ## GitHub
 First, make sure that you have a GitHub account. Please sign up for one [here](https://github.com/join). Once you have an account, log in. We are now going to create a repository. Go to your GitHub home page and click "New" to create a new repository.
 
-insert image here
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/new_git_repo.png)
 
 ## Files
 
