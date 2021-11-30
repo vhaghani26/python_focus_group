@@ -26,7 +26,7 @@ pwd
 This command stands for "**p**rint **w**orking **d**irectory," and it does exactly that. Your terminal output should show the directory you are in. 
 
 ## Directories
-Many Unix commands are named in a relatively straightforward way. Just like the `pwd` command, we can make a directory using the command `mkdir` which stands for "**m**a**k**e **dir***ectory." Let's practice navigating directories. First, we will make a new directory.
+Many Unix commands are named in a relatively straightforward way. Just like the `pwd` command, we can make a directory using the command `mkdir` which stands for "**m**a**k**e **dir**ectory." Let's practice navigating directories. First, we will make a new directory.
 
 ```
 mkdir new_dir
