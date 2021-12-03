@@ -49,9 +49,9 @@ Now try `pwd` again. You will see that we are in the original directory we start
 ## GitHub
 If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
 
-First, make sure that you have a GitHub account. Keep in mind that you will probably have to submit a link to your profile to someone down the line, so choose your username carefully. Please sign up your account [here](https://github.com/join). Choose the free plan and answer whatever questions you are asked about your interests. Also make sure that you verify your email address. 
+First, make sure that you have a GitHub account. Keep in mind that you will probably have to submit a link to your profile to someone down the line, so choose your username carefully. Please sign up for an account [here](https://github.com/join). Choose the free plan and answer whatever questions you are asked about your interests. Also make sure that you verify your email address. 
 
- Now, we are going to make a GitHub repository for your account. Repositories are essentially code projects, and they are commonly referred to as a "repo." Once you have an account, log in. We are now going to create a GitHub repo.
+ Now, we are going to make a GitHub repository for your account. Repositories are essentially code projects, and they are commonly referred to as a "repo." Once you have an account, log in. We are now going to create a GitHub repo. If you look at the left-hand side of the page, there should be a menu bar. In that menu bar, you will have the option to create a new repository. Click "New."
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/new_git_repo.png)
 
@@ -59,7 +59,14 @@ This will take you to a new page that will prompt you to fill in some informatio
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/create_git_repo.png)
 
-You've created a Git repo!
+You've created a Git repo! Now, we will clone the repo, which essentially just means that we will create a local copy of the repo and its contents for you to work on. Click on your repo
+
+(put an image of the git clone stuff here)
+
+Open your terminal, and run the following command using YOUR link:
+
+```
+git clone https://github.com/vhaghani26/python_focus_group.git python_focus_group
 
 ## Files
 
