@@ -47,9 +47,13 @@ cd ..
 Now try `pwd` again. You will see that we are in the original directory we started in. 
 
 ## GitHub
-First, make sure that you have a GitHub account. Please sign up for one [here](https://github.com/join). Once you have an account, log in. We are now going to create a repository. Go to your GitHub home page and click "New" to create a new repository.
+First, make sure that you have a GitHub account. Please sign up for one [here](https://github.com/join). We are going to make a GitHub repository. Repositories are essentially code projects, and they are commonly referred to as a "repo." Once you have an account, log in. We are now going to create a GitHub repo.
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/new_git_repo.png)
+
+This will take you to a new page that will prompt you to fill in some information about the repo you are creating. We will name the repo `python_focus_group`. Make the repository public since we are not working with any confidential data. This allows future employers to see the work that you have done. You should also add a `README.md`, which serves as a description of your repository. I like to set up my `README.md` as a table of contents so that if someone else is looking at the repository or if I look at an old repository, I know where I can find what I'm looking for. It is also useful to add a license. Following these steps should look like this:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/create_git_repo.png)
 
 ## Files
 
