@@ -47,13 +47,19 @@ cd ..
 Now try `pwd` again. You will see that we are in the original directory we started in. 
 
 ## GitHub
-First, make sure that you have a GitHub account. Please sign up for one [here](https://github.com/join). We are going to make a GitHub repository. Repositories are essentially code projects, and they are commonly referred to as a "repo." Once you have an account, log in. We are now going to create a GitHub repo.
+If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
+
+First, make sure that you have a GitHub account. Keep in mind that you will probably have to submit a link to your profile to someone down the line, so choose your username carefully. Please sign up your account [here](https://github.com/join). Choose the free plan and answer whatever questions you are asked about your interests. Also make sure that you verify your email address. 
+
+ Now, we are going to make a GitHub repository for your account. Repositories are essentially code projects, and they are commonly referred to as a "repo." Once you have an account, log in. We are now going to create a GitHub repo.
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/new_git_repo.png)
 
 This will take you to a new page that will prompt you to fill in some information about the repo you are creating. We will name the repo `python_focus_group`. Make the repository public since we are not working with any confidential data. This allows future employers to see the work that you have done. You should also add a `README.md`, which serves as a description of your repository. I like to set up my `README.md` as a table of contents so that if someone else is looking at the repository or if I look at an old repository, I know where I can find what I'm looking for. It is also useful to add a license. Following these steps should look like this:
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/create_git_repo.png)
+
+You've created a Git repo!
 
 ## Files
 
