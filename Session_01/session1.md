@@ -15,7 +15,7 @@ This may vary depending on the Linux distribution being used, but at its simples
 [Source](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955)
 
 ### Windows
-Open the start menu and type "Ubuntu." Open the application. Using Ubuntu, you will be prompted to create an "account" involving a username and password. The password is required at times for installing or updating software, so it is important to keep note of your password. 
+Open the start menu and type "Ubuntu." Open the application. Using Ubuntu, you will be prompted to create an account requiring a username and password. The password is required at times for installing or updating software, so it is important to keep note of your password. 
 
 ## Using the Terminal
 In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command:
@@ -47,7 +47,11 @@ cd ..
 
 Now try `pwd` again. You will see that we are in the original directory we started in. 
 
-## Files
+## Making Files
+
+## Editing Files
+
+## File Manipulation
 
 ## GitHub
 If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
@@ -101,6 +105,56 @@ python --version
 If you receive an output with a version number, ideally 3.10.1, then you have succeeded! If not, pause and ask Viki to help you with the installation.
 
 ## Python at the Command Line
+
+Let's run our first Python command! To activate Python, run the command:
+
+```
+python3
+```
+
+Now, you should be able to run Python code at the command line. As any experienced coder knows, "Hello, World!" is where we'll start. This is just a convention people go by when unning their first line of a new language. Here is [The History of Hello World](https://www.thesoftwareguild.com/blog/the-history-of-hello-world/) for those who are interested. Let's run the command:
+
+```
+print("Hello, World!")
+```
+
+Your terminal should print back, "Hello, World!" Congratulations! You ran your first Python command! `print()` is one of the most widely used functions, and thus presents a good place to start. We will discuss how functions work in more depth later, but for now, I will explain briefly. A function looks something like this: `function()`, where the function name is outside of the parentheses, and the parentheses are there to take arguments. An argument is something you give a function as an input. In this case, our function is `print`, and our argument (input) is "Hello, World!". Try printing your name! In my case, it would look like this:
+
+```
+print("Viki")
+```
+
+Note that `print(Viki)` does not work, as the absence of quotation marks interprets "Viki" as a variable (we will learn more about variables in the future). Try a few more commands and see what you can do! Note that you can also use single quotations to print as long as the quotations marks flanking the statement are the same style (single vs. double).
+
+```
+print("My name is Viki")
+print("I have many pets")
+print("I enjoy learning Python!"
+print('Here I am using single quotation marks')
+```
+
+Now try running this:
+
+```
+print('I don't want to do anything today')
+```
+
+This will give you an error because you have three single quotation marks and `print()` can't understand what you're trying to print. So how do we deal with this? There are a few ways we can do this. 
+
+(1) Use single quotes to print double quotes
+
+```
+print('Whenever I get home, I walk up to my iguana's cage and say, "What are you doing, Stella?"')
+print('She said her name was "Viki"')
+```
+
+(2) Use double quotes to print single quotes (this is useful for using apostrophes) 
+
+```
+print("You shouldn't need to worry about using apostrophes since you can use double quotes")
+```
+
+There are very rare instances that these two methods will not work for you, and in those cases, you can try some of the other methods listed [here](https://www.kite.com/python/answers/how-to-print-quotation-marks-in-python). Personally, I have never run had to use a different method from the ones above.
 
 ## Python Scripts
 
