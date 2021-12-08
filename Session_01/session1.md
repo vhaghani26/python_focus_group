@@ -18,7 +18,7 @@ This may vary depending on the Linux distribution being used, but at its simples
 Open the start menu and type "Ubuntu." Open the application. Using Ubuntu, you will be prompted to create an account requiring a username and password. The password is required at times for installing or updating software, so it is important to keep note of your password. 
 
 ## Using the Terminal
-In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command:
+In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command by typing `pwd` into the terminal and clicking "Enter" on your keyboard:
 
 ```
 pwd
@@ -45,13 +45,7 @@ Now if we use `pwd`, it will show that you are in `new_dir/`. Note that director
 cd ..
 ```
 
-Now try `pwd` again. You will see that we are in the original directory we started in. 
-
-## Making Files
-
-## Editing Files
-
-## File Manipulation
+Now try `pwd` again. You will see that we are in the original directory we started in. Note that when rerunning a command, there are two ways you can do it. The first is to manually retype the command. For short commands or commands that haven't been run very recently, this may be easier. However, for longer commands, you can use the up arrow on your keyboard to navigate the commands you previously ran. Try using your up arrow to see the commands you have run. When you get to `pwd`, run it and see that it will print your working directory again. Try using your up arrow one more time. Isn't it powerful? I think it's helpful!
 
 ## GitHub
 If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
@@ -70,7 +64,7 @@ You've created a Git repo! Now, we will clone the repo, which essentially just m
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/git_clone_repo.png)
 
-Open your terminal, and run the following command using **YOUR*** link. It should look something like this:
+Open your terminal, and run the following command using **YOUR** link. It should look something like this:
 
 ```
 git clone https://github.com/vhaghani26/python_focus_group.git python_focus_group
@@ -78,9 +72,127 @@ git clone https://github.com/vhaghani26/python_focus_group.git python_focus_grou
 
 Enter your user information when prompted. This command means that we are creating the local directory, `python_focus_group` (which we specify at the end of the command), and cloning the contents of the GitHub repository into this local directory. You don't have anything in your GitHub repo at the moment, but this is important because it connects your local directory to GitHub. 
 
+## Files
+
+Enter `python_focus_group/`. Remember that we can use the `cd` command to do this. The command should look like this:
+
+```
+cd python_focus_group
+```
+
+If you are changing directories constantly (which you will very likely do), it seems burdensome to type the directory name out every time. There is a lovely trick to manage this: tab complete. To test it out, leave `python_focus_group` and go back a directory. To do so, you can go to your home directory (if you made this directory in your home directory), like so:
+
+```
+cd ~
+```
+
+Or you can use the `..` notation to take you back a directory:
+
+```
+cd ..
+```
+
+Let's try getting back into `python_focus_group/`. Try typing `cd p` and then hitting the tab button on your keyboard. Assuming nothing else in your current directory starts with a p, it will automatically complete the rest of the statement for you. If you have other files or directories beginning with p, you can try adding another letter (`cd py`) and then trying tab complete again.
+
+You should now be in `python_focus_group/`. How can you check? `pwd`! Once you start populating your directory with files, you can also use the `ls` command to list the contents of your current directory. This is extremely helpful when you want to see what's in your directory. Let's fill your directory!
+
+Personally, I like having all my files organized. In this case, I would recommend making a subdirectory called `session_01`.
+
+```
+mkdir session_01
+```
+
+Now enter the directory (tab complete!).
+
+```
+cd session_01
+```
+
+There are several ways to create a file at the command line, but some of the easier ones include `touch` and `nano`. 
+
+**(1) The `touch` command**
+
+We are going to create a text file called `foo` at the command line. Note that the file extension for text files is `.txt`. Use the touch command to create the file:
+
+```
+touch foo.txt
+```
+
+To verify that the file has been made, list your directory contents:
+
+```
+ls
+```
+
+You should now see `foo.txt` in your directory.
+
+**(2) The `nano` command**
+
+Unlike the touch command, which just creates the file, `nano` gives you the ability to create and edit the file. Nano is a built-in text editor (albeit a terrible one) that you can use to edit your files at the command line. While it is easy for simple changes, it sucks. For this reason, people use their own text editors. We will learn how to download and use our own text editors in a future session, but we will use nano for today. Make a new file called `bar` using nano.
+
+```
+nano bar.txt
+```
+
+This changes the entire look of your terminal. Now you can change the contents of `bar.txt`. Type some random words or sentences into `bar.txt`. Note that cursors do not work in the command line, so you will need to use your keyboard to navigate. Use the arrow keys to move the cursor around. Add some text by typing. Remove some text with the delete key or backspace. At the bottom, you can see a menu that uses control keys. To save the file you hit the ^O key (command/control and then the letter o). You will then be prompted for the file name, at which point you can overwrite the current file (bar) by clicking "Enter" or make a new file with a different name. To exit nano, hit ^X. Note that you don't need to give nano a file name when you start it up. Also know that in Unix, file names do not have spaces in the names. Spaces are usually represented by underscores. Also, file names always display extensions (file types). 
+
+Once you have some text in `bar.txt`, save and exit. Now we will edit `foo.txt`. Use nano to do so (tab complete!).
+
+```
+nano foo.txt
+```
+
+Add some text to `foo.txt`, save, and exit.
+
+Since this directory is linked to GitHub, we are going to sync your local changes to your GitHub repository. Go to the main `python_focus_group` directory. If you did not make a `session_01` directory, then you should already be in it. If you did make it, go back a directory (Hint: `cd ..`). To see what is out of sync/what changes we have made, we can use the command:
+
+```
+git status
+```
+
+This should show that you have the directory `session_01` with `foo.txt` and `bar.txt` inside it. You can do the following to add a change to the GitHub repository:
+
+```
+git add --all
+```
+
+The `--all` flag syncs all changes, so everything you have done will be synced. Now we will commit the change:
+
+```
+git commit -m "initial commit"
+```
+
+The `-m` flag indicates a message, and the stuff inside the quotation marks is the message that gets displayed alongside your files so you can document what changes you made.
+
+```
+git push
+```
+
+This prompts you to enter your username and password, and it will sync all of your changes in your GitHub repository! Congratulations! You pushed your files to GitHub.
+
+An alternative to pushing all changes at once is to do it manually with specific commit messages (this can be helpful). You can do it sequentially like so:
+
+```
+git add session_01/foo.txt
+git commit -m "add foo.txt"
+git add session_01/bar.txt
+git commit -m "add bar.txt"
+git push
+```
+
+This will prompt you to input your username and password. Now if you go to your GitHub repository from your internet browser and refresh it, you should see your updated repository and its contents! In general, the order of Git commands goes:
+
+```
+git add
+git commit
+git push
+```
+
+If you commit multiple changes, you can git push between everything or once at the end.
+
 ## Installing Python
 
-Now that we have set up GitHub, we are going to try making our first Python script. This requires us to install Python. Based on your operating system, the instructions for installation vary. I have included some helpful sources that will walk you through how to install Python. For those of you who already use Python or are doing this in `spitfire` or `epigenerate`, you can use the command `module load anaconda3` to load Python.
+Now that we have set up GitHub and made some files, we are going to try making our first Python script. This requires us to install Python. Based on your operating system, the instructions for installation vary. I have included some helpful sources that will walk you through how to install Python. For those of you who already use Python or are doing this in `spitfire` or `epigenerate`, you can use the command `module load anaconda3` to load Python.
 
 **Note for Cluster Users**: The default version of Python in the cluster is OLD, so you need to specify `anaconda3` so you are using Python 3 instead of Python 2 (the default). 
 
@@ -156,31 +268,61 @@ print("You shouldn't need to worry about using apostrophes since you can use dou
 
 There are very rare instances that these two methods will not work for you, and in those cases, you can try some of the other methods listed [here](https://www.kite.com/python/answers/how-to-print-quotation-marks-in-python). Personally, I have never run had to use a different method from the ones above.
 
+To exit the Python prompt, type:
+
+```
+exit()
+```
+
+Notice that the parentheses after `exit`. This means that `exit()` is a function. You should be back in your normal terminal now where you can run Unix language. 
+
 ## Python Scripts
 
+The majority of the time, you will be running Python scripts, not command line Python. Navigate to your `session_01` directory (you should know how to do this now, but please ask if you are still confused). Using either `touch` or `nano`, create a python script. I will use `nano` here since we are adding text to the file.
 
+```
+nano hello_world.py
+```
 
+Make sure that whatever you name your file has the `.py` file extension at the end. This indicates that the content in this file is Python code. In the file, include the following text, save, and exit:
 
+```
+#!/usr/bin/env python3
 
+print('Hello, World!')
+```
 
+Line 1 is what's known as an interpreter directive. It's also sometimes called a hashbang. It tells the shell which interpreter to use when the program executed. Line 2 is a blank line. Use blank lines to separate thoughts from each other. The hashbang is one such thought and the other is a print statement. Blank lines do not do anything in scripts, but they are helpful for organization. Line 3 prints 'hello world to the terminal. Now let's try running the command from the shell.
 
+```
+python3 hello_world.py
+```
 
+If everything worked okay, you should see "Hello, World!" in your terminal. If not, don't go on. Ask for help fixing your computing environment.
 
-## Tab Complete
+Congratulations! You wrote your first Python script! Go back to the `python_focus_group` directory, then push it to GitHub.
 
-## Rerunning Comands
+```
+git add session_01/hello_world.py
+git commit -m "prints hello world"
+git push
+```
 
+## Exit Ticket
 
+In your main `python_focus_group` directory, you should have a file called `README.md`. Your assignment is to navigate to the file and edit it to reflect the content in your repository. An example of the text you can include is:
 
+```
+This repository is for the LaSalle Lab Python Focus Group, where we are learning how to code using Python.
 
+# Session_01
 
+foo.txt: A file containing random phrases that was created using `touch`
+bar.txt: A file containing random phases that was created using `nano`
+hello_world.py: A Python script that prints "Hello, World!" when run
+```
 
-
-
-
-
-
-
+Note that since the file extension is `.md`, a markdown file, it is written in markdown language. For the most part, you can just use text. However, if you want to make it fancy, you can include things like bolded text, headings, and code blocks. This document is actually written in markdown. In the above example, the `#` in front of `Session_01` indicates that that line is a heading. This is not necessary, but it does look organized. If you do not want to have `Session_01` as a heading, simply remove the `#` in front of it. 
 
 ## Unix Cheat Sheet
 
