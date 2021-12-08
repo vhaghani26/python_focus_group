@@ -4,6 +4,7 @@
 Modern bioinformatics primarily uses Unix or a Unix-based operating system. Navigating a command line requires you to know Unix commands. However, Unix language is used in a shell program, aka a terminal. Depending on a user's operating system (Windows, Mac OS, Linux), different steps must be taken to access a Unix-based terminal. Fortunately, both Mac OS and Linux use Unix-based terminals by default. Windows, on the other hand, requires a few extra steps. The native Windows command prompt (terminal) does not use the Unix language required by most software. This means that Windows users need to install a different terminal capable of using Unix. One of the most common terminals for download is the Linux distribution: Ubuntu. Use of Ubuntu requires enabling WSL1 or WSL2 (Windows Subsystem for Linux). Detailed instructions can be found using a simple search, but these are instructions that I find helpful for the [download of Ubuntu](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) and [enabling WSL2](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/). 
 
 ## Opening the Terminal
+
 ### Mac OS
 (1) Click the Launchpad icon in the Dock, type Terminal in the search field, then click Terminal  
 (2) In the Finder, open the /Applications/Utilities folder, then double-click Terminal  
@@ -46,6 +47,8 @@ cd ..
 
 Now try `pwd` again. You will see that we are in the original directory we started in. 
 
+## Files
+
 ## GitHub
 If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
 
@@ -59,16 +62,49 @@ This will take you to a new page that will prompt you to fill in some informatio
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/create_git_repo.png)
 
-You've created a Git repo! Now, we will clone the repo, which essentially just means that we will create a local copy of the repo and its contents for you to work on. Click on your repo
+You've created a Git repo! Now, we will clone the repo, which essentially just means that we will create a local copy of the repo and its contents for you to work on. Click on your repo and navigate to the middle to right side of the page. You should see a green button that says "Code." Click on "Code." This will open a drop down menu with the top section being "Clone." In "Clone," there is a link to your repository. Copy that link.
 
-(put an image of the git clone stuff here)
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/git_clone_repo.png)
 
-Open your terminal, and run the following command using YOUR link:
+Open your terminal, and run the following command using **YOUR*** link. It should look something like this:
 
 ```
 git clone https://github.com/vhaghani26/python_focus_group.git python_focus_group
+```
 
-## Files
+Enter your user information when prompted. This command means that we are creating the local directory, `python_focus_group` (which we specify at the end of the command), and cloning the contents of the GitHub repository into this local directory. You don't have anything in your GitHub repo at the moment, but this is important because it connects your local directory to GitHub. 
+
+## Installing Python
+
+Now that we have set up GitHub, we are going to try making our first Python script. This requires us to install Python. Based on your operating system, the instructions for installation vary. I have included some helpful sources that will walk you through how to install Python. For those of you who already use Python or are doing this in `spitfire` or `epigenerate`, you can use the command `module load anaconda3` to load Python.
+
+**Note for Cluster Users**: The default version of Python in the cluster is OLD, so you need to specify `anaconda3` so you are using Python 3 instead of Python 2 (the default). 
+
+### Mac OS
+[How to Install Python3 on Mac](https://www.youtube.com/watch?v=0hGzGdRQeak) (I recommend this source, as it's easier to follow and requires less command-line knowledge)
+[Installing Python 3 on Mac OS X](https://docs.python-guide.org/starting/install3/osx/)
+
+### Linux
+[Installing Python 3 on Linux](https://docs.python-guide.org/starting/install3/linux/)
+
+### Windows
+[How to Install Python 3 on Ubuntu 18.04 or 20.04](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
+
+## Verify Python Installation
+
+Once you have installed Python, verify that you have installed it by running the command:
+
+```
+python --version
+```
+
+If you receive an output with a version number, ideally 3.10.1, then you have succeeded! If not, pause and ask Viki to help you with the installation.
+
+## Python at the Command Line
+
+## Python Scripts
+
+
 
 
 
