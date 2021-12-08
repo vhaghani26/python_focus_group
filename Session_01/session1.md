@@ -18,7 +18,7 @@ This may vary depending on the Linux distribution being used, but at its simples
 Open the start menu and type "Ubuntu." Open the application. Using Ubuntu, you will be prompted to create an account requiring a username and password. The password is required at times for installing or updating software, so it is important to keep note of your password. 
 
 ## Using the Terminal
-In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command by typing `pwd` into the terminal and clicking "Enter" on your keyboard:
+In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command (present working directory) by typing `pwd` into the terminal and clicking "Enter" on your keyboard:
 
 ```
 pwd
