@@ -10,8 +10,13 @@ The focus of Session 1 is to set up software and accounts to use Python and to s
 * Directories
 * GitHub
 * Files
+* UNIX Cheat Sheet
+
+## Session_02
+The focus of Session 2 is to finish software set up and begin learning basic Python commands and create our first script. Topics include:
 * Installing Python
 * Verifying Python Installation
 * Python at the Command Line
 * Python Scripts
-* UNIX Cheat Sheet
+
+Note: Still need to add more for Session 2
