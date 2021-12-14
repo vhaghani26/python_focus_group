@@ -1,0 +1,1 @@
+Hi, my name is Viki. I just created this foo.txt file as an example of how to use the 'touch' command and how to use nano.
