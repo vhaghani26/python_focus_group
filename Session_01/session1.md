@@ -197,7 +197,7 @@ git push
 
 If you commit multiple changes, you can git push between everything or once at the end.
 
-## Exit Ticket
+## Exit Ticket: `git_test.txt`
 
 Create a file called `git_test.txt` in `session_01/`. You can edit it so it includes text or leave it empty. Once you have created the file, push it to GitHub. Do not read on until you have completed this.
 
