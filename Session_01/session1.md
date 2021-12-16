@@ -197,6 +197,10 @@ git push
 
 If you commit multiple changes, you can git push between everything or once at the end.
 
+## GitHub Personal Access Tokens
+
+There may be some cases in which your GitHub password is not accepted when you use `git push`. If so, you will get an error that says something about a personal access token. If you get this error, follow [these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a personal access token. Once it has been created, save it and use it in place of a password when you Git push.
+
 ## Exit Ticket: `git_test.txt`
 
 Create a file called `git_test.txt` in `session_01/`. You can edit it so it includes text or leave it empty. Once you have created the file, push it to GitHub. Do not read on until you have completed this.
