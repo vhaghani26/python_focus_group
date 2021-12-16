@@ -87,3 +87,69 @@ Note that we will discuss lists in more detail next session
 ## Sets
 
 ## Dictionaries
+
+## The `range()` Function
+
+## For-Loops
+
+### Basic For-Loops
+
+### Nested For-Loops
+
+### Parallel For-Loops
+
+## While-Loops
+
+## If-Else Statements
+
+### Adding an `elif` Statement
+
+### Logic Operators
+
+## Components of a Function
+
+## Making a Function
+
+## Objects
+
+## Classes
+
+### Creating a Class
+
+## Reading Files with Open
+
+## Writing Files with Open
+
+## Using `loc`
+
+### Creating a New Data Frame Using `loc` Slicing
+
+## Using `iloc`
+
+### Creating a New Data Frame Using `iloc` Slicing
+
+## Using `ix`
+
+## Loading Data with Pandas
+
+## Working with and Saving Data with Pandas
+
+## Manipulating Pandas Arrays
+
+## Array Dimensionality
+
+## Numpy 1D Arrays
+
+### The Basics and Array creation
+
+### Basic Operations
+
+### Universal Functions
+
+## Numpy 2D Arrays
+
+### Indexing and Slicing in 2D
+
+### Basic Operations in 2D
+
+## Argparse
