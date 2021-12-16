@@ -53,17 +53,119 @@ In hindsight, we realize we should make the file name represent what the code do
 mv first_python_script.py hello_world.py
 ```
 
-Using `ls`, you can see that the file has been successfully renamed!
+Using `ls`, you can see that the file has been successfully renamed! We will come back to this file later.
 
-## Moving Files & Directories
+## Moving Files
 
-## Copying Files & Directories
+Another useful thing to do at the command line is to move files. This is especially helpful if you decide to reorganize your directories. Starting from `python_focus_group/`, **m**a**k**e a new sub-**dir**ectory called `practice`. You should now be familiar with how to make a directory, but please let Viki know if you need a refresher or see the [notes](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/session1.md) from Session 1. Enter `practice/` and make two more directories within practice: `dir1` and `dir2`.
+
+We will practice moving files between directories. Enter `dir1/` and create a file called `file1.txt`. Exit the directory (i.e. return to `practice/`). Using the `mv` command, we can move the file to `dir2/`. This uses the same `source` and `target` formatting I introduced earlier:
+
+```
+mv dir1/file1.txt dir2/file1.txt
+```
+
+Now if you enter `dir1/` and check the directory contents, it will be empty. On the other hand, `dir2/` will contain `file1.txt`. 
+
+**Exercise**: Create a file called `file2.txt` in `dir2/`, then move that file from `dir2/` to `dir1/`. Do not move on until you have succesfully completed this.
+
+## Moving Directories
+
+Moving directories is slightly more complicated than moving files since directories often contain other files and subdirectories. The main difference here is that we need to use a command line option (aka flag). The command we will use will look like this:
+
+```
+mv -r <source> <target>
+```
+
+The `-r` flag represents "**r**ecursively." Essentially, we are telling our terminal to recursively move a directory somewhere else. The "recursive" part of this means that we are moving the contents within the directory along with the directory we are moving.
+
+In `practice/`, create a subdirectory called `dir1A`. Within `dir1A/`, create the following files: `samp1.txt`, `samp2.txt`, `samp3.txt`. 
+
+Now we will move `dir1A/` and its contents into `dir1/`. To do so, we run this command while in `practice/`:
+
+```
+mv -r dir1A/ dir1/dir1A
+```
+
+If you enter `dir1`, and check the directory contents (hint: `ls`), then you should see `dir1A/` within `dir1`. Enter `dir1A/` and check the directory contents. You should see your sample text files here.
+
+## Copying Files
+
+Copying files can be convenient for a number of reasons, including wanting to manipulate a file but keeping the original version for reference. There are a few ways this can be done. In this example, we will be using the `cp` command, which stands for "**c**o**p**y."
+
+Enter `dir2/` and create a subdirectory `dir2A/`. We are going to copy all of the text files from `dir1A/` into `dir2A/`. Remember that when you are manipulating files and directories, you need to be in the parent directory that contains all of the contents you are moving and their desired locations. In our case, this means we can be in `practice/`. Enter `practice/` and carry out these commands:
+
+```
+cp dir1/dir1A/samp1.txt dir2/dir2A/samp1.txt
+cp dir1/dir1A/samp2.txt dir2/dir2A/samp2.txt
+cp dir1/dir1A/samp3.txt dir2/dir2A/samp3.txt
+```
+
+### Wildcards at the Command Line
+
+Notice that this is tedious. You don't want to do this manually for several files. To address this issue, we can use wildcards. At the command line, `*` is the wildcard symbol. Since all of the files we want to copy are text files, we can represent the prefix of the text files using `*`. This would look like:
+
+```
+cp dir1/dir1A/*.txt dir2/dir2A/
+```
+
+Since the "samp" part is the same, you can alternatively use:
+
+```
+cp dir1/dir1A/samp*.txt dir2/dir2A/
+```
+
+As I mentioned earlier, there are multiple ways you can do this. You can also do something similar to the `mv -r` command for `cp`, where you copy files and directories recursively: `cp -r`. These commands are helpful to know, but recall that Google is your best friend with Unix commands. If you forget how to do something or want to figure out how to do something, Google it! I often find myself Googling things like: "how to move directory and its contents unix," and that's totally okay! 
+
+## Deleting Files
+
+Deleting files is another helpful thing that we can do. We went through this in Session 1 briefly, but we will review it again here. We can **r**e**m**ove files using `rm`. 
+
+Enter `dir1A/` and delete the file `samp1.txt`.
+
+```
+rm samp1.txt
+```
+
+If you check the directory contents, you will now only see `samp2.txt` and `samp3.txt` left. You can also use the wildcard symbol to delete multiple files:
+
+```
+rm *.txt
+```
+
+Now `dir1A/` should be empty.
+
+## Deleting Directories
+
+Since all of the content in `practice/` was just for UNIX practice, but it does not have anything useful to look at, we will delete the directory. We can use the `-r` option to delete a directory and all its contents. Remember that we need to be in the parent directory containing `practice/` to carry out this command:
+
+```
+rm -rf practice/
+```
+
+Now if you check the contents of `python_focus_group`, you will no longer have `practice/`.
+
+Note: Be VERY careful when removing files and directories, as you will not be able to undo this operation once it has been carried out.
+
+
+
+
+
+
+
 
 ## Linking Files & Directories
 
-## Deleting Files & Directories
-
 ## File Permissions
+
+
+
+
+
+
+
+
+
 
 ## Installing Python
 
@@ -201,3 +303,18 @@ hello_world.py: A Python script that prints "Hello, World!" when run
 ```
 
 Note that since the file extension is `.md`, a markdown file, it is written in markdown language. For the most part, you can just use text. However, if you want to make it fancy, you can include things like bolded text, headings, and code blocks. This document is actually written in [markdown](https://www.markdownguide.org/basic-syntax/). In the above example, the `#` in front of `Session_01` indicates that that line is a heading. This is not necessary, but it does look organized. If you do not want to have `Session_01` as a heading, simply remove the `#` in front of it.
+
+### Solution
+
+Assuming you start in `session_02`, you can carry out the following:
+
+```
+cd ..
+nano README.md
+# Edit and save the file
+git add --all
+git commit -m "finish session 2 work"
+git push
+```
+
+Congratulations! You finished Session 2!
