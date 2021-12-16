@@ -8,23 +8,28 @@ Last Updated: 2021-12-16
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
 ## Terminals
+
 Modern bioinformatics primarily uses Unix or a Unix-based operating system. Navigating a command line requires you to know Unix commands. Unix language is used in a shell program, aka a terminal. Depending on a user's operating system (Windows, Mac OS, Linux), different steps must be taken to access a Unix-based terminal. Fortunately, both Mac OS and Linux use Unix-based terminals by default. Windows, on the other hand, requires a few extra steps. The native Windows command prompt (terminal) does not use the Unix language required by most software. This means that Windows users need to install a different terminal capable of using Unix. One of the most common terminals for download is the Linux distribution: Ubuntu. Use of Ubuntu requires enabling WSL1 or WSL2 (Windows Subsystem for Linux). Detailed instructions can be found using a simple search, but these are instructions that I find helpful for the [download of Ubuntu](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) and [enabling WSL2](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/). 
 
 ## Opening the Terminal
 
 ### Mac OS
+
 (1) Click the Launchpad icon in the Dock, type "Terminal" in the search field, then click "Terminal"
 (2) In the Finder, open the /Applications/Utilities folder, then double-click "Terminal"
 [Source](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac)
 
 ### Linux
+
 This may vary depending on the Linux distribution being used, but at its simplest, you can open the terminal by directly pressing ctrl+alt+T or searching it up by clicking the "Dash" icon, typing "terminal" in the search box, and opening the Terminal application.  
 [Source](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955)
 
 ### Windows
+
 Open the start menu and type "Ubuntu." Open the application. Using Ubuntu, you will be prompted to create an account requiring a username and password. The password is required at times for installing or updating software, so it is important to keep note of your password. 
 
 ## Using the Terminal
+
 In order to use the terminal, you will need to use Unix-based language. At the end of this document, I will include a Unix cheat sheet for easy reference. For now, we will start with something basic. Try running the `pwd` command by typing `pwd` into the terminal and clicking "Enter" on your keyboard:
 
 ```
@@ -34,6 +39,7 @@ pwd
 This command stands for "**p**rint **w**orking **d**irectory," and it does exactly that. Your terminal output should show the directory you are in. 
 
 ## Directories
+
 Many Unix commands are named in a relatively straightforward way. Just like the `pwd` command, we can make a directory using the command `mkdir` which stands for "**m**a**k**e **dir**ectory." Let's practice navigating directories. First, we will make a new directory.
 
 ```
@@ -55,6 +61,7 @@ cd ..
 Now try `pwd` again. You will see that we are in the original directory we started in. Note that when rerunning a command, there are two ways you can do it. The first is to manually retype the command. For short commands or commands that haven't been run very recently, this may be easier. However, for longer commands, you can use the up arrow on your keyboard to navigate the commands you previously ran. Try using your up arrow to see the commands you have run. When you get to `pwd`, run it and see that it will print your working directory again. Try using your up arrow one more time. Isn't it powerful? I think it's helpful!
 
 ## GitHub
+
 If you plan on doing anything with bioinformatics in your career, you will need to add your GitHub account to your CV, and likely submit the link in job applications. GitHub helps log your code activity (how often you code and what you code) as well as provide a place to work on your code. If you keep your GitHub up to date, then you are able to work on the same code from any computer.
 
 First, make sure that you have a GitHub account. Keep in mind that you will probably have to submit a link to your profile to someone down the line, so choose your username carefully. Please sign up for an account [here](https://github.com/join). Choose the free plan and answer whatever questions you are asked about your interests. Also make sure that you verify your email address. 
