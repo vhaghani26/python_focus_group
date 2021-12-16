@@ -17,10 +17,6 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ## File Permissions
 
-## Text Editors
-
-## GitHub Desktop
-
 ## Installing Python
 
 Now that we have set up GitHub and made some files, we are going to try making our first Python script. This requires us to install Python. Based on your operating system, the instructions for installation vary. I have included some helpful sources that will walk you through how to install Python. For those of you who already use Python or are doing this in `spitfire` or `epigenerate`, you can use the command `module load anaconda3` to load Python.
@@ -42,9 +38,7 @@ Now that we have set up GitHub and made some files, we are going to try making o
 
 Once you have installed Python, verify that you have installed it by running the command:
 
-```
-python --version
-```
+```python --version```
 
 If you receive an output with a version number, ideally 3.10.1, then you have succeeded! If not, pause and ask Viki to help you with the installation.
 
@@ -140,11 +134,12 @@ git commit -m "prints hello world"
 git push
 ```
 
-## Update `README.md`
+## Exit Ticket: Update `README.md`
 
-In your main `python_focus_group` directory, you should have a file called `README.md`. Your assignment is to navigate to the file and edit it to reflect the content in your repository. An example of the text you can include is:
+In your main `python_focus_group` directory, you should have a file called `README.md`. Your assignment is to navigate to the file and edit it to reflect the content in your repository, then Git push it. An example of the text you can include is:
 
-```This repository is for the LaSalle Lab Python Focus Group, where we are learning how to code using Python.
+```
+This repository is for the LaSalle Lab Python Focus Group, where we are learning how to code using Python.
 
 # Session_01
 foo.txt: A file containing random phrases that was created using `touch`
@@ -152,6 +147,7 @@ bar.txt: A file containing random phases that was created using `nano`
 git_test.txt: An empty file created to practice pushing files to GitHub
 
 # Session _02
-hello_world.py: A Python script that prints "Hello, World!" when run```
+hello_world.py: A Python script that prints "Hello, World!" when run
+```
 
 Note that since the file extension is `.md`, a markdown file, it is written in markdown language. For the most part, you can just use text. However, if you want to make it fancy, you can include things like bolded text, headings, and code blocks. This document is actually written in [markdown](https://www.markdownguide.org/basic-syntax/). In the above example, the `#` in front of `Session_01` indicates that that line is a heading. This is not necessary, but it does look organized. If you do not want to have `Session_01` as a heading, simply remove the `#` in front of it.
