@@ -1,11 +1,59 @@
 # Session 2: File and Directory Manipulation in UNIX and First Python Script
 
 By: Viktoria Haghani
-Date: 2021-12-14
+
+Session Date: TBD
+Last Updated: 2021-12-16
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
-## Renaming Files & Directories
+## File and Directory Manipulation
+
+A common occurence you will experience is reorganization. Here, we will explore how to handle different types of file and directory manipulation techniques at the command line.
+
+### Renaming a Directory
+
+First, we will create a new directory for `session_02/` in `python_focus_group`. Let's make a new directory:
+
+```
+mkdir sessin_02
+```
+
+Oh no! You typed too quickly and have a typo. Now you have a directory called `sessin_02/` instead of `session_02/`. Luckily, UNIX has an extremely useful command: `mv`. The `mv` command allows us to **m**o**v**e and rename files. Typically, the `mv` function looks something like this:
+
+```
+mv <source> <target>
+```
+
+Where `source` represents the thing that currently exists in your directory (this can be a file or directory) and `target` represents what you are renaming or moving a file/directory to. Make sure you are in the parent directory containing whatever file or directory you want to rename. In our case, the parent directory we should be in is `python_focus_group/`. Now, we can rename our directory. First, let's see what `python_focus_group/` contains. Remember that you can do this using the `ls` command. Once you verify that you can see `sessin_02/`, carry out the following command:
+
+```
+mv sessin_02 session_02
+```
+
+If you use `ls` again, you will now see that `sessin_02/` has been renamed `session_02`.
+
+## Renaming a File
+
+Here, we will practice renaming a file. Enter `session_02/`.
+
+```
+cd session_02
+```
+
+Create a file called `first_python_script.py`. You can do this using either `touch` or `nano`. Since we are not editing the file yet, `touch` will be your simpler option. 
+
+```
+touch first_python_script.py
+```
+
+In hindsight, we realize we should make the file name represent what the code does. Using the `mv` command, we can rename the file:
+
+```
+mv first_python_script.py hello_world.py
+```
+
+Using `ls`, you can see that the file has been successfully renamed!
 
 ## Moving Files & Directories
 
@@ -38,7 +86,9 @@ Now that we have set up GitHub and made some files, we are going to try making o
 
 Once you have installed Python, verify that you have installed it by running the command:
 
-```python --version```
+```
+python --version
+```
 
 If you receive an output with a version number, ideally 3.10.1, then you have succeeded! If not, pause and ask Viki to help you with the installation.
 
@@ -104,7 +154,7 @@ Notice that the parentheses after `exit`. This means that `exit()` is a function
 
 ## Python Scripts
 
-The majority of the time, you will be running Python scripts, not command line Python. Navigate to your `session_01` directory (you should know how to do this now, but please ask if you are still confused). Using either `touch` or `nano`, create a python script. I will use `nano` here since we are adding text to the file.
+The majority of the time, you will be running Python scripts, not command line Python. Navigate to your `session_01` directory (you should know how to do this now, but please ask if you are still confused). Using `nano`, edit the `hello_world.py` file we created earlier.
 
 ```
 nano hello_world.py
