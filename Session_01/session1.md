@@ -196,6 +196,23 @@ git push
 
 If you commit multiple changes, you can git push between everything or once at the end.
 
+## Exit Ticket
+
+Create a file called `git_test.txt` in `session_01/`. You can edit it so it includes text or leave it empty. Once you have created the file, push it to GitHub. Do not read on until you have completed this.
+
+### Solution
+
+You will need to enter `session_01/`. Starting in `python_focus_group/`, the steps go as follows:
+
+```
+cd session_01
+touch git_test.txt
+cd ..
+git add session_01/git_test.txt
+git commit -m "practice pushing to GitHub"
+git push
+```
+
 ## Unix Cheat Sheet
 
 Made by: Ian Korf
