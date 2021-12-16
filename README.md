@@ -20,3 +20,50 @@ The focus of Session 2 is to finish software set up and begin learning basic Pyt
 * Python Scripts
 
 Note: Still need to add more for Session 2
+
+
+## Topic Bank
+
+All sections below are topics I plan to integrate into sessions.
+
+## Comments in Python
+
+### Inline Comments
+
+### Single Line Comments
+
+### Multi-Line Comments
+
+## Data Types in Python
+
+https://www.w3schools.com/python/python_datatypes.asp
+
+## Type Casting
+
+## The `print()` Function
+
+(see Python notes from IBM course)
+
+## Escape Sequences
+
+## Python Variables
+
+## Python Expressions
+
+## Comparison Operations
+
+## Simple Statistics with Lists of Numbers
+
+Note that we will discuss lists in more detail next session
+
+## String Operations
+
+### Stripping Spaces
+
+### Indexing Strings
+
+### Concatenate Strings
+
+### String Formatting
+
+## Stride
