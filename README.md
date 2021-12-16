@@ -67,3 +67,23 @@ Note that we will discuss lists in more detail next session
 ### String Formatting
 
 ## Stride
+
+## Tuples
+
+### Sorting Tuples
+
+### Concatenating Tuples
+
+### Slicing Tuples
+
+### Nesting Tuples
+
+## Lists
+
+### Aliasing Lists
+
+### Cloning Lists
+
+## Sets
+
+## Dictionaries
