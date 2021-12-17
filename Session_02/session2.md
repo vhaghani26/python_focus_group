@@ -72,20 +72,10 @@ Now if you enter `dir1/` and check the directory contents, it will be empty. On 
 
 ## Moving Directories
 
-Moving directories is slightly more complicated than moving files since directories often contain other files and subdirectories. The main difference here is that we need to use a command line option (aka flag). The command we will use will look like this:
+Moving directories is similar to moving files. We will use the `mv` command. In `practice/`, create a subdirectory called `dir1A`. Within `dir1A/`, create the following files: `samp1.txt`, `samp2.txt`, `samp3.txt`. Now we will move `dir1A/` and its contents into `dir1/`. To do so, we run this command while in `practice/`:
 
 ```
-mv -r <source> <target>
-```
-
-The `-r` flag represents "**r**ecursively." Essentially, we are telling our terminal to recursively move a directory somewhere else. The "recursive" part of this means that we are moving the contents within the directory along with the directory we are moving.
-
-In `practice/`, create a subdirectory called `dir1A`. Within `dir1A/`, create the following files: `samp1.txt`, `samp2.txt`, `samp3.txt`. 
-
-Now we will move `dir1A/` and its contents into `dir1/`. To do so, we run this command while in `practice/`:
-
-```
-mv -r dir1A/ dir1/dir1A
+mv dir1A/ dir1/dir1A
 ```
 
 If you enter `dir1`, and check the directory contents (hint: `ls`), then you should see `dir1A/` within `dir1`. Enter `dir1A/` and check the directory contents. You should see your sample text files here.
@@ -94,7 +84,7 @@ If you enter `dir1`, and check the directory contents (hint: `ls`), then you sho
 
 Copying files can be convenient for a number of reasons, including wanting to manipulate a file but keeping the original version for reference. There are a few ways this can be done. In this example, we will be using the `cp` command, which stands for "**c**o**p**y."
 
-Enter `dir2/` and create a subdirectory `dir2A/`. We are going to copy all of the text files from `dir1A/` into `dir2A/`. Remember that when you are manipulating files and directories, you need to be in the parent directory that contains all of the contents you are moving and their desired locations. In our case, this means we can be in `practice/`. Enter `practice/` and carry out these commands:
+Enter `dir2/` and create a subdirectory `dir2A/`. We are going to copy all of the text files from `dir1A/` into `dir2A/`. Remember that when you are manipulating files and directories, it is helpful to be in the parent directory that contains all of the contents you are moving and their desired locations. In our case, this means we can be in `practice/`. Enter `practice/` and carry out these commands:
 
 ```
 cp dir1/dir1A/samp1.txt dir2/dir2A/samp1.txt
@@ -116,7 +106,7 @@ Since the "samp" part is the same, you can alternatively use the following to be
 cp dir1/dir1A/samp*.txt dir2/dir2A/
 ```
 
-As I mentioned earlier, there are multiple ways you can do this. You can also do something similar to the `mv -r` command for `cp`, where you copy files and directories recursively: `cp -r`. These commands are helpful to know, but recall that Google is your best friend with Unix commands. If you forget how to do something or want to figure out how to do something, Google it! I often find myself Googling things like: "how to move directory and its contents unix," and that's totally okay! 
+As I mentioned earlier, there are multiple ways you can do this. Recall that Google is your best friend with Unix commands. If you forget how to do something or want to figure out how to do something, Google it! I often find myself Googling things like: "how to move directory and its contents unix," and that's totally okay! 
 
 ## Deleting Files
 
@@ -164,7 +154,7 @@ Now let's practice creating a link. In `session_02/`, create a subdirectory call
 ln -s ../original_copy.txt linked_to_original_copy.txt
 ```
 
-The `..` in the above command tells the terminal to go up a directory. Since we are in `linked_file/` and we want to go back up to `session_02/`, we can use the `..` to accomplish this. The command essentially means we are linking the file `original_copy.txt` found in the directory above ours to a new "file" we are calling `linked_to_original_copy.txt`. 
+The `..` in the above command tells the terminal to go up a directory. Since we are in `linked_file/` and we want to go back up to `session_02/`, we can use the `..` to accomplish this. The command essentially means we are linking the file `original_copy.txt` found in the directory above ours to a new "file" we are calling `linked_to_original_copy.txt`. Notice that if you use `ls`, the file will have `@` next to it. This tells us that it is a link.
 
 Once you have created a linked file, edit `original_copy.txt` to include some sort of words or phrases and save it. Then, view the contents of `linked_to_original_copy.txt`. Notice that you see the same text you input in `original_copy.txt`. 
 
@@ -185,23 +175,25 @@ ls -lF hello_world.py
 This will produce something like the following.
 
 ```
--rw-r--r--  1 vhaghani  staff     45 Dec 16 13:56 hello_world.py*
+-rw-r--r--  1 vhaghani  vhaghani     0 Dec 16 13:56 hello_world.py
 ```
 
 After the leading dash, there are 3 triplets of letters. The first triplet shows user permissions. In the example code above, you should see that I have read and write permissions, but not execute. The next triplets are for group and public. Both have read permission, but not write or execute. Let's first turn on all permissions for everyone using the `chmod` command and then list again.
 
 ```
 chmod 777 hello_world.py
-ls -lF hello_world.py
+ls -lF hello_world.py # Remember you can use your up arrow to rerun previously run commands
 ```
 
 Notice that you can now see `rwx` for owner, group, and public.
 
 ```
--rwxrwxrwx  1 vhaghani  staff     45 Dec 16 13:56 hello_world.py*
+-rwxrwxrwx  1 vhaghani  vhaghani     0 Dec 16 13:56 hello_world.py*
 ```
 
-There is also an asterisk after the program name. The `-F` option in `ls` shows you what kind of file something is with a trailing character. If the file is a directory, there will be a trailing `/`. You won't need to get complicated with permissions. This is just a helpful tidbit of information that may be useful one day. The following 3 are all you need right now.
+There is also an asterisk after the program name indicating that the file is now executable. The `-F` option in `ls` shows you what kind of file something is with a trailing character. If the file is a directory, there will be a trailing `/`.
+
+You won't need to get complicated with permissions. This is just a helpful tidbit of information that may be useful one day. The following 3 are all you need right now.
 
 * `chmod 444` file is read only
 * `chmod 666` file may be read and edited
@@ -339,7 +331,7 @@ If everything worked okay, you should see "Hello, World!" in your terminal. If n
 Congratulations! You wrote your first Python script! Go back to the `python_focus_group` directory, then push it to GitHub.
 
 ```
-git add session_01/hello_world.py
+git add session_02/hello_world.py
 git commit -m "prints hello world"
 git push
 ```
