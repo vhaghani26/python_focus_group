@@ -3,6 +3,7 @@
 By: Viktoria Haghani
 
 Session Date: TBD
+
 Last Updated: 2021-12-16
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
@@ -11,7 +12,7 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 A common occurence you will experience is reorganization. Here, we will explore how to handle different types of file and directory manipulation techniques at the command line.
 
-### Renaming a Directory
+## Renaming a Directory
 
 First, we will create a new directory for `session_02/` in `python_focus_group`. Let's make a new directory:
 
@@ -25,7 +26,7 @@ Oh no! You typed too quickly and have a typo. Now you have a directory called `s
 mv <source> <target>
 ```
 
-Where `source` represents the thing that currently exists in your directory (this can be a file or directory) and `target` represents what you are renaming or moving a file/directory to. Make sure you are in the parent directory containing whatever file or directory you want to rename. In our case, the parent directory we should be in is `python_focus_group/`. Now, we can rename our directory. First, let's see what `python_focus_group/` contains. Remember that you can do this using the `ls` command. Once you verify that you can see `sessin_02/`, carry out the following command:
+Where `source` represents the thing that currently exists in your directory (this can be a file or directory) and `target` represents what you are renaming or moving a file/directory to. Make sure you are in the parent directory containing whatever file or directory you want to rename (note that you can avoid this using `..` in your paths, but we will use these steps for simplification). In our case, the parent directory we should be in is `python_focus_group/`. Now, we can rename our directory. First, let's see what `python_focus_group/` contains. Remember that you can do this using the `ls` command. Once you verify that you can see `sessin_02/`, carry out the following command:
 
 ```
 mv sessin_02 session_02
@@ -109,7 +110,7 @@ Notice that this is tedious. You don't want to do this manually for several file
 cp dir1/dir1A/*.txt dir2/dir2A/
 ```
 
-Since the "samp" part is the same, you can alternatively use:
+Since the "samp" part is the same, you can alternatively use the following to be a little more conservative:
 
 ```
 cp dir1/dir1A/samp*.txt dir2/dir2A/
@@ -145,27 +146,84 @@ rm -rf practice/
 
 Now if you check the contents of `python_focus_group`, you will no longer have `practice/`.
 
-Note: Be VERY careful when removing files and directories, as you will not be able to undo this operation once it has been carried out.
-
-
-
-
-
-
-
+Note: Be **VERY** careful when removing files and directories, as you will not be able to undo this operation once it has been carried out.
 
 ## Linking Files & Directories
 
+Linking (aka aliasing) files or directories is an extremely powerful tool. Let's say I downloaded and processed the entire human genome as a reference file on epigenerate and now someone else wants to use it. Instead of copying the whole file into their directory to work with, they can create a symbolic link to the file within their own directory. This allows them to use/access the file or directory without taking up any extra space - especially for such a large file! The **l**i**n**k command, `ln`, allows us to do this. Before we get started, there are a few things that may be helpful to explain. First, when we use the command, it will generally look like this:
+
+```
+ln -s <original file> <link to file>
+```
+
+Second, we will always use the `-s` option when using `ln`. `-s` represents that the link is "symbolic," which means that it creates a soft link rather than a hard link. A **soft link** is equivalent to a shortcut in Windows, or rather a redirection to the original location and file. A **hard link**, on the other hand, associates two files (which may have different names) to the same file information. We don't want hard links; we only want to use soft links, hence our strict use of `ln -s` instead of *just* `ln`.
+
+Now let's practice creating a link. In `session_02/`, create a subdirectory called `linked_file`. In `session_02/`, create a file called `original_copy.txt`. Then, enter `linked_file/` and create a symbolic link to `original_copy.txt` that is called `linked_to_original_copy.txt`. To do so, we can use the following command:
+
+```
+ln -s ../original_copy.txt linked_to_original_copy.txt
+```
+
+The `..` in the above command tells the terminal to go up a directory. Since we are in `linked_file/` and we want to go back up to `session_02/`, we can use the `..` to accomplish this. The command essentially means we are linking the file `original_copy.txt` found in the directory above ours to a new "file" we are calling `linked_to_original_copy.txt`. 
+
+Once you have created a linked file, edit `original_copy.txt` to include some sort of words or phrases and save it. Then, view the contents of `linked_to_original_copy.txt`. Notice that you see the same text you input in `original_copy.txt`. 
+
+Because this is just practice with no content, feel free to remove `linked_file/` and `original_copy.txt`.
+
 ## File Permissions
 
+This section is adapted directly from Ian Korf.
 
+While file permissions may not affect daily work, it is still important to know and understand. A file can have 3 kinds of permissions: read, write, and execute. These are abbreviated as `rwx`. Read and write are obvious, but execute is a little weird. Programs and directories need executable permission to access them. Generally, you want read and write access to the files you create. However, if you have some incredibly important data file, you might want to protect it from being edited, so you may want to remove write permission and make it read-only.
 
+In addition to having 3 types of permissions, every file also has 3 types of people that can access it: the owner (you), the group you belong to (e.g. a laboratory), or the public. For the purposes of learning how to program, we can treat these all the same. However, you can imagine that some files should not be readable by others (for example, your private poetry efforts). Navigate into `session_02` and examine the file permissions on `hello_world.py`, the script we will be editing shortly. 
 
+```
+ls -lF hello_world.py
+```
 
+This will produce something like the following.
 
+```
+-rw-r--r--  1 vhaghani  staff     45 Dec 16 13:56 hello_world.py*
+```
 
+After the leading dash, there are 3 triplets of letters. The first triplet shows user permissions. In the example code above, you should see that I have read and write permissions, but not execute. The next triplets are for group and public. Both have read permission, but not write or execute. Let's first turn on all permissions for everyone using the `chmod` command and then list again.
 
+```
+chmod 777 hello_world.py
+ls -lF hello_world.py
+```
 
+Notice that you can now see `rwx` for owner, group, and public.
+
+```
+-rwxrwxrwx  1 vhaghani  staff     45 Dec 16 13:56 hello_world.py*
+```
+
+There is also an asterisk after the program name. The `-F` option in `ls` shows you what kind of file something is with a trailing character. If the file is a directory, there will be a trailing `/`. You won't need to get complicated with permissions. This is just a helpful tidbit of information that may be useful one day. The following 3 are all you need right now.
+
+* `chmod 444` file is read only
+* `chmod 666` file may be read and edited
+* `chmod 777` file may be read, edited, and used as Unix command
+
+Furthermore, the `chmod` command has two different syntaxes. The more human readable one looks like this.
+
+```
+chmod u-x hello_world.py
+ls -lF hello_world.py
+```
+
+The above command says: "change the user (u) to remove (-) the execute (x) permission from file hello_world.py". You add permissions with +, like so:
+
+```
+chmod u+x hello_world.py
+ls -lF hello_world.py
+```
+
+The less readable `chmod` format is assigning all parameters in octal format. 4 is the read permission. 2 is the write permission. 1 is the execute permission. Each rwx corresponds to one octal number from 0 to 7. So `chmod 777` turns on all permissions for all types of people and `chmod 000` turns them all off.
+
+Now that we are going to shift to Python stuff, we can check and make sure that we have permission to read, write, and execute `hello_world.py`. You *should* already have permission, but it is nice to check just in case.
 
 ## Installing Python
 
@@ -184,7 +242,7 @@ Now that we have set up GitHub and made some files, we are going to try making o
 ### Windows
 [How to Install Python 3 on Ubuntu 18.04 or 20.04](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
 
-## Verify Python Installation
+## Verifying Python Installation
 
 Once you have installed Python, verify that you have installed it by running the command:
 
@@ -293,20 +351,20 @@ In your main `python_focus_group` directory, you should have a file called `READ
 ```
 This repository is for the LaSalle Lab Python Focus Group, where we are learning how to code using Python.
 
-# Session_01
+## Session_01
 foo.txt: A file containing random phrases that was created using `touch`
 bar.txt: A file containing random phases that was created using `nano`
 git_test.txt: An empty file created to practice pushing files to GitHub
 
-# Session _02
+## Session _02
 hello_world.py: A Python script that prints "Hello, World!" when run
 ```
 
-Note that since the file extension is `.md`, a markdown file, it is written in markdown language. For the most part, you can just use text. However, if you want to make it fancy, you can include things like bolded text, headings, and code blocks. This document is actually written in [markdown](https://www.markdownguide.org/basic-syntax/). In the above example, the `#` in front of `Session_01` indicates that that line is a heading. This is not necessary, but it does look organized. If you do not want to have `Session_01` as a heading, simply remove the `#` in front of it.
+Note that since the file extension is `.md`, a markdown file, it is written in markdown language. For the most part, you can just use text. However, if you want to make it fancy, you can include things like bolded text, headings, and code blocks. This document is actually written in [markdown](https://www.markdownguide.org/basic-syntax/). In the above example, the `##` in front of `Session_01` indicates that that line is a heading. This is not necessary, but it does look organized. If you do not want to have `Session_01` as a heading, simply remove the `##` in front of it.
 
 ### Solution
 
-Assuming you start in `session_02`, you can carry out the following:
+Assuming you start in `session_02/`, you can carry out the following:
 
 ```
 cd ..
