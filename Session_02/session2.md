@@ -266,12 +266,10 @@ print("Viki")
 
 Note that `print(Viki)` does not work, as the absence of quotation marks interprets "Viki" as a variable (we will learn more about variables in the future). Try a few more commands and see what you can do! Note that you can also use single quotations to print as long as the quotations marks flanking the statement are the same style (single vs. double).
 
-```
-print("My name is Viki")
+```print("My name is Viki")
 print("I have many pets")
-print("I enjoy learning Python!"
-print('Here I am using single quotation marks')
-```
+print("I enjoy learning Python!")
+print('Here I am using single quotation marks')```
 
 Now try running this:
 
