@@ -45,6 +45,8 @@ __________________________________
 
 All sections below are topics I plan to integrate into sessions.
 
+## Aliasing (in .bashrc/.profile)
+
 ## Comments in Python
 
 ### Inline Comments
