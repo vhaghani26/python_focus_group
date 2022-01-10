@@ -172,3 +172,5 @@ Note that we will discuss lists in more detail next session
 ### Basic Operations in 2D
 
 ## Argparse
+
+## Conda
