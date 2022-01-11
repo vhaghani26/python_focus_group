@@ -8,9 +8,13 @@ Last Updated: 2021-12-16
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
+## A Brief Note: Months of Mistakes
+
+Before we begin this session, I'd like to note that although this is the *Python* Focus Group, there are many housekeeping things that we can or need to do to effectively program. When I began learing Python, I used very basic tools with little understanding of the tools I had at my disposable. I used `nano` for months (disgusting!) and did all of my directory setup incorrectly. This meant that when I finally realized my big error, it was a conglomeration of several smaller mistakes, forcing me to delete all my work and start my setup from scratch. My goal here is to make your learning experience better. I want you to be aware of the tools you can utilize as well as understanding how incrediblly helpful some of these tools are. Therefore, the first few sessions may not be the *most* interesting or *most* helpful with learning Python coding directly, but it is a necessary step to get to the point of efficient coding. Your setup and organization is as instrumental as the code you will write one day.
+
 ## File and Directory Manipulation
 
-A common occurence you will experience is reorganization. Here, we will explore how to handle different types of file and directory manipulation techniques at the command line.
+A common occurence you will experience is reorganization. Today, we will explore how to handle different types of file and directory manipulation techniques at the command line.
 
 ## Renaming a Directory
 
