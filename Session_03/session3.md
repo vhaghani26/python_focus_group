@@ -112,7 +112,14 @@ Well, GitHub Desktop makes these steps a lot easier. To add something to GitHub,
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_add.png)
 
-![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_commit.png)
+Once you have selected your files, you type the message you would normally type for the `git commit` command in the following text box:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_commit_1.png)
+
+Then, you register that you want to add that change as a commit:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_commit_2.png)
+
 
 
 
