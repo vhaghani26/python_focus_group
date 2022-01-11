@@ -2,9 +2,9 @@
 
 By: Viktoria Haghani
 
-Session Date: TBD
+Session Date: 2022-01-18
 
-Last Updated: 2022-01-10
+Last Updated: 2022-01-11
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -68,7 +68,18 @@ Recall that you can tab complete so you don't have to type out "python_focus_gro
 
 ## Cloning through GitHub Desktop
 
-Go back to the GitHub Desktop app. 
+Go back to the GitHub Desktop app. Under the "File" menu tab, you should see an option to clone a repository. If you have nothing set up on GitHub Desktop yet, you will likely have a different home screen than depicted below. This should also give you the option to clone a repo.
 
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/clone_repo_gitdesktop.png)
 
+Once you click "Clone a repository," you will be taken to pop-up window (see image below) that asks you which repository you would like to clone in addition to what local path it stores that repository in. Even though you can change the local path, bioinformatics uses a lot of "behind the scenes" paths and defaults. I've found that if you change locations of things manually, it tends to give you issues with other things down the line, so it's best to just accept and download into the default location.
 
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/choose_repo.png)
+
+Select the `python_focus_group` repository and click the "Clone" button at the bottom. Because we don't have much in our repository, it will probably take less than a minute to download and sync. Using the file finder, you can now navigate to the repository and its see its contents.
+
+Note that you can now create and manipulate files using the file finder instead of the command line. For our Python Focus Group, we will still be using the command line for these things. There is, however, a method to the madness: (1) if you do any work on the cluster, you no longer have the ability to use a file finder or similar file visualization program, so you need to know how to use the command line to manipulate files, (2) you will get to a point where you run scripts that are automated and run commands from within the script, so knowing the commands is extremely useful, and (3) command line file manipulation can make your life a lot easier in many instances (wildcards being an example), so it will help save you time and energy down the line when you do more complicated work.
+
+## Navigating to the GitHub Repo at the Command Line
+
+Since our goal is to run Python scripts from this repository, we need to find the directory at the command line. Return to your terminal and 
