@@ -8,7 +8,7 @@ Last Updated: 2022-01-10
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
-## GitHub Desktop
+## Introduction to GitHub Desktop
 
 Up to now, we have done all of our GitHub work at the command line. Fortunately, there is an easier way to push things to GitHub. Now you may be thinking, "if there's an easier way, why are you being cruel and making me use the command line instead?" Rest assured; there is a good answer! 
 
@@ -16,11 +16,59 @@ Any remote work, such as using the cluster (i.e. epigenerate) cannot work with G
 
 GitHub Desktop is a software that can be downloaded on your personal laptop/computer that can help manage your GitHub repositories. It's both visually appealing and mouse-friendly! We're going to have to do some set up and clean up stuff here, so bear with me as we work through this.
 
+## Installing GitHub Desktop
+
 First, we're going to install GitHub Desktop. There are some great instructions [here](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop) (albiet specific to Windows) on how to install it, but we will run through it together. First, visit the download page for GitHub Desktop. You will notice a link towards the bottom that says "Download for macOS." Click it and download the software.
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/gitdesktop_install.png)
 
 Double-click the GitHub Desktop setup file (it usually defaults to the "Downloads" folder if you did not specify otherwise). Go through the on-screen instructions, which include setting up the software and logging into your GitHub account on the app.
+
+## Cleaning Up Previous Work
+
+GitHub Desktop will ask you about cloning repositories. **Before** you proceed, we have some cleanup to do. If you created `python_focus_group/` on the cluster somewhere, then DO NOT do the clean-up portion. Instead, practice creating a local copy for editing (next section). If you only have a local copy, then we're going to go through these steps.
+
+GitHub Desktop puts your repositories in a folder called "GitHub," which is typically a sub-folder in "Documents." Because we don't want two local copies, we will delete the old copy and clone the repository through GitHub Desktop. First, navigate to wherever your original **local** copy of `python_focus_group/` is. Enter the directory and verify that all your changes are synced with GitHub:
+
+```
+git status
+```
+
+If you do not have the all clear, sync whatever remaining changes you may have:
+
+```
+git add --all
+git commit -m "sync all local edits"
+git push
+```
+
+Remember you might have to use your Personal Access Token during the above step. 
+
+If GitHub gives you the all clear that everything is synced, go to the parent directory of `python_focus_group/` (likely just your home directory). You should know how to do this by now! Just in case, I'll put a reminder here:
+
+```
+cd ..
+```
+
+Note that this will be the last time I remind you about navigating up a directory, so be sure to remember, keep Google at your ready, or have an old session's notes open for reference. 
+
+Now, verify that you are in the parent directory by listing the directory contents.
+
+```
+ls
+```
+
+You should see `python_focus_group` listed here. Since all your changes are synced, we are going to delete this local copy:
+
+```
+rm -rf python_focus_group
+```
+
+Recall that you can tab complete so you don't have to type out "python_focus_group" for this command. Since you are running a remove command, make sure to double check the command before you click enter and delete something you didn't intend to. If you have typed it correctly, pull the trigger and delete the folder.
+
+## Cloning through GitHub Desktop
+
+Go back to the GitHub Desktop app. 
 
 
 
