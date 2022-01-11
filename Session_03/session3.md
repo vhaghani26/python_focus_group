@@ -120,6 +120,17 @@ Then, you register that you want to add that change as a commit:
 
 ![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_commit_2.png)
 
+Now you push the commit through! You can do this using the menu at the top or using the button on the main screen:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_push.png)
+
+## Exit Ticket
+
+Create another file called "second_practice.txt." You can leave this file empty or include some text in it. Using GitHub Desktop, write a commit message and push the file to your GitHub repo. 
+
+Once you have pushed it, go to your GitHub repo online (i.e. using a browser) and verify that all your changes have correctly synced. 
+
+Congratulations! You learned how to use GitHub Desktop! :)
 
 
 
