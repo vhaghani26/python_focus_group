@@ -100,3 +100,15 @@ Save and close the file.
 
 ## Pushing to GitHub from GitHub Desktop
 
+Open GitHub Desktop, ensuring that you are looking at your `python_focus_group` repository (check the top left corner). You should now see that GitHub Desktop automatically detected that you created a new file. It will display additions to the file in green highlighting and deletions in red highlighting as a way for you to track your changes.
+
+Remember that the normal process of Git pushing looks like this:
+
+(1) `git add Session_03/github_desktop_practice.txt`
+(2) `git commit -m "practice using github desktop"`
+(3) `git push`
+
+Well, GitHub Desktop makes these steps a lot easier. To add something to GitHub, you just check the box for the file(s) you want to sync:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/git_add.png)
+
