@@ -105,7 +105,9 @@ Open GitHub Desktop, ensuring that you are looking at your `python_focus_group` 
 Remember that the normal process of Git pushing looks like this:
 
 (1) `git add Session_03/github_desktop_practice.txt`
+
 (2) `git commit -m "practice using github desktop"`
+
 (3) `git push`
 
 Well, GitHub Desktop makes these steps a lot easier. To add something to GitHub, you just check the box for the file(s) you want to sync:
