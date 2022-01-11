@@ -37,6 +37,8 @@ The focus of Session 2 is to finish software set up and begin learning basic Pyt
 
 ## Session_03
 
+* GitHub Desktop
+
 
 
 __________________________________
