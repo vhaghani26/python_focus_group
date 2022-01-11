@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: 2022-01-11
 
-Last Updated: 2022-01-10
+Last Updated: 2022-01-11
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -244,6 +244,12 @@ Once you have installed Python, verify that you have installed it by running the
 
 ```
 python --version
+```
+
+In some cases, you may have to use the following instead:
+
+```
+python3 --version
 ```
 
 If you receive an output with a version number, ideally 3.10.1, then you have succeeded! If not, pause and ask Viki to help you with the installation.
