@@ -80,6 +80,23 @@ Select the `python_focus_group` repository and click the "Clone" button at the b
 
 Note that you can now create and manipulate files using the file finder instead of the command line. For our Python Focus Group, we will still be using the command line for these things. There is, however, a method to the madness: (1) if you do any work on the cluster, you no longer have the ability to use a file finder or similar file visualization program, so you need to know how to use the command line to manipulate files, (2) you will get to a point where you run scripts that are automated and run commands from within the script, so knowing the commands is extremely useful, and (3) command line file manipulation can make your life a lot easier in many instances (wildcards being an example), so it will help save you time and energy down the line when you do more complicated work.
 
-## Navigating to the GitHub Repo at the Command Line
+## Interacting with the GitHub Repo at the Command Line
 
-Since our goal is to run Python scripts from this repository, we need to find the directory at the command line. Return to your terminal and 
+Since our goal is to run Python scripts from this repository, we need to find the directory at the command line. Return to your terminal and try to find the repository. If you're having trouble, you can use `ls` as you navigate through different directories until you find it. Most often, it will be in whatever parent folder contains `Documents/`, so it will end up looking like: `Documents/GitHub/python_focus_group/`. If you cannot find it, please let Viki know. 
+
+Enter `python_focus_group` and create a new sub-directory called `session_03`. Enter `session_03/` and create a new file called `github_desktop_practice.txt` and put some comments in it:
+
+```
+nano github_desktop_practice.txt
+```
+
+In mine, I will write:
+
+```
+I am creating this file to demonstrate how to push something to GitHub Desktop
+```
+
+Save and close the file.
+
+## Pushing to GitHub from GitHub Desktop
+
