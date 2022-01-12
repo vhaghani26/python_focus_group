@@ -6,7 +6,6 @@ The purpose of forming this Python Focus Group is to teach students in LaSalle L
 
 ## Session_01
 
-The focus of Session 1 is to set up software and accounts to use Python and to start carrying out basic commands and actions at the command line. Topics include: 
 * Terminals
 * Opening the Terminal
 * Using the Terminal
@@ -18,7 +17,6 @@ The focus of Session 1 is to set up software and accounts to use Python and to s
 
 ## Session_02
 
-The focus of Session 2 is to finish software set up and begin learning basic Python commands and create our first script. Topics include:
 * File and Directory Manipulation
 * Renaming a Directory
 * Renaming a File
@@ -30,16 +28,14 @@ The focus of Session 2 is to finish software set up and begin learning basic Pyt
 * Deleting Directories
 * Linking Files & Directories
 * File Permissions
-* Installing Python
-* Verifying Python Installation
-* Python at the Command Line
-* Python Scripts
 
 ## Session_03
 
 * GitHub Desktop
-
-
+* Installing Python
+* Verifying Python Installation
+* Python at the Command Line
+* Python Scripts
 
 __________________________________
 
