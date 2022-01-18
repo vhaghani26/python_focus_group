@@ -6,6 +6,10 @@ The purpose of forming this Python Focus Group is to teach students in LaSalle L
 
 ## Session_01
 
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/session1.md
+
+Recording: NA
+
 * Terminals
 * Opening the Terminal
 * Using the Terminal
@@ -16,6 +20,10 @@ The purpose of forming this Python Focus Group is to teach students in LaSalle L
 * UNIX Cheat Sheet
 
 ## Session_02
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_02/session2.md
+
+Recording: https://www.youtube.com/watch?v=OItmKM8uuyI
 
 * File and Directory Manipulation
 * Renaming a Directory
@@ -30,6 +38,10 @@ The purpose of forming this Python Focus Group is to teach students in LaSalle L
 * File Permissions
 
 ## Session_03
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/session3.md
+
+Recording: TBD
 
 * GitHub Desktop
 * Installing Python
