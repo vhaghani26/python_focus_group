@@ -177,7 +177,7 @@ Let's run our first Python command! To activate Python, run the command:
 python3
 ```
 
-Now, you should be able to run Python code at the command line. As any experienced coder knows, "Hello, World!" is where we'll start. This is just a convention people go by when unning their first line of a new language. Here is [The History of Hello World](https://www.thesoftwareguild.com/blog/the-history-of-hello-world/) for those who are interested. Let's run the command:
+Now, you should be able to run Python code at the command line. As any experienced coder knows, "Hello, World!" is where we'll start. This is just a convention people go by when running their first line of a new language. Here is [The History of Hello World](https://www.thesoftwareguild.com/blog/the-history-of-hello-world/) for those who are interested. Let's run the command:
 
 ```
 print("Hello, World!")
@@ -194,7 +194,8 @@ Note that `print(Viki)` does not work, as the absence of quotation marks interpr
 ```print("My name is Viki")
 print("I have many pets")
 print("I enjoy learning Python!")
-print('Here I am using single quotation marks')```
+print('Here I am using single quotation marks')
+```
 
 Now try running this:
 
