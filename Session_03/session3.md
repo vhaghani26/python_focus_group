@@ -229,9 +229,10 @@ Notice that the parentheses after `exit`. This means that `exit()` is a function
 
 ## Python Scripts
 
-The majority of the time, you will be running Python scripts, not command line Python. Navigate to your `session_01` directory (you should know how to do this now, but please ask if you are still confused). Using `nano`, edit the `hello_world.py` file we created earlier.
+The majority of the time, you will be running Python scripts, not command line Python. Navigate to your `session_03` directory (you should know how to do this now, but please ask if you are still confused). Since we created `hello_world.py` last week, but did not do anything to it, we will move it to `session_03`. We can use the `mv` command we learned last week to do so. Then, we will use `nano` to edit the `hello_world.py` file.
 
 ```
+mv ../session_02/hello_world.py .
 nano hello_world.py
 ```
 
