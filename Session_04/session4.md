@@ -30,4 +30,49 @@ If you have chosen to proceed with a different text editor, please carry out the
 
 Once you have downloaded BBedit, you can create or open files. [Here](https://itservices.usc.edu/files/2013/11/bbedit.pdf) are some instructions from USC on the use of BBedit. Essentially, you will navigate to the "File" menu to carry out most of these tasks.
 
+## Comments in Python
+
+Now that you have a text editor and the majority of set-up is complete, we can get to the meat of the coding! Begin by creating your session directory, `session04/`. Then, create a new file called `comments.py`. 
+
+```
+mkdir session_04
+cd session_04/
+touch comments.py
+```
+
+Here, you will learn how to use different comment styles in your code. Comments are useful for a number of reasons, but primarily because (1) it helps someone else read and understand your code and (2) it helps the future *you* understand the code you wrote. Organization is key when coding, so comments are a really easy way to facilitate this.
+
+### Inline Comments
+
+One type of comment you can write is an inline comment. This is a comment that occurs in the same line as code that is being run. To add a comment, we use the `#` symbol. Everything after the `#` is interpreted as a comment in Python, so it does not get run. Although you do not have to understand the Python code here, I'd like you to see what an inline comment looks like. This is what our code looks like:
+
+```
+for i in range(1,5):
+	print(f'I am in for-loop iteration: {i}')
+	print("Notice the comments do not print")
+
+```
+
+And this is what it looks like when we add inline comments (add this code block to `comments.py`)
+
+```
+for i in range(1,5):
+	print(f'I am in for-loop iteration: {i}') # Print the number in the current iteration
+	print("Notice the comments do not print") # Here is another inline comment that does not print
+```
+
+### Single Line Comments
+
+While inline comments are helpful, I personally have a preference for single line comments. This acts almost like a header, saying something like:
+
+```
+# The following code carries out function X
+def function_x()
+	print("This function only prints this statement")
+```
+
+It seems more organized, keeping a nice separation between commentary and functional code.
+
+### Multi-Line Comments
+
 
