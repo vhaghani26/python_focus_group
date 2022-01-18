@@ -1,4 +1,4 @@
-# Session 3: GitHub Desktop
+# Session 3: GitHub Desktop and Getting Python Started
 
 By: Viktoria Haghani
 
