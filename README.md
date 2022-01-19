@@ -41,7 +41,7 @@ Recording: https://www.youtube.com/watch?v=OItmKM8uuyI
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/session3.md
 
-Recording: TBD
+Recording: https://youtu.be/uOv00Z2nxUg
 
 * GitHub Desktop
 * Installing Python
@@ -57,13 +57,7 @@ All sections below are topics I plan to integrate into sessions.
 
 ## Aliasing (in .bashrc/.profile)
 
-## Comments in Python
 
-### Inline Comments
-
-### Single Line Comments
-
-### Multi-Line Comments
 
 ## Data Types in Python
 
