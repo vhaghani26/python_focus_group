@@ -91,13 +91,111 @@ One of the other reasons I prefer single line comments is because it keeps your 
 
 [Source](https://richarddingwall.name/2008/05/31/is-the-80-character-line-limit-still-relevant/)
 
-### Multi-Line Comments
+### Multi-Line Comments/Comment Blocks
 
 I find two uses for multi-line comments.
 
-1. Have a comment block
+1. Have a comment block as a descriptor
 2. Prevent draft code from running
 
-Let's start with a comment block. Sometimes I like providing a brief description on how to execute code before running it
+#### Comment Blocks as Descriptors
+
+Let's start with a comment block. Sometimes I like providing a brief description on how to execute code before running it. For `comments.py`, we could do something like this:
+
+```
+'''
+Script Usage:
+To run comments.py, use the command "python3 comments.py" at the command line.
+
+Output:
+The output of comments.py are miscellaneous statements used as arguments to demonstrate the print() function
+'''
+```
+
+or
+
+```
+"""
+Script Usage:
+To run comments.py, use the command "python3 comments.py" at the command line.
+
+Output:
+The output of comments.py are miscellaneous statements used as arguments to demonstrate the print() function
+"""
+```
+
+Notice that we no longer use `#` for the comments. We *can* technically still use it, like this:
+
+```
+# Script Usage:
+# To run comments.py, use the command "python3 comments.py" at the command line.
+
+# Output:
+# The output of comments.py are miscellaneous statements used as arguments to demonstrate the print() function
+```
+
+Personally, I think this can be tedious and frankly just annoying. However, Python's (PEP 8 Style Code Style Guide)[https://www.youtube.com/watch?v=Hwckt4J96dI] prefers multiple single line comments. This is because if done incorectly, you may accidentally turn your comments into docstrings. It's ultimately up to you, but the several single-line comments are *technically* the way you're recommended to do it.
+
+#### Drafting Code
+
+Even though there's contention regarding code block syntax, drafting code is a different story. The use of either three single or three double quotes flanking code is much quicker and does not become a permanent part of the code. What do I mean by this? Let's say we have a script of 100 lines for now (not uncommon to have scripts this length or longer) and you're trying to troubleshoot something. Instead of running the entire script every time, you're only testing out a portion of the code. Therefore, you can comment out code that you are not trying to run. Let's try a simple example. You do not have to understand the code written below just yet. All you need to know is that the two code blocks separated  by a blank line do different things. Add the following into `comments.py`:
+
+```
+# Prints numbers 1-20
+for i in range(1,21):
+	print(i)
+
+# Prints the names of all my pets	
+pet_names = ["Stella", "Blueberry", "Sunny", "Bird", "Zoscia"]
+for pet in pet_names:
+	print(pet)
+```
+
+Run the script and see the outputs. Now let's add a new name to the list pet_names, like so:
+
+```
+# Prints numbers 1-20
+for i in range(1,21):
+	print(i)
+
+# Prints the names of all my pets	
+pet_names = ["Stella", "Blueberry", "Sunny", "Bird", "Zoscia", "New Pet"]
+for pet in pet_names:
+	print(pet)
+```
+
+Run the script again and compare outputs. You should see "New Pet" added to the output. Notice that comparing the outputs can be a little difficult when you have so much being printed out. In this example, I don't care about the numbers 1-20. I know it already works the way I intend it to work, and now I only want to test the code the prints the pet names to make sure I added the pet name properly. This is where a comment block comes in handy. I can just comment out the first block of code so that my script only runs the pet name part instead of both the number and pet name part. To do this, we can add three single or double quotes flanking the code:
+
+```
+'''
+# Prints numbers 1-20
+for i in range(1,21):
+	print(i)
+'''
+
+# Prints the names of all my pets	
+pet_names = ["Stella", "Blueberry", "Sunny", "Bird", "Zoscia", "New Pet"]
+for pet in pet_names:
+	print(pet)
+```
+
+Run the script again. Notice that we no longer see the numbers 1-20. While the use of comment blocks may be less frequent in completed code, it is very helpful when drafting code or troubleshooting since it lets you focus on one part at a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Variables
 
 
