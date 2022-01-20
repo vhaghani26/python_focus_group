@@ -30,9 +30,19 @@ If you have chosen to proceed with a different text editor, please carry out the
 
 Once you have downloaded BBedit, you can create or open files. [Here](https://itservices.usc.edu/files/2013/11/bbedit.pdf) are some instructions from USC on the use of BBedit. Essentially, you will navigate to the "File" menu to carry out most of these tasks.
 
+## The `print()` Function
+
+Last week, we started playing around with the `print()` function. `print()` is one of the most widely used functions. We will discuss how functions work in more depth later, but for now, I will explain briefly. A function looks something like this: `function()`, where the function name is outside of the parentheses, and the parentheses are there to take arguments. An argument is something you give a function as an input. In this case, our function is `print`, and our argument (input) is "Hello, World!". Try activating Python at your terminal and printing your name! In my case, it would look like this:
+
+```
+print("Viki")
+```
+
+Note that `print(Viki)` does not work, as the absence of quotation marks interprets "Viki" as a variable (we will learn more about variables in the future). Try a few more commands and see what you can do! Note that you can also use single quotations to print as long as the quotations marks flanking the statement are the same style (single vs. double).
+
 ## Comments in Python
 
-Now that you have a text editor and the majority of set-up is complete, we can get to the meat of the coding! Begin by creating your session directory, `session04/`. Then, create a new file called `comments.py`. 
+Now that you have a text editor and the majority of set-up is complete, we can get to the meat of the coding! Exit Python at the terminal using `quit()` or `exit()`. We will begin by creating your session directory, `session04/`. Then, create a new file called `comments.py`. 
 
 ```
 mkdir session_04
@@ -40,39 +50,54 @@ cd session_04/
 touch comments.py
 ```
 
-Here, you will learn how to use different comment styles in your code. Comments are useful for a number of reasons, but primarily because (1) it helps someone else read and understand your code and (2) it helps the future *you* understand the code you wrote. Organization is key when coding, so comments are a really easy way to facilitate this.
+Here, you will learn how to use different comment styles in your code. Comments are useful for a number of reasons, but primarily because (1) it helps someone else read and understand what your code is doing and (2) it helps the future *you* understand the code you wrote. Organization is key when coding, so comments are a really easy way to facilitate this.
 
 ### Inline Comments
 
-One type of comment you can write is an inline comment. This is a comment that occurs in the same line as code that is being run. To add a comment, we use the `#` symbol. Everything after the `#` is interpreted as a comment in Python, so it does not get run. Although you do not have to understand the Python code here, I'd like you to see what an inline comment looks like. This is what our code looks like:
+One type of comment you can write is an inline comment. This is a comment that occurs in the same line as code that is being run. To add a comment, we use the `#` symbol. Everything after the `#` is interpreted as a comment in Python, so it does not get read or executed. Add the following code to `comments.py`. Do this using your text editor instead of `nano`.
 
 ```
-for i in range(1,5):
-	print(f'I am in for-loop iteration: {i}')
-	print("Notice the comments do not print")
-
+print("Here is an example of an inline comment") # Inline comment
 ```
 
-And this is what it looks like when we add inline comments (add this code block to `comments.py`)
+Run this at the command line.
 
 ```
-for i in range(1,5):
-	print(f'I am in for-loop iteration: {i}') # Print the number in the current iteration
-	print("Notice the comments do not print") # Here is another inline comment that does not print
+python3 comments.py
 ```
+
+Notice that the output is:
+
+```
+Here is an example of an inline comment
+```
+
+Here, we see that our comment does not get printed.
 
 ### Single Line Comments
 
 While inline comments are helpful, I personally have a preference for single line comments. This acts almost like a header, saying something like:
 
 ```
-# The following code carries out function X
-def function_x()
-	print("This function only prints this statement")
+# Print my name
+print("Viki")
 ```
 
-It seems more organized, keeping a nice separation between commentary and functional code.
+Add this code with your name to `comments.py` and rerun it. The output should now also print out your name. The reason I prefer single line comments is because it seems more organized. It keeps a nice separation between commentary and functional code, so you don't get overwhelmed looking at your code.
+
+#### The 80-Character Line Limit
+
+One of the other reasons I prefer single line comments is because it keeps your lines shorter. Historically, computer terminals could only display 25 rows and 80 columns of text on screen at once. Any lines that were longer were just cut out of sight. Thus, old programmers split up long lines of code so that none exceeded 80 characters. It isn't relevant anymore, but it still looks neater, as you won't have unusually long code lines. It has also become a convention/artifact of old coding. Essentially, it doesn't *really* matte, but who doesn't want nice looking code?
+
+[Source](https://richarddingwall.name/2008/05/31/is-the-80-character-line-limit-still-relevant/)
 
 ### Multi-Line Comments
+
+I find two uses for multi-line comments.
+
+1. Have a comment block
+2. Prevent draft code from running
+
+Let's start with a comment block. Sometimes I like providing a brief description on how to execute code before running it
 
 
