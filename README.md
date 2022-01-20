@@ -49,6 +49,17 @@ Recording: https://youtu.be/uOv00Z2nxUg
 * Python at the Command Line
 * Python Scripts
 
+## Session_04
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/session4.md
+
+Recording: TBD
+
+* Text Editors
+* The `print()` Function
+* Comments in Python
+* Variables
+
 __________________________________
 
 ## Topic Bank
