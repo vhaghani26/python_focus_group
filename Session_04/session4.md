@@ -50,6 +50,12 @@ cd session_04/
 touch comments.py
 ```
 
+Using your text editor, add the interpreter directive to the beginning of your `comments.py` file:
+
+```
+#!/usr/bin/env python3
+```
+
 Here, you will learn how to use different comment styles in your code. Comments are useful for a number of reasons, but primarily because (1) it helps someone else read and understand what your code is doing and (2) it helps the future *you* understand the code you wrote. Organization is key when coding, so comments are a really easy way to facilitate this.
 
 ### Inline Comments
@@ -181,21 +187,95 @@ for pet in pet_names:
 
 Run the script again. Notice that we no longer see the numbers 1-20. While the use of comment blocks may be less frequent in completed code, it is very helpful when drafting code or troubleshooting since it lets you focus on one part at a time.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Push your changes to GitHub using terminal commands or GitHub desktop.
 
 ## Variables
 
+When coding, you will likely generate and store lots of information. In order to store the information, we can assign it to a variable. There are a few things we need to know about variables in Python:
 
+* Python does not have a command for declaring a variable. The variable is created the moment you first assign a value to it using the assignment operator: `=`
+* You can assign any data type to a variable (we will talk more about data types later)
+* Variable names should not contain any spaces (spaces are usually replaced with underscores, which is the case with the variable: pet_names)
+* Variable names must begin with a letter or the underscore character (a variable name cannot star with a number)
+* Variable names can only contain alpha-numeric characters and underscores (A-z, 0-9, and _)
+* Variables are case-sensitive (a and A are different variables)
+
+In your session directory, create a new file called `variables.py`. We will demonstrate some examples of legal and illegal variable names. Put the following code in your `variables.py` file:
+
+```
+#!/usr/bin/env python3
+
+
+# Illegal variable names
+1animal = "Snake"
+an-animal = "Dog"
+an animal = "Cat"
+
+# Legal variable names
+ananimal = "Budgie"
+an_animal = "Iguana"
+_an_animal = "Gecko"
+anAnimal = "Owl"
+AnAnimal = "Fish"
+ANANIMAL = "Bunny"
+an_animal_1 = "Guinea Pig"
+```
+
+Notice how we are using comments to tell ourselves more information about the code. Now, try running the script:
+
+```
+python3 variables.py
+```
+
+You should get an invalid syntax error. Why? Because our variables are illegal! We cannot use that syntax for our variable names. Now, comment out the entire "illegal variables" section and try rerunning your script.
+
+```
+'''
+# Illegal variable names
+1animal = "Snake"
+an-animal = "Dog"
+an animal = "Cat"
+'''
+
+# Legal variable names
+ananimal = "Budgie"
+an_animal = "Iguana"
+_an_animal = "Gecko"
+anAnimal = "Owl"
+AnAnimal = "Fish"
+ANANIMAL = "Bunny"
+an_animal_1 = "Guinea Pig"
+```
+
+When you rerun the script, you should not get an error. You might also be a little shocked to see that you also have no outputs. This is because we did not put anything in our script that gives us an output. Let's try calling and printing on of our variables:
+
+```
+# Legal variable names
+ananimal = "Budgie"
+an_animal = "Iguana"
+_an_animal = "Gecko"
+anAnimal = "Owl"
+AnAnimal = "Fish"
+ANANIMAL = "Bunny"
+an_animal_1 = "Guinea Pig"
+
+print(an_animal_1)
+```
+
+Rerun your script. You should see the output "Guinea Pig." One thing that's great about variables is that they can be changed! Let's say you've decided you don't like "Guinea Pigs" as part of your list. Change it to another animal:
+
+```
+an_animal_1 = "Bear"
+
+print(an_animal_1)
+```
+
+Rerun your script. Now your output should be "Bear." 
+
+**Note**: Although it isn't a strict convention, and certainly not necessary for early/personal coding, there is a convention that variables that are completely capitalized represent global/absolute values (i.e. things that do not change anywhere in the script; variable is the same throughout the script) and lowercase variables can repesent dynamic values. This becomes more important when developing software, but there is no need to do this or worry about it any time soon. Personally, I just stick to using all lowercase letters separated by underscores.
+
+## Exit Ticket: Update README.md and Git Push
+
+Using a similar style from last week, update your README.md in `python_focus_group/`. Once you have finished for the day, push all of your stuff to GitHub. 
+
+Congratulations, you finished Session 4!
