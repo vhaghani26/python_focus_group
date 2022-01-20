@@ -65,10 +65,6 @@ https://www.w3schools.com/python/python_datatypes.asp
 
 ## Type Casting
 
-## The `print()` Function
-
-(see Python notes from IBM course)
-
 ## Escape Sequences
 
 ## Python Variables
