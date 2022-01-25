@@ -49,6 +49,23 @@ alias pfg="cd your/path/to/python_focus_goup/" # Use pfg to change into python_f
 
 To get your path to `python_focus_group/`, you can navigate to the directory and use `pwd`. Save your file and close it. Then, restart your terminal (close it and open a new one) so that the commands get executed when it restats. 
 
-## Data Types
+## Data Types in Python
+
+Go to `python_focus_group/` (you can now just type `pfg` to do so!). Create a new session directory, enter it, and make a file called `data_types.py`:
+
+```
+pfg
+mkdir session_05
+cd session_05
+touch data_types.py
+```
+
+Using your text editor, open `data_types.py`. You can use this file to take notes on the data types. Remember you can include comments in addition to your executable code.
+
+
+
+
+https://www.w3schools.com/python/python_datatypes.asp
+
 
 ## Type Casting
