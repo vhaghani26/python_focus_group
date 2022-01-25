@@ -66,10 +66,6 @@ __________________________________
 
 All sections below are topics I plan to integrate into sessions.
 
-## Aliasing (in .bashrc/.profile)
-
-
-
 ## Data Types in Python
 
 https://www.w3schools.com/python/python_datatypes.asp
@@ -77,8 +73,6 @@ https://www.w3schools.com/python/python_datatypes.asp
 ## Type Casting
 
 ## Escape Sequences
-
-## Python Variables
 
 ## Python Expressions
 
