@@ -53,7 +53,7 @@ Recording: https://youtu.be/uOv00Z2nxUg
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/session4.md
 
-Recording: TBD
+Recording: NA
 
 * Text Editors
 * The `print()` Function
