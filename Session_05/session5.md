@@ -220,12 +220,33 @@ complicated_stride = string_to_index[0:5:2]
 print(complicated_stride)
 ```
 
+### Assessing String Properties
+
+There are several functions we can use on strings. Another few notable ones are `len()` and `find()`. 
+
+`len()` allows us to learn the length of a string. Using the same "Index Arrays" sample as before, let's figure out the length:
+
+```
+# Length function
+string_to_index = "Index Arrays"
+print(len(string_to_index))
+```
+
+Note that the output is 12. The last index is 11, but since Python starts with an index of 0, there are 12 characters in the string - not 11. This function becomes more helpful when working with other data types, but I just wanted to demonstrate how we can work with strings.
+
+`find()` allows us to find sub-strings. The argument of the function is the sub-string you would like to find. The output is the first index of the sequence. For example, if we want to find what index "Arrays" begins at, we would use:
+
+```
+# Find function
+start_index_Arrays = string_to_index.find("Arrays")
+print(start_index_Arrays)
+```
+
+The output is 6, which is the index we expect based on Python indexing of strings.
+
 ### Concatenate Strings
 
 ### String Formatting
-
-### More on String Operations
-
 
 
 
