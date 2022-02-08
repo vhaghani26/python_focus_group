@@ -121,7 +121,39 @@ print(r"//*/*//**")
 
 This actually prints `//*/*//**`. This mimics directory paths, and can come in handy when you run into path issues reading in data down the line.
 
+[Source](https://wiki.c2.com/?RawStrings)
+
 ## String Operations
+
+When working with strings, you can use certain operations to manipulate them. Here are some functions you can use:
+
+* `upper()` turns the string uppercase
+* `title()` turns the string title case
+* `lower()` turns the string lowercase
+* `replace()` replaces part of the string
+
+Now let's put these functions to use:
+
+```
+# String operations
+original_str = "Viki is teaching me how to code in Python"
+
+upper_str = original_str.upper()
+print(upper_str)
+
+title_str = original_str.title()
+print(title_str)
+
+lower_str = original_str.lower()
+print(lower_str)
+```
+
+All of the above functions transform the case of the original string. We can also replace parts of the string. Let's replace my name in `original_str`:
+
+```
+replace_str = original_str.replace("Viki", "The internet")
+print(replace_str)
+```
 
 ### Stripping Spaces
 
