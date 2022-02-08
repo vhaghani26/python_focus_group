@@ -91,6 +91,28 @@ Numeric types are data types containing numbers.
 
 #### Integers
 
+Just like we learn in math class, an integer is any whole number. We cannot have a decimal at all for Python integers, as even something like `1.0` is interpreted as a different data type. Let's take a look at some examples of integers:
+
+```
+# Integers
+int1 = 1
+int2 = 9
+int3 = 42
+int4 = 558
+int5 = 21543215
+```
+
+Python language is very delicate. This is incredibly helpful in most cases, but it also means that you have strict guidelines to adhere to. For example, `21543215` and `21,543,215` are different data types. At the end of your "Integers" section, add the following:
+
+```
+not_int = 21,543,215
+
+print(int5, type(int5))
+print(not_int, type(not_int))
+```
+
+Notice that when we add commas, it is now considered a tupple, which is a sequence and not a numeric type anymore. Therefore, if you want to use an integer or set a variable to some integer value, use ONLY numeric characters (0-9).
+
 #### Floats
 
 #### Complexes
