@@ -60,6 +60,14 @@ Recording: NA
 * Comments in Python
 * Variables
 
+## Session_05
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/session5.md
+
+Recording: TBD
+
+* Aliasing (in .bashrc/.profile)
+
 __________________________________
 
 ## Topic Bank
