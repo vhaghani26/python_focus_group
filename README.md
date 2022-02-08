@@ -68,35 +68,14 @@ Recording: TBD
 
 * Aliasing (in .bashrc/.profile)
 * Text Types (Strings)
-* Numeric Types (Integers, Floats, Complexes)
 
 __________________________________
+
+* Numeric Types (Integers, Floats, Complexes)
 
 ## Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
-
-## Escape Sequences
-
-## Python Expressions
-
-https://docs.python.org/3/library/stdtypes.html
-
-## Comparison Operations
-
-## Simple Statistics with Lists of Numbers
-
-Note that we will discuss lists in more detail next session
-
-## String Operations
-
-### Stripping Spaces
-
-### Indexing Strings
-
-### Concatenate Strings
-
-### String Formatting
 
 ## Stride
 

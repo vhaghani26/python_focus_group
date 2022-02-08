@@ -10,7 +10,113 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ## Data Types in Python
 
-Last week, we started learning about text and numeric types. This week, we will continue diving into different Python data types.
+Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into different Python data types.
+
+### Numeric Types (Integers, Floats, and Complexes)
+
+Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` for this section. Use your text editor to edit the file.
+
+#### Integers
+
+Just like we learn in math class, an integer is any whole number. We cannot have a decimal at all for Python integers, as even something like `1.0` is interpreted as a different data type. Let's take a look at some examples of integers:
+
+```
+#!/usr/bin/env python3
+
+# Integers
+int1 = 1
+int2 = 9
+int3 = 42
+int4 = 558
+int5 = 21543215
+```
+
+Python language is very delicate. This is incredibly helpful in most cases, but it also means that you have strict guidelines to adhere to. For example, `21543215` and `21,543,215` are different data types. At the end of your "Integers" section, add the following:
+
+```
+not_int = 21,543,215
+
+print(int5, type(int5))
+print(not_int, type(not_int))
+```
+
+Notice that when we add commas, it is now considered a tupple, which is a sequence and not a numeric type anymore. Therefore, if you want to use an integer or set a variable to some integer value, use ONLY numeric characters (0-9).
+
+#### Floats
+
+Similar to an integer, a float is a numeric type. However, floats differ in that they allow us to use decimals and fractions, so we are not limited to using whole numbers when using floats.
+
+```
+# Floats
+float1 = 1.0
+float2 = 3.4
+float3 = 74.3
+float4 = 9.99999999999
+float5 = 1844384.85262
+float6 = 3/4
+float7 = 9/16
+```
+
+#### Complexes
+
+In addition to handling real numbers, Python is also capable of handling complex (i.e. imaginary) numbers. I don't anticipate that you will need to use this down the line, so I'll keep it simple. It's okay if it doesn't fully make sense to you. The goal is to expose you to its existence so that if you do need it, you'll be aware of it.
+
+Complex numbers have a real and imaginary part, which are each a float. To extract these parts from a complex number, we can use `.real` and `.imag`. Appending `j` or `J` to a numeric literal yields an imaginary number (a complex number with a zero real part) that you can add to an integer or float to get a complex number with real and imaginary parts.
+
+```
+# Complexes
+
+# Simple Complexes
+comp1 = 2J
+comp2 = 7j
+
+# Complicated Complexes
+
+# Initialize real part
+x = 5
+
+# Initialize imaginary part
+y = 3
+
+# Convert x and y into a complex and store it in z
+z = complex(x, y)
+
+# View the real and imaginary parts:
+print("The real part of the complex number is: ", z.real)
+print("The imaginary part of the complex number is: ", z.imag)
+
+# Confirm that all are complexes:
+print(comp1, type(comp1))
+print(comp2, type(comp2))
+print(z, type(z))
+```
+
+Notice that in our output, the complex component for `z` is represented as `3j` in our output.
+
+Sources
+* https://www.geeksforgeeks.org/complex-numbers-in-python-set-1-introduction/
+* https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
+
+We'll go ahead and take a break here and dive into some more complicated data types next week. 
+
+## Python Expressions
+
+https://docs.python.org/3/library/stdtypes.html
+
+## Comparison Operations
+
+## Simple Statistics with Lists of Numbers
+
+Note that we will discuss lists in more detail next session
+
+
+
+
+
+
+
+
+
 
 ### Sequence Types (List, Tuples, Ranges)
 
