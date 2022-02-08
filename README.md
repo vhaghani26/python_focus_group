@@ -74,8 +74,6 @@ __________________________________
 
 All sections below are topics I plan to integrate into sessions.
 
-## Type Casting
-
 ## Escape Sequences
 
 ## Python Expressions
