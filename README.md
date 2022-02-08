@@ -67,6 +67,8 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/ses
 Recording: TBD
 
 * Aliasing (in .bashrc/.profile)
+* Text Types (Strings)
+* Numeric Types (Integers, Floats, Complexes)
 
 __________________________________
 
