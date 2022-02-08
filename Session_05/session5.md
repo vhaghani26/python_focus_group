@@ -192,9 +192,12 @@ We can also do a range of letters
 ```
 first_word = string_to_index[0:5]
 print(first_word)
+
+last_word = string_to_index[6:12]
+print(last_word)
 ```
 
-Notice that in the above example, we start with 0 and end at 5. Why not 4? We'll expand more when we get to the `range()` function. To quickly explain, it does not use the formatting `[start, end]`. It instead uses something more like `[start index, total elements]`. In the above example, we started at the index 0 and wanted the first 5 elements, so our range is `[0:5]`. A standard rule of thumb if you want to just think about it in terms of indexes is to use `[start index, end index + 1]`. 
+Notice that in the first example above, we start with 0 and end at 5. Why not 4? We'll expand more when we get to the `range()` function. To quickly explain, it does not use the formatting `[start, end]`. It instead uses something more like `[start index, total elements]`. In the above example, we started at the index 0 and wanted the first 5 elements, so our range is `[0:5]`. A standard rule of thumb if you want to just think about it in terms of indeces is to use `[start index, end index + 1]`. 
 
 Another note on Python convention is that the index `-1` represents the last index. We can access the last index like so:
 
@@ -274,15 +277,87 @@ print(full_name)
 
 ### String Formatting
 
+Notice above that we had to add the strings. There are other ways Python has developed for us to work with different string variables. This is something I use VERY frequently.
 
+Previously, we have used commas in our print statements:
 
+```
+# String formatting
+first_name = "Viki"
+last_name = "Haghani"
+print(first_name, last_name)
+```
 
+But what if we want to control the way the text looks? What if we want to add words, spaces, or punctuation in between? Well, there are three string formatting methods that can be employed.
 
+#### Method 1: `printf()`
 
+`printf()` is the name of an old C function. The syntax is well-known among programmers, but looks odd upon first glance.
 
+```
+txt = "Nucleus"
+num = 3/11
 
+# Method 1: printf()
+print('%s %.3f' % (txt, num))
+```
 
+The `%s` indicates that the first element is a string. The `%.3f` means two things. The `3` indicates that we want to display three numbers after the decimal point. The `f` indicates that the second element is a float (more on floats later). We can also change notations even more, including changing things to an integer (`%d`) or to scientific notation (`%e`). Remember that the order of our instructions is respective to the order of our arguments:
 
+```
+print('%s %.3f %d %e' % (txt, num, 2.1, .1))
+```
+
+Now for the fun reveal: this is ugly! It works, but it's more complicated than simply printing the arguments after variables have been assigned (it's more useful for more complicated situations). I've NEVER had to use this string format. I prefer f-strings (Method 3).
+
+#### Method 2: `str.format()`
+
+The `format()` method is a powerful way to control string formatting. Let's see: 
+
+```
+# Method 2: str.format()
+print('{} {}'.format(txt, num))
+print('{} {:.3f}'.format(txt, num))
+```
+
+The first line here does not have us manipulate any formatting since nothing is between the `{}` entries. In the second line, we specify that we want our variable `num` to display as a 3 decimal point float. Notice that they print out differently. Another fun reveal: this is also ugly! It's complicated and irritating to use. This brings us to my favorite method, which is also the most intuitive: f-strings.
+
+#### Method 3: f-strings
+
+F-strings play into a larger type of string manipulation referred to as string interpolation. String interpolation refers to the idea that there are variables (placeholders) inside a string literal. This allows us to put python code inside a string directly in a fairly straightforward manner:
+
+```
+# Method 3: f-strings
+first_name = "Viki"
+last_name = "Haghani"
+
+my_first_f_string = f'My first name is {first_name} and my last name is {last_name}. That makes my full name {first_name + " " + last_name}'
+print(my_first_f_string)
+```
+
+To mimic the above example regarding decimal manipulation, we can do the following:
+
+```
+num = 3/11
+
+decimal_manip = f'The value of 3/11 is {num}. If we round to three decimal places, that makes 3/11 = {num:.3f}'
+print(decimal_manip)
+```
+
+The general formatting with f-strings is that you have single or double quotes with an f at the beginning:
+
+```
+f""
+f''
+```
+
+And you put your string in the middle of the quotations. Anything that is contained within the brackets (`{}`) is carrying out Python code or calling on a variable. This is much more straightforward in my opinion, and why I recommend f-strings for string formatting. This is extremely helpful when troubleshooting because you can do something like `print(f'My data frame looks like: {data frame}')`, which allows you to visualize and annotate different parts of your code effectively. It also becomes extremely helpful when you get to troubleshooting for-loops (more on this later). Ultimately, this is something I recommend you use in your code.
+
+## thing.function() or function(thing)?
+
+One thing you'll notice is that the functions we use are a little inconsistent here. For example, we use `thing.upper()` and then we use `len(thing)`. Why is `thing` on the outside in one and on the inside for the other? It depends on if the function is using object syntax. In Python, strings are considered objects. When using object syntax, the function comes after the variable. For `upper()` and `lower()`, these are functions specific to strings, and therefore use object syntax (`thing.function()`). `len()` is not specific to strings. It can be applied to other data types, such as lists, and therefore is not specific to an object. In that case, the function does NOT use object syntax, and it instead uses normal function syntax (`function(thing)`). 
+
+Sometimes it is hard to differentiate, so if in doubt, Google it!
 
 ## Exit Ticket
 
