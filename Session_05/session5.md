@@ -171,6 +171,11 @@ print(left_strip)
 
 ### Indexing Strings
 
+Each element of a string can be accessed using an index. It is helpful to think of a string as an ordered sequence. Each element in the sequence is accessed using its number. In Python, indexing defaults to starting at 0, meaning 0 is the first index. It looks something like this:
+
+| V | i | k | i |   | H | a | g | h | a | n  |  i |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+
 ### Concatenate Strings
 
 ### String Formatting
