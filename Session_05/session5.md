@@ -157,6 +157,18 @@ print(replace_str)
 
 ### Stripping Spaces
 
+We can remove the white space from the string on the right or left side using `rstrip()` and `lstrip()`. 
+
+```
+# Stripping spaces
+spaced_out = " M y N a m e I s V i k i "
+right_strip = spaced_out.rstrip()
+left_strip = spaced_out.lstrip()
+
+print(right_strip)
+print(left_strip)
+```
+
 ### Indexing Strings
 
 ### Concatenate Strings
