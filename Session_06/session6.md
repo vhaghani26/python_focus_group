@@ -126,6 +126,8 @@ Note that we will discuss lists in more detail next session
 
 ### Boolean Types (Boolean)
 
+A Boolean value can take two on two values: True or False.
+
 ### Binary Types (Bytes, Bytearray, Memoryview)
 
 ## Getting the Data Type
