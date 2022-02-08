@@ -242,9 +242,35 @@ start_index_Arrays = string_to_index.find("Arrays")
 print(start_index_Arrays)
 ```
 
-The output is 6, which is the index we expect based on Python indexing of strings.
+The output is 6, which is the index we expect based on Python indexing of strings. If the sub-string is not in the string, the output is -1. Let's see:
+
+```
+not_found = string_to_index.find("I'm not here")
+print(not_found)
+```
+
+### Replicating String Elements
+
+We can replicate strings using multiplication (`*`):
+
+```
+# Replicating strings
+my_bird = "Bird"
+total_birds = my_bird * 3
+print(total_birds)
+```
 
 ### Concatenate Strings
+
+We can also concatenate strings using `+`:
+
+```
+# Concatenating strings
+first_name = "Viki"
+last_name = "Haghani"
+full_name = first_name + last_name
+print(full_name)
+```
 
 ### String Formatting
 
