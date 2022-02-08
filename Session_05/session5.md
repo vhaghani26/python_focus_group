@@ -347,11 +347,12 @@ print(decimal_manip)
 The general formatting with f-strings is that you have single or double quotes with an f at the beginning:
 
 ```
-f""
-f''
+my_variable = "variable"
+f"Some string with my {my_variable}"
+f'Some string with my {my_variable}'
 ```
 
-And you put your string in the middle of the quotations. Anything that is contained within the brackets (`{}`) is carrying out Python code or calling on a variable. This is much more straightforward in my opinion, and why I recommend f-strings for string formatting. This is extremely helpful when troubleshooting because you can do something like `print(f'My data frame looks like: {data frame}')`, which allows you to visualize and annotate different parts of your code effectively. It also becomes extremely helpful when you get to troubleshooting for-loops (more on this later). Ultimately, this is something I recommend you use in your code.
+And you put your string in the middle of the quotations. Anything that is contained within the curly brackets `{}` is carrying out Python code or calling on a variable. This is much more straightforward in my opinion, and why I recommend f-strings for string formatting. This is extremely helpful when troubleshooting because you can do something like `print(f'My data frame looks like: {data frame}')`, which allows you to visualize and annotate different parts of your code effectively. It also becomes extremely helpful when you get to troubleshooting for-loops (more on this later). Ultimately, this is something I recommend you use in your code.
 
 ## thing.function() or function(thing)?
 
