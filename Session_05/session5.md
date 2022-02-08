@@ -69,19 +69,19 @@ Using your text editor, open `data_types.py`. You can use this file to take note
 
 [This](https://www.w3schools.com/python/python_datatypes.asp) is some of the reference material I am using for the Python data types in conjunction with the sources I mentioned at the beginning of the document.
 
-### Text Types
+### Text Types (Strings)
 
-### Numeric Types
+### Numeric Types (Integers, Floats, and Complexes)
 
-### Sequence Types
+### Sequence Types (List, Tuples, Ranges)
 
-### Mapping Types
+### Mapping Types (Dictionaries)
 
-### Set Types
+### Set Types (Set, Frozenset)
 
-### Boolean Types
+### Boolean Types (Boolean)
 
-### Binary Types
+### Binary Types (Bytes, Bytearray, Memoryview)
 
 ## Getting the Data Type
 
@@ -105,20 +105,20 @@ type13 = bytearray(5)
 type14 = memoryview(bytes(5))
 
 # Check data types
-print(type1, ":", type(type1))
-print(type2, ":", type(type2))
-print(type3, ":", type(type3))
-print(type4, ":", type(type4))
-print(type5, ":", type(type5))
-print(type6, ":", type(type6))
-print(type7, ":", type(type7))
-print(type8, ":", type(type8))
-print(type9, ":", type(type9))
-print(type10, ":", type(type10))
-print(type11, ":", type(type11))
-print(type12, ":", type(type12))
-print(type13, ":", type(type13))
-print(type14, ":", type(type14))
+print(type1, type(type1))
+print(type2, type(type2))
+print(type3, type(type3))
+print(type4, type(type4))
+print(type5, type(type5))
+print(type6, type(type6))
+print(type7, type(type7))
+print(type8, type(type8))
+print(type9, type(type9))
+print(type10, type(type10))
+print(type11, type(type11))
+print(type12, type(type12))
+print(type13, type(type13))
+print(type14, type(type14))
 ```
 
 Note that among the data types above, I've only personally had to use strings, integers, floats, lists, ranges, dictionaries, and Boolean types. Your experiences may differ, so not all of the displayed types above may be necessary, but it's helpful to be aware that they exist.
@@ -159,12 +159,15 @@ Not all type conversions are compatible (e.g. `int("Hi")`). When you want to cha
 
 ```
 # Functions for type casting
+
 # Turn the string "3" into an integer
 my_int = int("3")
 print(my_int, type(my_int))
+
 # Turn the number 53 into a string
 my_str = str(53)
 print(my_str, type(my_str))
+
 # Turn the integer 7 into a float
 my_float = float(7)
 print(my_float, type(my_float))
