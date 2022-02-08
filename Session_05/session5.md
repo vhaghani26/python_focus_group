@@ -115,6 +115,19 @@ Notice that when we add commas, it is now considered a tupple, which is a sequen
 
 #### Floats
 
+Similar to an integer, a float is a numeric type. However, floats differ in that they allow us to use decimals and fractions, so we are not limited to using whole numbers when using floats.
+
+```
+# Floats
+float1 = 1.0
+float2 = 3.4
+float3 = 74.3
+float4 = 9.99999999999
+float5 = 1844384.85262
+float6 = 3/4
+float7 = 9/16
+```
+
 #### Complexes
 
 ### Sequence Types (List, Tuples, Ranges)
