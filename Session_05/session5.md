@@ -54,7 +54,7 @@ To get your path to `python_focus_group/`, you can navigate to the directory and
 
 ## Data Types in Python
 
-[Last week](https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/session4.md), we learned about variables. As a brief reminder, we can store several data types in a Python variable. Today, we're going to learn more about those data types.  
+[Last week](https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/session4.md), we learned about variables. As a brief reminder, we can store several data types in a Python variable. Today, we're going to learn more about those data types. There is a lot we can dive into for each data type, so today is meant to serve as an overview for these different data types. In the coming sessions, we will focus more heavily on individual data types to get a better understanding of how we can use these data types in our code.
 
 Go to `python_focus_group/` (you can now just type `pfg` to do so!). Create a new session directory, enter it, and make a file called `data_types.py`:
 
@@ -71,7 +71,29 @@ Using your text editor, open `data_types.py`. You can use this file to take note
 
 ### Text Types (Strings)
 
+A string is a data type that is a sequence of characters. Even though it can contain numbers, the way a string is formatted tells Python to interpret those characters as characters rather than numbers. Let's take a look!
+
+```
+# Strings
+str1 = "Hello world"
+str2 = "Spring is coming!"
+str3 = "My dog ate 3 slices of my pizza"
+str4 = "I can't believe my dog did that"
+```
+
+Notice that we have an apostrophe, a number, and even an exclamation mark in the above statements. Because we follow string formatting (flanking the outside of our string with single or double quotes), Python knows that we are inputting characters inside and that it should interpret it as such. 
+
+Note that there is a `str()` function. We do not want to say anything like `str = x`, as this will override the `str()` function and give errors. For this reason, I will add numbers or prefixes to my variables. I used numbers in the above example. If I only have one variable, I would do something like `my_str` instead. This helps prevent overriding functions while also still having informative variable names.
+
 ### Numeric Types (Integers, Floats, and Complexes)
+
+Numeric types are data types containing numbers.
+
+#### Integers
+
+#### Floats
+
+#### Complexes
 
 ### Sequence Types (List, Tuples, Ranges)
 
@@ -181,6 +203,6 @@ Overall, here's a summary of some of the type casting functions:
 
 ## Exit Ticket
 
-Finally, make sure to update your `README.md` and Git push all your work from this session.
+Update your `README.md` and Git push all your work from this session.
 
 Congratulations, you finished Session 5!
