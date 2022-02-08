@@ -1,4 +1,4 @@
-# Session 6: 
+# Session 6: Strings and String Operations
 
 By: Viktoria Haghani
 
