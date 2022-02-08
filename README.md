@@ -78,6 +78,8 @@ All sections below are topics I plan to integrate into sessions.
 
 ## Python Expressions
 
+https://docs.python.org/3/library/stdtypes.html
+
 ## Comparison Operations
 
 ## Simple Statistics with Lists of Numbers
