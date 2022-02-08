@@ -123,7 +123,7 @@ This actually prints `//*/*//**`. This mimics directory paths, and can come in h
 
 [Source](https://wiki.c2.com/?RawStrings)
 
-## String Operations
+## Manipulating Strings
 
 When working with strings, you can use certain operations to manipulate them. Here are some functions you can use:
 
@@ -171,15 +171,62 @@ print(left_strip)
 
 ### Indexing Strings
 
-Each element of a string can be accessed using an index. It is helpful to think of a string as an ordered sequence. Each element in the sequence is accessed using its number. In Python, indexing defaults to starting at 0, meaning 0 is the first index. It looks something like this:
+Each element of a string can be accessed using an index. It is helpful to think of a string as an ordered sequence. Each element in the sequence is accessed using its number (including spaces). In Python, indexing defaults to starting at 0, meaning 0 is the first index. It looks something like this:
 
-| V | i | k | i |   | H | a | g | h | a | n  |  i |
+| I | n | d | e | x |   | A | r | r | a | y  |  s |
 |---|---|---|---|---|---|---|---|---|---|----|----|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+
+So to access the first A in "Arrays", we can use the following:
+
+```
+# Indexing strings
+string_to_index = "Index Arrays"
+
+first_A = string_to_index[6]
+print(first_A)
+```
+
+We can also do a range of letters
+
+```
+first_word = string_to_index[0:5]
+print(first_word)
+```
+
+Notice that in the above example, we start with 0 and end at 5. Why not 4? We'll expand more when we get to the `range()` function. To quickly explain, it does not use the formatting `[start, end]`. It instead uses something more like `[start index, total elements]`. In the above example, we started at the index 0 and wanted the first 5 elements, so our range is `[0:5]`. A standard rule of thumb if you want to just think about it in terms of indexes is to use `[start index, end index + 1]`. 
+
+Another note on Python convention is that the index `-1` represents the last index. We can access the last index like so:
+
+```
+last_index = string_to_index[-1]
+print(last_index)
+```
+
+### Strides
+
+We can also use a stride to index strings. A stride value indicates that we want to select every Xth position. To demonstrate this, let's try this:
+
+```
+# Strides
+every_2nd_value = string_to_index[::2]
+print(every_2nd_value)
+```
+
+We can also get more complicated. We can specify what values we want to start and end at. Let's select every 2nd value starting at 0 and ending at 5:
+
+```
+complicated_stride = string_to_index[0:5:2]
+print(complicated_stride)
+```
 
 ### Concatenate Strings
 
 ### String Formatting
+
+### More on String Operations
+
+
 
 
 
