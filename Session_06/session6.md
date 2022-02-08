@@ -1,4 +1,4 @@
-# Session 6: 
+# Session 6: Lab - Work with string operations
 
 By: Viktoria Haghani
 
