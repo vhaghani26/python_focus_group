@@ -102,6 +102,8 @@ Sources
 Create a new file called `type_casting.py`. Most times that you assign a Python variable with some type of data, Python is able to assign a data type to that variable. In some instances, there may be incompatibilities (which result in the type error I mentioned earlier) that require manual fixes. For example, consider the following:
 
 ```
+#!/usr/bin/env python3
+
 # Assign numbers as an integer, float, and string
 a = 1
 b = 1.5
@@ -155,23 +157,53 @@ Overall, here's a summary of some of the type casting functions:
 
 ## Python Expressions
 
-Now that you've learned about numeric types, we'll learn what we can do with numeric types!
+Now that you've learned about numeric types, we'll learn what we can do with numeric types! Doing math in Python requires special syntax so that the correct mathematical operations are carried out. Here is a table of the different operations that can be used in Python (including the type casting data previously discussed):
+
+| Operation | Result | 
+|-----------|--------|
+| `x + y` | sum of x and y |
+| `x - y` | difference of x and y |
+| `x * y` | product of x and y |
+| `x / y` | quotient of x and y |
+| `x // y` | floored quotient of x and y |
+| `x % y` | remainder of `x/y` |
+| `-x` | x negated |
+| `+x` | x unchanged |
+| `abs(x)` | absolute value or magnitude of x |
+| `int(x)` | x converted to integer |
+| `float(x)` | x converted to float |
+| `complex(re, im)` | a complex number with real part *re*, imaginary part *im* (defaults to 0) |
+| `c.conjugate()` | conjugate to the complex number c |
+| `divmod(x, y)` | the pair `(x // y, x % y)` |
+| `pow(x, y)` | x to the power y |
+| `x ** y` | x to the power y |
+
+There are also more complicated operations that we will not cover here. You can take a look at [this](https://docs.python.org/3/library/stdtypes.html) to read more if you are interested.
+
+Now we'll take a look at how to use these operations. Make a new file called `expressions.py` for this topic.
+
+```
+#!/usr/bin/env python3
+
+# Set miscellaneous variables to use in expressions
+a = 10
+b = 5
+
+# Find the sum of a and b (use f-string formatting)
+print(f'The sum of {a} and {b} is {a + b}')
+
+# Find the difference between a and b
+print(f'The difference between {a} and {b} is {a - b}')
+
+# Find the product of a and b
+print(f'The product of {a} and {b} is {a * b}')
+
+# Find the quotient of a and b
+print(f'The quotient of {a} and {b} is {a/b}')
+
+```
 
 
-https://docs.python.org/3/library/stdtypes.html
-
-## Comparison Operations
-
-| Operation | Meaning |
-|-----------|---------|
-| `<` | strictly less than |
-| `<=` | less than or equal |
-| `>` | strictly greater than |
-| `>=` | greater than or equal |
-| `==` | equal (since only one `=` is a variable assignment) |
-| `!=` | not equal |
-| `is` | object identity |
-| `is not` | negated object identity |
 
 
 ## Simple Statistics with Lists of Numbers
