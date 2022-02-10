@@ -69,15 +69,20 @@ Recording: TBD
 * Aliasing (in .bashrc/.profile)
 * Text Types (Strings)
 
+## Session_06
+
+Notes: TBD
+
+Recording: TBD
+
+* Numeric Types (Integers, Floats, Complexes) 
+
 __________________________________
 
-* Numeric Types (Integers, Floats, Complexes)
 
 ## Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
-
-## Stride
 
 ## Tuples
 

@@ -1,4 +1,4 @@
-# Session 6: Lab - Work with string operations
+# Session 6: Lab - Numeric Types, Type Casting, and Expressions
 
 By: Viktoria Haghani
 
@@ -10,11 +10,11 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ## Data Types in Python
 
-Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into different Python data types.
+Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into more Python data types.
 
 ### Numeric Types (Integers, Floats, and Complexes)
 
-Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` for this section. Use your text editor to edit the file.
+Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` in a `session_06/` directory. Use your text editor to edit the file.
 
 #### Integers
 
@@ -97,82 +97,9 @@ Sources
 * https://www.geeksforgeeks.org/complex-numbers-in-python-set-1-introduction/
 * https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 
-We'll go ahead and take a break here and dive into some more complicated data types next week. 
-
-## Python Expressions
-
-https://docs.python.org/3/library/stdtypes.html
-
-## Comparison Operations
-
-## Simple Statistics with Lists of Numbers
-
-Note that we will discuss lists in more detail next session
-
-
-
-
-
-
-
-
-
-
-### Sequence Types (List, Tuples, Ranges)
-
-### Mapping Types (Dictionaries)
-
-### Set Types (Set, Frozenset)
-
-### Boolean Types (Boolean)
-
-A Boolean value can take two on two values: True or False.
-
-### Binary Types (Bytes, Bytearray, Memoryview)
-
-## Getting the Data Type
-
-There may be times where it will be helpful to check your data type. This will usually be in response to some sort of type error. To do so, you can use the `type()` function. Let's make some variables containing different data types and determine the types:
-
-```
-# Create variables with different data types
-type1 = "Hello World"
-type2 = 3
-type3 = 7.9
-type4 = 1j
-type5 = ["Dog", "Cat"]
-type6 = ("Dog", "Cat")
-type7 = range(5)
-type8 = {"Name": "Viki", "Age": 23}
-type9 = {"Peach", "Apple", "Strawberry"}
-type10 = frozenset({"Peach", "Apple", "Strawberry"})
-type11 = True
-type12 = b"Hello"
-type13 = bytearray(5)
-type14 = memoryview(bytes(5))
-
-# Check data types
-print(type1, type(type1))
-print(type2, type(type2))
-print(type3, type(type3))
-print(type4, type(type4))
-print(type5, type(type5))
-print(type6, type(type6))
-print(type7, type(type7))
-print(type8, type(type8))
-print(type9, type(type9))
-print(type10, type(type10))
-print(type11, type(type11))
-print(type12, type(type12))
-print(type13, type(type13))
-print(type14, type(type14))
-```
-
-Note that among the data types above, I've only personally had to use strings, integers, floats, lists, ranges, dictionaries, and Boolean types. Your experiences may differ, so not all of the displayed types above may be necessary, but it's helpful to be aware that they exist.
-
 ## Setting the Specific Data Type (AKA Type Casting)
 
-Most times that you assign a Python variable with some type of data, Python is able to assign a data type to that variable. In some instances, there may be incompatibilities (which result in the type error I mentioned earlier) that require manual fixes. For example, consider the following:
+Create a new file called `type_casting.py`. Most times that you assign a Python variable with some type of data, Python is able to assign a data type to that variable. In some instances, there may be incompatibilities (which result in the type error I mentioned earlier) that require manual fixes. For example, consider the following:
 
 ```
 # Assign numbers as an integer, float, and string
@@ -225,3 +152,38 @@ Overall, here's a summary of some of the type casting functions:
 * `int()` is used to convert data into an integer
 * `str()` is used to convert data into a string
 * `float()` is used to convert data into a float
+
+## Python Expressions
+
+Now that you've learned about numeric types, we'll learn what we can do with numeric types!
+
+
+https://docs.python.org/3/library/stdtypes.html
+
+## Comparison Operations
+
+| Operation | Meaning |
+|-----------|---------|
+| `<` | strictly less than |
+| `<=` | less than or equal |
+| `>` | strictly greater than |
+| `>=` | greater than or equal |
+| `==` | equal (since only one `=` is a variable assignment) |
+| `!=` | not equal |
+| `is` | object identity |
+| `is not` | negated object identity |
+
+
+## Simple Statistics with Lists of Numbers
+
+Note that we will discuss lists in more detail next session
+
+
+
+
+
+
+
+
+
+
