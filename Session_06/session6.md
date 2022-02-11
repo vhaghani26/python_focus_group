@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2022-02-08
+Last Updated: 2022-02-11
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -254,6 +254,11 @@ print(exp2)
 
 exp3 = a ** e + d - b * c
 print(exp3)
+
+# Math example
+total_min = 43 + 42 + 57
+total_hr = total_min/60
+print(total_hr)
 ```
 
 Notice that depending on your preference, you can assign Python code snippets to variables and print them directly or print them within the `print()` function. I alternate between the two depending on the complexity of the code I'm writing and whether or not I want any string formatting/string interpolation. 
@@ -279,15 +284,40 @@ A module refers to some Python file containing statements, definitions, function
 
 ```
 #!/usr/bin/env python3
+
+import math
 ```
 
+Run this to ensure that the module is able to load. For module loading, Python uses the convention `import {module}`. These statements typically go at the beginning of the script, which is why I recommended starting a new file. Furthermore, when using a module, you usually call a function/aspect like so: `module_name.function`. Let's implement some other math functions now.
 
+```
+# Use square root for Pythagorean theorem
+a = 3
+b = 4
 
+hyp = math.sqrt(a**2 + b**2)
+print(hyp)
 
+# Use log2
+print(math.log2(0.25))
 
+# Use pi
+print(math.pi)
 
+# Use Euler's number
+print(math.e)
 
+# Use infinity 
+print(math.inf)
 
+# Use factorial
+print(math.factorial(a))
+```
 
+If you're ever doing more complicated math than this, many times there will be modules or libraries available for install. Remember Google (or your preferred search engine) is your friend for bioinformatics!
 
+## Exit Ticket
 
+Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
+
+Congratulations, you finished Session 6! 
