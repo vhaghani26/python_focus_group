@@ -9,6 +9,8 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ### Sequence Types (List, Tuples, Ranges)
 
+## Simple Statistics with Lists of Numbers
+
 ### Mapping Types (Dictionaries)
 
 ### Set Types (Set, Frozenset)
