@@ -188,27 +188,99 @@ Now we'll take a look at how to use these operations. Make a new file called `ex
 # Set miscellaneous variables to use in expressions
 a = 10
 b = 5
+c = 3
+d = -19
+e = 2
+
 
 # Find the sum of a and b (use f-string formatting)
 print(f'The sum of {a} and {b} is {a + b}')
-
-# Find the difference between a and b
-print(f'The difference between {a} and {b} is {a - b}')
-
-# Find the product of a and b
-print(f'The product of {a} and {b} is {a * b}')
-
-# Find the quotient of a and b
-print(f'The quotient of {a} and {b} is {a/b}')
-
 ```
 
+```
+# Find the difference between a and b
+print(f'The difference between {a} and {b} is {a - b}')
+```
 
+```
+# Find the product of a and b
+print(f'The product of {a} and {b} is {a * b}')
+```
 
+```
+# Find the quotient of a and b (a divided by b)
+print(f'The quotient of {a} and {b} is {a/b}')
+```
 
-## Simple Statistics with Lists of Numbers
+```
+# Find the floored quotient of a and c (drops remainder)
+print(f'The floored quotient of {a} and {c} is {a//c}')
+```
 
-Note that we will discuss lists in more detail next session
+```
+# Find the remainder of a divided by c
+# This is referred to as the modulo
+print(f'The remainder of {a} divided by {c} is {a % c}')
+```
+
+```
+# Find negative d
+print(f'When we negate {d}, we get {-d}')
+```
+
+```
+# Find the absolute value of d
+print(f'The absolute value of {d} is {abs(d)}')
+```
+
+```
+# Raise a to the power of c
+print(f'{a} to the power of {c} is {pow(a,c)}')
+```
+
+```
+# Try another way to raise a to the power of c
+print(f'{a} to the power of {c} is {a ** c}')
+```
+
+Python also follows the standard order of operations (PEMDAS). We can observe when we make more complicated expressions:
+
+```
+exp1 = a * e + d
+print(exp1)
+
+exp2 = a * (e + d)
+print(exp2)
+
+exp3 = a ** e + d - b * c
+print(exp3)
+```
+
+Notice that depending on your preference, you can assign Python code snippets to variables and print them directly or print them within the `print()` function. I alternate between the two depending on the complexity of the code I'm writing and whether or not I want any string formatting/string interpolation. 
+
+You can also do math and assignment at the same time. This becomes more helpful in loops (which we will learn in a future session). This is a shorthand notation that we can use. First, you initiate some variable with a value (typically 0, but depends on the case). Then, you use the initiated variable and carry out some manipulation that uses the previous variable value. Then, this new value overwrites the variable value. This is like a baby version of recursive functions, which essentially just means the previous value is required to compute the new value.
+
+```
+# Practice simultaneous math and assignment
+i = 0
+i = i + 1 # fully written out
+print(i)
+
+i = 0
+i += 1 # shorthand notation
+print(i)
+```
+
+# Complex Math Operations and First Module Import
+
+Make a new file called `complex_math.py` or keep going in `expressions.py`. It's ultimately your preference, but I'd recommend starting a new file since we will import a module for the first time. 
+
+A module refers to some Python file containing statements, definitions, functions, etc. It's code that someone else has written and made available for public use. Many modules are already included with a Python installation, but on occasion, you will have to install it yourself. For complex math operations, it is helpful to import the module `math`, which should already be installed. Let's try importing the module!
+
+```
+#!/usr/bin/env python3
+```
+
 
 
 
