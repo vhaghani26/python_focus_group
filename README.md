@@ -76,6 +76,9 @@ Notes: TBD
 Recording: TBD
 
 * Numeric Types (Integers, Floats, Complexes) 
+* Setting the Specific Data Type (Type Casting)
+* Python Expressions
+* Complex Math Operations and First Module Import
 
 __________________________________
 
