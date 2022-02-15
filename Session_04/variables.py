@@ -13,16 +13,8 @@ _an_animal = "Gecko"
 anAnimal = "Owl"
 AnAnimal = "Fish"
 ANANIMAL = "Bunny"
+an_animal_1 = "Guinea Pig"
 an_animal_1 = "Bear"
 
-# Print with quotes
 print("an_animal_1")
-# Printing a variable
 print(an_animal_1)
-
-# Example variables
-my_var = 3
-# Show that variable gets overwritten
-my_var = 5
-
-print(my_var)
