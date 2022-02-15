@@ -13,10 +13,11 @@ print("Here is an example of an inline comment") # Inline comment
 # Print my name
 print("Viki")
 
+
 # Prints numbers 1-20
 for i in range(1,21):
 	print(i)
-
+    
 # Prints the names of all my pets	
 pet_names = ["Stella", "Blueberry", "Sunny", "Bird", "Zoscia", "New Pet"]
 for pet in pet_names:
