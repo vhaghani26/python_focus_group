@@ -64,7 +64,7 @@ Recording: NA
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/session5.md
 
-Recording: TBD
+Recording: https://youtu.be/v7MOOiPRwZE
 
 * Aliasing (in .bashrc/.profile)
 * Text Types (Strings)
@@ -74,6 +74,10 @@ Recording: TBD
 Notes: TBD
 
 Recording: TBD
+
+* Text Types (Strings)
+
+## Session_07
 
 * Numeric Types (Integers, Floats, Complexes) 
 * Setting the Specific Data Type (Type Casting)
