@@ -1,4 +1,4 @@
-# Session 6: Lab - Numeric Types, Type Casting, and Expressions
+# Session 6: 
 
 By: Viktoria Haghani
 
@@ -10,311 +10,203 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ## Data Types in Python
 
-Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into more Python data types.
+Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into text types.
 
-### Numeric Types (Integers, Floats, and Complexes)
+### Indexing Strings
 
-Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` in a `session_06/` directory. Use your text editor to edit the file.
+Go to `python_focus_group/` (you can now just type `pfg` to do so!). Create a new session directory, enter it, and make a file called `more_strings.py`:
 
-#### Integers
+```
+pfg
+mkdir session_06
+cd session_06
+touch more_strings.py
+```
 
-Just like we learn in math class, an integer is any whole number. We cannot have a decimal at all for Python integers, as even something like `1.0` is interpreted as a different data type. Let's take a look at some examples of integers:
+Each element of a string can be accessed using an index. It is helpful to think of a string as an ordered sequence. Each element in the sequence is accessed using its number (including spaces). In Python, indexing defaults to starting at 0, meaning 0 is the first index. It looks something like this:
+
+| I | n | d | e | x |   | A | r | r | a | y  |  s |
+|---|---|---|---|---|---|---|---|---|---|----|----|
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+
+So to access the first A in "Arrays", we can use the following:
 
 ```
 #!/usr/bin/env python3
 
-# Integers
-int1 = 1
-int2 = 9
-int3 = 42
-int4 = 558
-int5 = 21543215
+# Indexing strings
+string_to_index = "Index Arrays"
+
+first_A = string_to_index[6]
+print(first_A)
 ```
 
-Python language is very delicate. This is incredibly helpful in most cases, but it also means that you have strict guidelines to adhere to. For example, `21543215` and `21,543,215` are different data types. At the end of your "Integers" section, add the following:
+We can also do a range of letters
 
 ```
-not_int = 21,543,215
+first_word = string_to_index[0:5]
+print(first_word)
 
-print(int5, type(int5))
-print(not_int, type(not_int))
+last_word = string_to_index[6:12]
+print(last_word)
 ```
 
-Notice that when we add commas, it is now considered a tupple, which is a sequence and not a numeric type anymore. Therefore, if you want to use an integer or set a variable to some integer value, use ONLY numeric characters (0-9).
+Notice that in the first example above, we start with 0 and end at 5. Why not 4? We'll expand more when we get to the `range()` function. To quickly explain, it does not use the formatting `[start, end]`. It instead uses something more like `[start index, total elements]`. In the above example, we started at the index 0 and wanted the first 5 elements, so our range is `[0:5]`. A standard rule of thumb if you want to just think about it in terms of indeces is to use `[start index, end index + 1]`. 
 
-#### Floats
-
-Similar to an integer, a float is a numeric type. However, floats differ in that they allow us to use decimals and fractions, so we are not limited to using whole numbers when using floats.
+Another note on Python convention is that the index `-1` represents the last index. We can access the last index like so:
 
 ```
-# Floats
-float1 = 1.0
-float2 = 3.4
-float3 = 74.3
-float4 = 9.99999999999
-float5 = 1844384.85262
-float6 = 3/4
-float7 = 9/16
+last_index = string_to_index[-1]
+print(last_index)
 ```
 
-#### Complexes
+### Strides
 
-In addition to handling real numbers, Python is also capable of handling complex (i.e. imaginary) numbers. I don't anticipate that you will need to use this down the line, so I'll keep it simple. It's okay if it doesn't fully make sense to you. The goal is to expose you to its existence so that if you do need it, you'll be aware of it.
-
-Complex numbers have a real and imaginary part, which are each a float. To extract these parts from a complex number, we can use `.real` and `.imag`. Appending `j` or `J` to a numeric literal yields an imaginary number (a complex number with a zero real part) that you can add to an integer or float to get a complex number with real and imaginary parts.
+We can also use a stride to index strings. A stride value indicates that we want to select every Xth position. To demonstrate this, let's try this:
 
 ```
-# Complexes
-
-# Simple Complexes
-comp1 = 2J
-comp2 = 7j
-
-# Complicated Complexes
-
-# Initialize real part
-x = 5
-
-# Initialize imaginary part
-y = 3
-
-# Convert x and y into a complex and store it in z
-z = complex(x, y)
-
-# View the real and imaginary parts:
-print("The real part of the complex number is: ", z.real)
-print("The imaginary part of the complex number is: ", z.imag)
-
-# Confirm that all are complexes:
-print(comp1, type(comp1))
-print(comp2, type(comp2))
-print(z, type(z))
+# Strides
+every_2nd_value = string_to_index[::2]
+print(every_2nd_value)
 ```
 
-Notice that in our output, the complex component for `z` is represented as `3j` in our output.
-
-Sources
-* https://www.geeksforgeeks.org/complex-numbers-in-python-set-1-introduction/
-* https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
-
-## Setting the Specific Data Type (AKA Type Casting)
-
-Create a new file called `type_casting.py`. Most times that you assign a Python variable with some type of data, Python is able to assign a data type to that variable. In some instances, there may be incompatibilities (which result in the type error I mentioned earlier) that require manual fixes. For example, consider the following:
+We can also get more complicated. We can specify what values we want to start and end at. Let's select every 2nd value starting at 0 and ending at 5:
 
 ```
-#!/usr/bin/env python3
-
-# Assign numbers as an integer, float, and string
-a = 1
-b = 1.5
-c = '1'
+complicated_stride = string_to_index[0:5:2]
+print(complicated_stride)
 ```
 
-The variable `a` is an integer, `b` is a float, and `c` is a string (text). Well, what happens when I want to add `a` and `b`? Let's try.
+### Assessing String Properties
+
+There are several functions we can use on strings. Another few notable ones are `len()` and `find()`. 
+
+`len()` allows us to learn the length of a string. Using the same "Index Arrays" sample as before, let's figure out the length:
 
 ```
-# Demonstrate type incompatibilities
-print(a + b)
+# Length function
+string_to_index = "Index Arrays"
+print(len(string_to_index))
 ```
 
-Notice that we get an error. The types are incompatible, so you need to make `a` a float or make `b` an integer. Note that if we make `b` an integer, the transition from float to integer causes the loss of some information. In Python, instead of rounding a value up or down, everything after the decimal point gets dropped. Let's see what this looks like:
+Note that the output is 12. The last index is 11, but since Python starts with an index of 0, there are 12 characters in the string - not 11. This function becomes more helpful when working with other data types, but I just wanted to demonstrate how we can work with strings.
+
+`find()` allows us to find sub-strings. The argument of the function is the sub-string you would like to find. The output is the first index of the sequence. For example, if we want to find what index "Arrays" begins at, we would use:
 
 ```
-# Store float in d
-d = 1.9
-print(d, type(d))
-
-# Convert float from d to integer and store that in e
-e = int(d)
-print(e, type(e))
-``` 
-
-Look at our outputs. It says that `d` is a float and `e` is an integer, meaning we succesfully converted `d` into an integer. However, when we print `e`, we see that our value is `1` instead of `2`. This shows us that the conversion Python uses to go from float to integer isn't as accurate as going from integer to float. 
-
-Not all type conversions are compatible (e.g. `int("Hi")`). When you want to change a data type (which is called type casting), then you need to use certain functions. Here are examples of those functions for you to refer to. 
-
-```
-# Functions for type casting
-
-# Turn the string "3" into an integer
-my_int = int("3")
-print(my_int, type(my_int))
-
-# Turn the number 53 into a string
-my_str = str(53)
-print(my_str, type(my_str))
-
-# Turn the integer 7 into a float
-my_float = float(7)
-print(my_float, type(my_float))
+# Find function
+start_index_Arrays = string_to_index.find("Arrays")
+print(start_index_Arrays)
 ```
 
-Overall, here's a summary of some of the type casting functions:
-
-* `int()` is used to convert data into an integer
-* `str()` is used to convert data into a string
-* `float()` is used to convert data into a float
-
-## Python Expressions
-
-Now that you've learned about numeric types, we'll learn what we can do with numeric types! Doing math in Python requires special syntax so that the correct mathematical operations are carried out. Here is a table of the different operations that can be used in Python (including the type casting data previously discussed):
-
-| Operation | Result | 
-|-----------|--------|
-| `x + y` | sum of x and y |
-| `x - y` | difference of x and y |
-| `x * y` | product of x and y |
-| `x / y` | quotient of x and y |
-| `x // y` | floored quotient of x and y |
-| `x % y` | remainder of `x/y` |
-| `-x` | x negated |
-| `+x` | x unchanged |
-| `abs(x)` | absolute value or magnitude of x |
-| `int(x)` | x converted to integer |
-| `float(x)` | x converted to float |
-| `complex(re, im)` | a complex number with real part *re*, imaginary part *im* (defaults to 0) |
-| `c.conjugate()` | conjugate to the complex number c |
-| `divmod(x, y)` | the pair `(x // y, x % y)` |
-| `pow(x, y)` | x to the power y |
-| `x ** y` | x to the power y |
-
-There are also more complicated operations that we will not cover here. You can take a look at [this](https://docs.python.org/3/library/stdtypes.html) to read more if you are interested.
-
-Now we'll take a look at how to use these operations. Make a new file called `expressions.py` for this topic.
+The output is 6, which is the index we expect based on Python indexing of strings. If the sub-string is not in the string, the output is -1. Let's see:
 
 ```
-#!/usr/bin/env python3
-
-# Set miscellaneous variables to use in expressions
-a = 10
-b = 5
-c = 3
-d = -19
-e = 2
-
-
-# Find the sum of a and b (use f-string formatting)
-print(f'The sum of {a} and {b} is {a + b}')
+not_found = string_to_index.find("I'm not here")
+print(not_found)
 ```
 
-```
-# Find the difference between a and b
-print(f'The difference between {a} and {b} is {a - b}')
-```
+### Replicating String Elements
+
+We can replicate strings using multiplication (`*`):
 
 ```
-# Find the product of a and b
-print(f'The product of {a} and {b} is {a * b}')
+# Replicating strings
+my_bird = "Bird"
+total_birds = my_bird * 3
+print(total_birds)
 ```
 
-```
-# Find the quotient of a and b (a divided by b)
-print(f'The quotient of {a} and {b} is {a/b}')
-```
+### Concatenate Strings
+
+We can also concatenate strings using `+`:
 
 ```
-# Find the floored quotient of a and c (drops remainder)
-print(f'The floored quotient of {a} and {c} is {a//c}')
+# Concatenating strings
+first_name = "Viki"
+last_name = "Haghani"
+full_name = first_name + last_name
+print(full_name)
 ```
 
-```
-# Find the remainder of a divided by c
-# This is referred to as the modulo
-print(f'The remainder of {a} divided by {c} is {a % c}')
-```
+### String Formatting
+
+Notice above that we had to add the strings. There are other ways Python has developed for us to work with different string variables. This is something I use VERY frequently.
+
+Previously, we have used commas in our print statements:
 
 ```
-# Find negative d
-print(f'When we negate {d}, we get {-d}')
+# String formatting
+first_name = "Viki"
+last_name = "Haghani"
+print(first_name, last_name)
 ```
 
-```
-# Find the absolute value of d
-print(f'The absolute value of {d} is {abs(d)}')
-```
+But what if we want to control the way the text looks? What if we want to add words, spaces, or punctuation in between? Well, there are three string formatting methods that can be employed.
+
+#### Method 1: `printf()`
+
+`printf()` is the name of an old C function. The syntax is well-known among programmers, but looks odd upon first glance.
 
 ```
-# Raise a to the power of c
-print(f'{a} to the power of {c} is {pow(a,c)}')
+txt = "Nucleus"
+num = 3/11
+
+# Method 1: printf()
+print('%s %.3f' % (txt, num))
 ```
 
-```
-# Try another way to raise a to the power of c
-print(f'{a} to the power of {c} is {a ** c}')
-```
-
-Python also follows the standard order of operations (PEMDAS). We can observe when we make more complicated expressions:
+The `%s` indicates that the first element is a string. The `%.3f` means two things. The `3` indicates that we want to display three numbers after the decimal point. The `f` indicates that the second element is a float (more on floats later). We can also change notations even more, including changing things to an integer (`%d`) or to scientific notation (`%e`). Remember that the order of our instructions is respective to the order of our arguments:
 
 ```
-exp1 = a * e + d
-print(exp1)
-
-exp2 = a * (e + d)
-print(exp2)
-
-exp3 = a ** e + d - b * c
-print(exp3)
-
-# Math example
-total_min = 43 + 42 + 57
-total_hr = total_min/60
-print(total_hr)
+print('%s %.3f %d %e' % (txt, num, 2.1, .1))
 ```
 
-Notice that depending on your preference, you can assign Python code snippets to variables and print them directly or print them within the `print()` function. I alternate between the two depending on the complexity of the code I'm writing and whether or not I want any string formatting/string interpolation. 
+Now for the fun reveal: this is ugly! It works, but it's more complicated than simply printing the arguments after variables have been assigned (it's more useful for more complicated situations). I've NEVER had to use this string format. I prefer f-strings (Method 3).
 
-You can also do math and assignment at the same time. This becomes more helpful in loops (which we will learn in a future session). This is a shorthand notation that we can use. First, you initiate some variable with a value (typically 0, but depends on the case). Then, you use the initiated variable and carry out some manipulation that uses the previous variable value. Then, this new value overwrites the variable value. This is like a baby version of recursive functions, which essentially just means the previous value is required to compute the new value.
+#### Method 2: `str.format()`
 
-```
-# Practice simultaneous math and assignment
-i = 0
-i = i + 1 # fully written out
-print(i)
-
-i = 0
-i += 1 # shorthand notation
-print(i)
-```
-
-# Complex Math Operations and First Module Import
-
-Make a new file called `complex_math.py` or keep going in `expressions.py`. It's ultimately your preference, but I'd recommend starting a new file since we will import a module for the first time. 
-
-A module refers to some Python file containing statements, definitions, functions, etc. It's code that someone else has written and made available for public use. Many modules are already included with a Python installation, but on occasion, you will have to install it yourself. For complex math operations, it is helpful to import the module `math`, which should already be installed. Let's try importing the module!
+The `format()` method is a powerful way to control string formatting. Let's see: 
 
 ```
-#!/usr/bin/env python3
-
-import math
+# Method 2: str.format()
+print('{} {}'.format(txt, num))
+print('{} {:.3f}'.format(txt, num))
 ```
 
-Run this to ensure that the module is able to load. For module loading, Python uses the convention `import {module}`. These statements typically go at the beginning of the script, which is why I recommended starting a new file. Furthermore, when using a module, you usually call a function/aspect like so: `module_name.function`. Let's implement some other math functions now.
+The first line here does not have us manipulate any formatting since nothing is between the `{}` entries. In the second line, we specify that we want our variable `num` to display as a 3 decimal point float. Notice that they print out differently. Another fun reveal: this is also ugly! It's complicated and irritating to use. This brings us to my favorite method, which is also the most intuitive: f-strings.
+
+#### Method 3: f-strings
+
+F-strings play into a larger type of string manipulation referred to as string interpolation. String interpolation refers to the idea that there are variables (placeholders) inside a string literal. This allows us to put python code inside a string directly in a fairly straightforward manner:
 
 ```
-# Use square root for Pythagorean theorem
-a = 3
-b = 4
+# Method 3: f-strings
+first_name = "Viki"
+last_name = "Haghani"
 
-hyp = math.sqrt(a**2 + b**2)
-print(hyp)
-
-# Use log2
-print(math.log2(0.25))
-
-# Use pi
-print(math.pi)
-
-# Use Euler's number
-print(math.e)
-
-# Use infinity 
-print(math.inf)
-
-# Use factorial
-print(math.factorial(a))
+my_first_f_string = f'My first name is {first_name} and my last name is {last_name}. That makes my full name {first_name + " " + last_name}'
+print(my_first_f_string)
 ```
 
-If you're ever doing more complicated math than this, many times there will be modules or libraries available for install. Remember Google (or your preferred search engine) is your friend for bioinformatics!
+To mimic the above example regarding decimal manipulation, we can do the following:
+
+```
+num = 3/11
+
+decimal_manip = f'The value of 3/11 is {num}. If we round to three decimal places, that makes 3/11 = {num:.3f}'
+print(decimal_manip)
+```
+
+The general formatting with f-strings is that you have single or double quotes with an f at the beginning:
+
+```
+my_variable = "variable"
+f"Some string with my {my_variable}"
+f'Some string with my {my_variable}'
+```
+
+And you put your string in the middle of the quotations. Anything that is contained within the curly brackets `{}` is carrying out Python code or calling on a variable. This is much more straightforward in my opinion, and why I recommend f-strings for string formatting. This is extremely helpful when troubleshooting because you can do something like `print(f'My data frame looks like: {data frame}')`, which allows you to visualize and annotate different parts of your code effectively. It also becomes extremely helpful when you get to troubleshooting for-loops (more on this later). Ultimately, this is something I recommend you use in your code.
 
 ## Exit Ticket
 
