@@ -1,4 +1,4 @@
-# Session 6: 
+# Session 6: Text Types (cont'd)
 
 By: Viktoria Haghani
 
