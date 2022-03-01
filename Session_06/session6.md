@@ -213,3 +213,50 @@ And you put your string in the middle of the quotations. Anything that is contai
 Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
 
 Congratulations, you finished Session 6! 
+
+## Extra Practice
+
+This section is not intended to be part of the lesson, but rather extra practice after the session to help solidify some of the concepts learned.
+
+**Exercise**: Make a script that does the following:
+
+1. Using a method of your choice, fix the error that arises from the following code: `print('Anthony J. D'Angelo said, "Develop a passion for learning. If you do, you will never cease to grow."')`
+2. Make the following sentence appear completely uppercase: The door swung open to reveal pink giraffes and red elephants.
+3. Determine the index of the "a" in "departure."
+4. Determine the length of the sentence: The tattered work gloves speak of the many hours of hard labor he endured throughout his life
+5. Given a variable `breed = "Great Dane"`, use string formatting (e.g. f-string) to print the following sentence: The Great Dane looked more like a horse than a dog.
+6. Assign `breed` to `"Mastiff"` and reprint the statement.
+
+**Solution**
+
+Your solution may look a little different, so as long as you get the proper outputs, you're good to go! Here is one potential solution:
+
+```
+#!/usr/bin/env python3
+
+# Using a method of your choice, fix the error that arises from the following code: print('Anthony J. D'Angelo said, "Develop a passion for learning. If you do, you will never cease to grow."')
+print('Anthony J. D\'Angelo said, "Develop a passion for learning. If you do, you will never cease to grow."')
+
+# Make the following sentence appear completely uppercase: The door swung open to reveal pink giraffes and red elephants.
+str1 = "The door swung open to reveal pink giraffes and red elephants."
+STR1 = str1.upper()
+print(STR1)
+
+# Determine the index of the "a" in "departure"
+str2 = "departure"
+index_a = str2.find("a")
+print(index_a)
+
+# Determine the length of the sentence: The tattered work gloves speak of the many hours of hard labor he endured throughout his life
+str3 = "The tattered work gloves speak of the many hours of hard labor he endured throughout his life"
+my_length = len(str3)
+print(my_length)
+
+# Given a variable `breed = "Great Dane"`, use string formatting (e.g. an f-string) to print the following sentence: The Great Dane looked more like a horse than a dog.
+breed = "Great Dane"
+print(f'The {breed} looked more like a horse than a dog')
+
+# Assign breed to "Mastiff" and reprint the statement.
+breed = "Mastiff"
+print(f'The {breed} looked more like a horse than a dog')
+```
