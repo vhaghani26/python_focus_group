@@ -312,5 +312,20 @@ print(math.factorial(a))
 
 If you're ever doing more complicated math than this, many times there will be modules or libraries available for install. Remember Google (or your preferred search engine) is your friend for bioinformatics!
 
+## Exit Ticket
 
+Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
 
+Congratulations, you finished Session 7! 
+
+## Extra Practice
+
+This section is not intended to be part of the lesson, but rather extra practice after the session to help solidify some of the concepts learned.
+
+### Exercise
+
+This section will be updated after the session is complete to ensure that only concepts presented are tested on.
+
+### Solution
+
+TBD
