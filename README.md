@@ -68,14 +68,22 @@ Recording: https://youtu.be/v7MOOiPRwZE
 
 * Aliasing (in .bashrc/.profile)
 * Text Types (Strings)
+* Escape Sequences
+* Manipulating Strings
+* Stripping Spaces
 
 ## Session_06
 
-Notes: TBD
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/session6.md
 
 Recording: TBD
 
-* Text Types (Strings)
+* Indexing Strings
+* Strides
+* Assessing String Properties
+* Replicating String Elements
+* Concatenating Strings
+* String Formatting (String Interpolation) 
 
 ## Session_07
 
