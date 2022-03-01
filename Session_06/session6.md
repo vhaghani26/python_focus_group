@@ -2,9 +2,9 @@
 
 By: Viktoria Haghani
 
-Session Date: TBD
+Session Date: 2022-03-01
 
-Last Updated: 2022-02-11
+Last Updated: 2022-03-01
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -12,7 +12,7 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 Last week, we started learning about text types and how to manipulate text types. This week, we will continue diving into text types.
 
-### Indexing Strings
+## Indexing Strings
 
 Go to `python_focus_group/` (you can now just type `pfg` to do so!). Create a new session directory, enter it, and make a file called `more_strings.py`:
 
@@ -60,7 +60,7 @@ last_index = string_to_index[-1]
 print(last_index)
 ```
 
-### Strides
+## Strides
 
 We can also use a stride to index strings. A stride value indicates that we want to select every Xth position. To demonstrate this, let's try this:
 
@@ -77,7 +77,7 @@ complicated_stride = string_to_index[0:5:2]
 print(complicated_stride)
 ```
 
-### Assessing String Properties
+## Assessing String Properties
 
 There are several functions we can use on strings. Another few notable ones are `len()` and `find()`. 
 
@@ -106,7 +106,7 @@ not_found = string_to_index.find("I'm not here")
 print(not_found)
 ```
 
-### Replicating String Elements
+## Replicating String Elements
 
 We can replicate strings using multiplication (`*`):
 
@@ -117,7 +117,7 @@ total_birds = my_bird * 3
 print(total_birds)
 ```
 
-### Concatenate Strings
+## Concatenating Strings
 
 We can also concatenate strings using `+`:
 
@@ -129,7 +129,7 @@ full_name = first_name + last_name
 print(full_name)
 ```
 
-### String Formatting
+## String Formatting
 
 Notice above that we had to add the strings. There are other ways Python has developed for us to work with different string variables. This is something I use VERY frequently.
 
@@ -144,7 +144,7 @@ print(first_name, last_name)
 
 But what if we want to control the way the text looks? What if we want to add words, spaces, or punctuation in between? Well, there are three string formatting methods that can be employed.
 
-#### Method 1: `printf()`
+### Method 1: `printf()`
 
 `printf()` is the name of an old C function. The syntax is well-known among programmers, but looks odd upon first glance.
 
@@ -164,7 +164,7 @@ print('%s %.3f %d %e' % (txt, num, 2.1, .1))
 
 Now for the fun reveal: this is ugly! It works, but it's more complicated than simply printing the arguments after variables have been assigned (it's more useful for more complicated situations). I've NEVER had to use this string format. I prefer f-strings (Method 3).
 
-#### Method 2: `str.format()`
+### Method 2: `str.format()`
 
 The `format()` method is a powerful way to control string formatting. Let's see: 
 
@@ -176,7 +176,7 @@ print('{} {:.3f}'.format(txt, num))
 
 The first line here does not have us manipulate any formatting since nothing is between the `{}` entries. In the second line, we specify that we want our variable `num` to display as a 3 decimal point float. Notice that they print out differently. Another fun reveal: this is also ugly! It's complicated and irritating to use. This brings us to my favorite method, which is also the most intuitive: f-strings.
 
-#### Method 3: f-strings
+### Method 3: f-strings
 
 F-strings play into a larger type of string manipulation referred to as string interpolation. String interpolation refers to the idea that there are variables (placeholders) inside a string literal. This allows us to put python code inside a string directly in a fairly straightforward manner:
 
@@ -218,7 +218,9 @@ Congratulations, you finished Session 6!
 
 This section is not intended to be part of the lesson, but rather extra practice after the session to help solidify some of the concepts learned.
 
-**Exercise**: Make a script that does the following:
+### Exercise
+
+Make a script that does the following:
 
 1. Using a method of your choice, fix the error that arises from the following code: `print('Anthony J. D'Angelo said, "Develop a passion for learning. If you do, you will never cease to grow."')`
 2. Make the following sentence appear completely uppercase: The door swung open to reveal pink giraffes and red elephants.
@@ -227,7 +229,7 @@ This section is not intended to be part of the lesson, but rather extra practice
 5. Given a variable `breed = "Great Dane"`, use string formatting (e.g. f-string) to print the following sentence: The Great Dane looked more like a horse than a dog.
 6. Assign `breed` to `"Mastiff"` and reprint the statement.
 
-**Solution**
+### Solution
 
 Your solution may look a little different, so as long as you get the proper outputs, you're good to go! Here is one potential solution:
 
