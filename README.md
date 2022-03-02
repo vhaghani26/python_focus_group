@@ -76,7 +76,7 @@ Recording: https://youtu.be/v7MOOiPRwZE
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/session6.md
 
-Recording: TBD
+Recording: https://youtu.be/IvIlPjDzDTg
 
 * Indexing Strings
 * Strides
