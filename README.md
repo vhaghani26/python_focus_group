@@ -87,6 +87,10 @@ Recording: https://youtu.be/IvIlPjDzDTg
 
 ## Session_07
 
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/session7.md
+
+Recording: https://youtu.be/COkd1Q3uw58
+
 * Numeric Types (Integers, Floats, Complexes) 
 * Setting the Specific Data Type (Type Casting)
 * Python Expressions

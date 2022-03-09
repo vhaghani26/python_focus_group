@@ -4,7 +4,9 @@ By: Viktoria Haghani
 
 Session Date: 2022-03-08
 
-Last Updated: 2022-03-01
+Last Updated: 2022-03-08
+
+Session Recording: https://youtu.be/COkd1Q3uw58
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
