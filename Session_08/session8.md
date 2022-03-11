@@ -157,10 +157,6 @@ print(list2[-1])
 print(list2[4][1])
 ```
 
-#### Manipulating Lists
-
-There are several miscellaneous functions you can use to manipulate lists. I couldn't cover them all in one session if I tried, so my advice is that if you want to know if you can manipulate a list in a certain way, Google "how to do X to a list in Python." You'll usually get an answer! Here, I'll show some ways to manipulate lists.
-
 #### Slicing Lists
 
 This uses the same notation as tuples.
@@ -300,6 +296,10 @@ print(sum(listD))
 #### For-Loops
 
 For-loops are an entire discussion on their own and they can apply to other data types, so while we won't be covering them today, I wanted to note that for-loops can be applied to lists, and this is ultimately what makes lists as powerful as they are.
+
+#### A Last Note About Lists
+
+There are several miscellaneous functions you can use to manipulate lists. I couldn't cover them all in one session if I tried, so my advice is that if you want to know if you can manipulate a list in a certain way, Google "how to do X to a list in Python." You'll usually get an answer! 
 
 ### Ranges
 
