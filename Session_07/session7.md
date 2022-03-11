@@ -337,7 +337,7 @@ Make a script that does the following:
 7. Finds the product of `var5` and `var3`.
 8. Raises `var3` to the power of `var1`.
 9. Assign `var7 = 9` and take the square root of it.
-10. Suppose you have a circle with a radius of 10. What is the circumference of the circle? (Hint: Circumference = 2 * pi * radius)
+10. Suppose you have a circle with a radius of 10 cm. What is the circumference of the circle? (Hint: Circumference = 2 * pi * radius)
 11. An employee documents their time driving to and from work since they get compensated for it. In the past week, they spent the following amount of time driving: 33, 37, 35, 31, 29, and 39 minutes. How many total hours is this?
 
 ### Solution
