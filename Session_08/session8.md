@@ -345,12 +345,19 @@ This section is not intended to be part of the lesson, but rather extra practice
 
 Make a script that does the following:
 
-1. TBD, will update after session
+1. Make a list named `my_list` containing the following information (you will need to format it properly, but keep it in this order): glasses, canvas, soap, photo album, 5084988, 9.2, 3/11, False
+2. Make the list nested by adding a tuple containing the numbers 1-5 in it
+3. Use indexing to print 5084988 from the list. Use an f-string to print the index in addition to the value in the same print statement.
+4. Use indexing to print out the number 3 from within the tuple. Use an f-string to print the index in addition to the value in the same print statement.
+5. Use indexing to access the "b" in "photo album." Use an f-string to print the index in addition to the value in the same print statement.
+6. Slice the list such that only strings are present in your sliced data. 
+7. Add the word "ideology" between "photo album" and 5084988.
+8. Change the word "canvas" to "panel."
+9. Delete 9.2 from the list.
+10. Print the maximum value present in the tuple. (Hint: Use indexing to access the tuple)
+11. Use the range function to print the numbers 1-20 ONLY (i.e. do not print 0 or 21)
+
 
 ### Solution
 
-Your solution may look a little different, so as long as you get the proper outputs, you're good to go! Here is one potential solution:
-
-```
-TBD
-```
+You can view the solution to the exercise [here](https://github.com/vhaghani26/python_focus_group/blob/main/Session_08/extra_practice_solution_08.py). Your solution may look a little different, so as long as you get the proper outputs, you're good to go! 
