@@ -11,6 +11,67 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ### Set Types (Set, Frozenset)
 
+Sets are a type of collection. This means that like lists and tuples, you can input different Python data types. Unlike lists and tuples, sets are unordered, meaning that sets do not record element position. For us, this means we cannot index sets, which ends up making them less useful than lists (in my opinion). To define a set, you can use curly brackets: `{}`. Using type-casting, we can also convert a list to a set. Make a new file called `sets.py` and let's get started!
+
+```
+#!/usr/bin/env python3
+
+# Creating a set using list to set type-casting
+album_list = ["Michael Jackson", "Thriller", 1982, "00:42:19", "Pop, Rock, R&B", 46.0, 65, "30-Nov-82", None, 10.0]
+album_set = set(album_list)             
+print(album_set)
+```
+
+To add an element to the set, we can use the `add()` function:
+
+```
+# Try adding an element to the set
+album_set.add("Back in Black")
+print(album_set)
+```
+
+To remove something from a set, we can use the `remove()` function.
+
+```
+# Remove element from set
+album_set.remove(10.0)
+print(album_set)
+```
+
+We can verify if an element is in the set using the `in` command.
+
+```
+# Verify element presence in a list
+exists = "Back in Black" in album_set
+print(exists)
+
+no_exists = "Pillow" in album_set
+print(no_exists)
+```
+
+To find the intersection of two sets, we use the `&` command or the `intersection()` function
+
+```
+# Find intersecting elements in lists
+another_album_set = {"Thriller", "Closer", "The Queen is Dead", "Born in the USA", "Synchronicity"}
+my_intersections1 = album_set & another_album_set
+print(my_intersections1)
+
+my_intersections2 = album_set.intersection(another_album_set)
+print(my_intersections2)
+```
+
+Unlike lists and tuples, sets only have unique elements, meaning there is only one of a particular element in a set. Duplicate terms are not present. 
+
+```
+# Demonstrate lack of duplicates in sets
+duplicated_list = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
+print(duplicated_list)
+
+duplicated_list_as_set = set(duplicated_list)
+print(duplicated_list_as_set)
+```
+
 ### Boolean Types (Boolean)
 
 A Boolean value can take two on two values: True or False. Make a new file called `booleans.py`. We're going to take a look at how Booleans work!
