@@ -3,7 +3,8 @@
 By: Viktoria Haghani
 
 Session Date: TBD
-Last Updated: 2021-12-16
+
+Last Updated: 2022-03-29
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -120,20 +121,32 @@ Frozen sets are an immutable (i.e. cannot be edited) version of a set. Due to th
 To create a frozen set, we can use the `frozenset()` function.
 
 ```
+# Make an empty frozen set
+print(f'The empty frozen set is: {frozenset()}')
+
 # Tuple of vowels
 vowels = ('a', 'e', 'i', 'o', 'u')
-
+# Turn the tuple of vowels into a frozenset
 fSet = frozenset(vowels)
 print(f'The frozen set is: {fSet}')
-print(f'The empty frozen set is: {frozenset()}')
 
 # frozensets are immutable
 fSet.add('v')
 ```
 
+Now let's create a frozenset using the keys of a dictionary.
+
+```
+# Random dictionary
+person = {"name": "John", "age": 23, "sex": "male"}
+# Turn dictionary keys into a frozen set
+fSet = frozenset(person)
+print(f'The frozen set is: {fSet}')
+```
+
 [Source](https://www.programiz.com/python-programming/methods/built-in/frozenset)
 
-### Boolean Types (Boolean)
+## Boolean Types (Boolean)
 
 A Boolean value can take two on two values: True or False. Make a new file called `booleans.py`. We're going to take a look at how Booleans work!
 
@@ -171,12 +184,6 @@ bool7 = bool(0)
 print(bool7)
 ```
 
+# Comparison Operators
+
 [Include comparison operations]
-
-### Binary Types (Bytes, Bytearray, Memoryview)
-
-#### Bytes
-
-#### Bytearray
-
-#### Memoryview
