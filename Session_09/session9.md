@@ -213,9 +213,11 @@ print(f'The frozen set is: {fSet}')
 
 [Source](https://www.programiz.com/python-programming/methods/built-in/frozenset)
 
+This concludes our mapping/sequence (storage) types! Although you can use whatever mapping/sequence type you prefer, the most commonly used are lists (if you don't need paired entries) and dictionaries (for paired entries). Since I've started coding in Python, I've only ever used lists or dictionaries - not sets, tuples, frozensets, etc. Ultimately, it's up to you to decide what you like to work with best, but hopefully you should have an overview on how to work with these different Python data types. The best part is that there's a lot of functional overlap between each type. For example, with many types, you can add, remove, or change an element. You can also nest many of these data types. The internet is your friend if you ever forget!
+
 ## Boolean Types (Boolean)
 
-A Boolean value can take two on two values: True or False. Make a new file called `booleans.py`. We're going to take a look at how Booleans work!
+While Boolean values are usually not directly coded for, they are extremely helpful since any logical operator or statement ends up being a Boolean output. Booleans are most heavily associated with conditionals, one of the most important aspects of coding (we'll learn it soon!). A Boolean value can take two on two values: True or False. Make a new file called `booleans.py`. We're going to take a look at how Booleans work!
 
 ```
 #!/usr/bin/env python3
@@ -253,4 +255,4 @@ print(bool7)
 
 # Comparison Operators
 
-[Include comparison operations]
+As I mentioned earlier, we do not usually code for a Boolean. Instead, we allow Python to do the work for us.
