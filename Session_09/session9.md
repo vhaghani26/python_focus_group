@@ -255,4 +255,82 @@ print(bool7)
 
 # Comparison Operators
 
-As I mentioned earlier, we do not usually code for a Boolean. Instead, we allow Python to do the work for us.
+As I mentioned earlier, we do not usually code for a Boolean. Instead, we allow Python to do the work for us. Comparison operators compare some value or operand, then, based on some condition, produce a Boolean.
+
+We can use the equality operator, `==` to determine if values are equal.
+
+```
+# Variables
+a = 5
+b = 10
+c = 5
+
+# Determine if values are equal
+IsEqual = a == b
+print(IsEqual)
+```
+
+Let's compare the magnitude of the values.
+
+```
+# Check if a value is greater than another
+IsGreater = a > b
+print(IsGreater)
+
+# Check if a value is less than another
+IsLess = a < b
+print(IsLess)
+
+# Check if a value is less than or equal to another
+IsLessOrEqual = a <= c
+print(IsLessOrEqual)
+
+# Check if a value is greater than or equal to another
+IsGreaterOrEqual = b >= c
+print(IsGreaterOrEqual)
+```
+
+Testing for equality is easy, but now how do we test for inequality using operators? In Python, we can use the inequality operator: `!=`.
+
+```
+# See if values are not equal
+IsNotEqual1 = a != b
+print(IsNotEqual1)
+
+IsNotEqual2 = a != c
+print(IsNotEqual2)
+```
+
+Interestingly, we can also use the equality and inequality operators for strings.
+
+```
+# Check if strings match
+str1 = "Hello, World!"
+str2 = "Hello, World!"
+str3 = "Hello World!"
+
+print(str1 != str2)
+print(str1 == str2)
+print(str1 != str3)
+print(str1 == str2)
+```
+
+Even more strangely, we can compare letters.
+
+```
+# Compare letters
+print("A" > "B")
+print("A" < "B")
+```
+
+What does this even mean? Well, inequality operation for letters, words, and symbols goes according to the [ASCII value](https://www.ascii-code.com/) of letters. For example, the ASCII code for ! is 21, and the ASCII code for + is 43. Therefore, + is larger than !. Similarly, the value for A is 101 and B is 102. The case of the letters make a difference, so comparison between letters in Python is case-sensitive.
+
+# Logic Operators
+
+Logic operators take Boolean values and produce different Boolean values. The "not," "or," and "and" operator takes in two values to produce a new Boolean value. You can use "if, and" and "if, or" statements. The "and" statement is only True when both conditions are true. The "or" statement is true if one condition is True. The "not" statement outputs the opposite true value. This is essentially what we see in a [truth table](https://docs.oracle.com/html/E79061_01/Content/Reference/Truth_tables.htm). Let's take a look at these.
+
+```
+# Logic operators
+print(not(True))
+print(not(False))
+```
