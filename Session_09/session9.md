@@ -10,6 +10,73 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ### Mapping Types (Dictionaries)
 
+Dictionaries are a type of collection in Python. It has keys and values, where a key is analogous to the index. To create a dictionary, we use curly brackets: `{}`. The keys have to be immutable and unique (since they act as an index), but the values can be immutable, mutable, and duplicates. Each key and value pair is separated by a comma. Let's make a dictionary!
+
+```
+# Make our first dictionary
+dict1 = {'a':0, 'b':1, 'c':2}
+print(dict1)
+```
+
+You can use several data types as the values in a dictionary.
+
+```
+# Mix data types in a dictionary
+dict2 = {"my_string":"Coffee", "my_int": 8, "my_float":9.2, "my_list":[1, 2, 3, 4, 5]}
+print(dict2)
+```
+
+We can search for values in a dictionary like we would use indexing.
+
+```
+# Find values in a dictionary
+dict3 = {
+  "brand": "Honda",
+  "model": "Civic",
+  "year": 2020
+}
+print(dict3["brand"])
+```
+
+We can add new entries using the assignment operator `=`.
+
+```
+# Add new value dictionary entry
+dict3["owner"] = "Sadie"
+print(dict3)
+```
+
+We can also delete entries.
+
+```
+# Delete dictionary entry
+del(dict3["owner"])
+print(dict3)
+```
+
+Although we will cover Boolean types (True or False) at the end of this section, we can return a Boolean by verifying dictionary elements. Essentially, we can check if a value is in the dictionary using the `in` command.
+
+```
+# Check if elements are in the dictionary (note that it only works for keys)
+check1 = "owner" in dict3
+print(check1)
+check2 = "year" in dict3
+print(check2)
+check3 = 2020 in dict3
+print(check3)
+```
+
+Finally, we can print all keys or values in our dictionary.
+
+```
+# View all keys
+print(dict3.keys())
+# View all values
+print(dict3.values())
+```
+
+Dictionaries can be iterated through in loops as well, but we will touch on that when we start learning about loops.
+
 ### Set Types (Set, Frozenset)
 
 Make a new file called `set_types.py` and let's get started!
