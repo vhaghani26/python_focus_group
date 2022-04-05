@@ -344,5 +344,40 @@ if (album_year>1979) and (album_year<1990):
 	print("This album was made in the 80’s")
 ```
 
+## Exit Ticket
 
+Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
+
+Congratulations, you finished Session 9! 
+
+## Extra Practice
+
+This section is not intended to be part of the lesson, but rather extra practice after the session to help solidify some of the concepts learned.
+
+### Exercise
+
+Make a script that does the following:
+
+1. Make a dictionary called `my_dict` where the keys are `confusion, recording, organization, complaints, soup` and the values are `True, No, 57, [1, 2, 3], alphabet`, respectively.
+2. Print the key corresponding the `recording`.
+3. Add the key and value set `catastrophe` and `False`, respectively.
+4. Delete the `recording` entry and its corresponding value.
+5. Check if "soup" is in the dictionary.
+6. Print all the keys in the dictionary.
+7. Print all the values in the dictionary.
+8. Make a list containing the following: `Balalaika, Bouqet, Outlook, Petticoat, Summit, Chime, Labourer, Patty, Persimmon, Sample`.
+9. Turn the list into a set called `my_set1`.
+10. Add `Nucleotidase` to the set.
+11. Remove `Summit` from the set.
+12. Check if `Violin` is in the set.
+13. Make another set called `my_set2` containing the following: `Alias, Assist, Belfry, Sideboard, Soap, Balalaika, Persimmon`.
+14. Find the elements that intersect the two sets.
+15. Find the elements unique to `my_set2`.
+16. Combine `my_set1` and `my_set2`. 
+17. Assign `a = 16653509` and `b = 2448111` and determine if the values are equal.
+18. Use a comparison or logic operator to determine which is greater.
+
+### Solution
+
+You can view the solution to the exercise [here](https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/extra_practice_solution_09.py). Your solution may look a little different, so as long as you get the proper outputs, you're good to go! 
 
