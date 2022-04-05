@@ -96,6 +96,25 @@ Recording: https://youtu.be/COkd1Q3uw58
 * Python Expressions
 * Complex Math Operations and First Module Import
 
+## Session_08
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_08/session8.md
+
+Recording: TBD
+
+* Sequence Types (Tuples, Lists, Ranges)
+
+## Session_09
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/session9.md
+
+Recording: TBD
+
+* Mapping Types (Dictionaries)
+* Set Types (Set, Frozenset)
+* Boolean Types (Boolean)
+* Comparison Operators
+* Logic Operators
 __________________________________
 
 
