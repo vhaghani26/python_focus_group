@@ -1,10 +1,10 @@
-# Session 9:
+# Session 9: Mapping Types and Comparison and Logic Operators
 
 By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2022-03-29
+Last Updated: 2022-04-05
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -253,7 +253,7 @@ bool7 = bool(0)
 print(bool7)
 ```
 
-# Comparison Operators
+## Comparison Operators
 
 As I mentioned earlier, we do not usually code for a Boolean. Instead, we allow Python to do the work for us. Comparison operators compare some value or operand, then, based on some condition, produce a Boolean.
 
@@ -325,12 +325,24 @@ print("A" < "B")
 
 What does this even mean? Well, inequality operation for letters, words, and symbols goes according to the [ASCII value](https://www.ascii-code.com/) of letters. For example, the ASCII code for ! is 21, and the ASCII code for + is 43. Therefore, + is larger than !. Similarly, the value for A is 101 and B is 102. The case of the letters make a difference, so comparison between letters in Python is case-sensitive.
 
-# Logic Operators
+## Logic Operators
 
 Logic operators take Boolean values and produce different Boolean values. The "not," "or," and "and" operator takes in two values to produce a new Boolean value. You can use "if, and" and "if, or" statements. The "and" statement is only True when both conditions are true. The "or" statement is true if one condition is True. The "not" statement outputs the opposite true value. This is essentially what we see in a [truth table](https://docs.oracle.com/html/E79061_01/Content/Reference/Truth_tables.htm). Let's take a look at these.
 
 ```
-# Logic operators
+# Basic logic operators
 print(not(True))
 print(not(False))
 ```
+
+The following example uses a conditional (if statement), which we will dive into in a future session. I will keep it basic here, but wanted to demonstrate the logic used.
+
+```
+# Using logic operators in a basic conditional
+album_year = 1983
+if (album_year>1979) and (album_year<1990):
+	print("This album was made in the 80’s")
+```
+
+
+
