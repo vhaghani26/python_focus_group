@@ -224,3 +224,5 @@ All sections below are topics I plan to integrate into sessions.
 ## Argparse
 
 ## Conda
+
+## Snakemake
