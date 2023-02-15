@@ -104,13 +104,42 @@ dates = [1982, 1980, 1973]
 for date in dates:
     print(date)
 	
-# A more complicated for-loop where you can access the index
+# A more complicated for-loop where you can access the index and list items
 x = len(dates)
 for i in range(x):
     print(i, dates[i])  
 ```
 
 ### Nested For-Loops
+
+Another common use of for-loops is to nest them in order to work in combinations of variables. Nesting simply means to put a for-loop inside another for-loop. Let's say you want to determine all possible combinations of paired students in group A and group B. You can use a nested for-loop!
+
+```
+# Nested for-loop
+groupA = ["Janine", "Jessica", "Jules"]
+groupB = ["Osman", "Dag", "Logan"]
+
+for person1 in groupA:
+	for person2 in groupB:
+		print(person1, person2)
+```
+
+Look at the output. See that this creates all combinations of variables within the two lists. This becomes incredibly useful when working with data sets with nested metadata, such as having male and female mice, each with WT and MUT genotypes, and each from several time points. Here is a more applied example of what this would look like using my project set-up. It uses many nested for-loops.
+
+```
+# Viki's Project Set-Up
+sexes = ["male", "female"]
+genotypes = ["WT", "MUT"]
+time_points = ["E18", "P30", "P60", "P120"]
+cell_types = ["Camk2a", "VIP"]
+
+print("All conditions for Viki's project:")
+for sex in sexes:
+	for genotype in genotypes:
+		for time_point in time_points:
+			for cell_type in cell_types:
+				print(sex, genotype, time_point, cell_type)
+```
 
 ### Parallel For-Loops
 
