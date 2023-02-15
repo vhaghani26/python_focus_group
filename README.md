@@ -122,35 +122,13 @@ __________________________________
 
 All sections below are topics I plan to integrate into sessions.
 
-## Tuples
+## If-Else Statements
 
-### Sorting Tuples
+### Adding an `elif` Statement
 
-### Concatenating Tuples
+## Logic Operators
 
-### Slicing Tuples
-
-### Nesting Tuples
-
-## Lists
-
-### Aliasing Lists
-
-### Cloning Lists
-
-## Sets
-
-## Dictionaries
-
-## The `range()` Function
-
-## For-Loops
-
-### Basic For-Loops
-
-### Nested For-Loops
-
-### Parallel For-Loops
+and/or/not
 
 ## Comparison Operations
 
@@ -166,14 +144,6 @@ All sections below are topics I plan to integrate into sessions.
 | `is not` | negated object identity |
 
 [Source](https://docs.python.org/3/library/stdtypes.html)
-
-## While-Loops
-
-## If-Else Statements
-
-### Adding an `elif` Statement
-
-### Logic Operators
 
 ## Components of a Function
 

@@ -4,17 +4,9 @@ By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2022-03-29
+Last Updated: 2023-02-15
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
-
-## Binary Types (Bytes, Bytearray, Memoryview)
-
-### Bytes
-
-### Bytearray
-
-### Memoryview
 
 ## Getting the Data Type
 
@@ -54,8 +46,77 @@ print(type13, type(type13))
 print(type14, type(type14))
 ```
 
-Note that among the data types above, I've only personally had to use strings, integers, floats, lists, ranges, dictionaries, and Boolean types. Your experiences may differ, so not all of the displayed types above may be necessary, but it's helpful to be aware that they exist.
+Note that among the data types above, I primarily use strings, integers, floats, lists, ranges, dictionaries, and Boolean types. Your experiences may differ, so not all of the displayed types above may be necessary, but it's helpful to be aware that they exist.
 
 ## For-Loops
 
-## While Loops
+Make a new file calle `for_loops.py` and let's get started!
+
+We can perform an action on every component of various data types (e.g. lists, dictionaries, tuples, sets, strings) using a for-loop function. The concept can be thought of as "for every item, do this action." This is called iteration. It allows you to carry out many actions at once instead of doing it individually for objects, variables, or data. It is one of the most widely and commonly used tools in Python. Regarding syntax, after the initial "for" statement, every indented line following the for/in command is considered inside the loop, and each indented line is executed once for each value in the list. While this may sound a little complicated, it is far easier understood in practice. 
+
+### Basic For-Loops
+
+Let's implement some for-loops for practice. Try running this in your script to see how the outputs are different.
+
+```
+#!/usr/bin/env python3
+
+# Make a list
+magicians = ["alice", "david", "carolina"]
+
+# Printing the list to see the magicians
+print(magicians)
+
+# Printing each magician individually
+for magician in magicians:
+	print(magician)
+```
+
+Notice how the outputs are different. This is because the for loop carried out the print function for each element in the list rather than printing the whole list. Let's try another for-loop!
+
+```
+# Carry out more complicated actions
+for magician in magicians:
+	print(magician.title() + " , that was a great trick!")
+	print("I can’t wait to see your next trick, " + magician.title() + ".\n")
+```
+
+If we want to do something after a for-loop, write the code without an indentation. You can also include a line break if you prefer to keep the code cleaner.
+
+```
+# Carry out more complicated actions
+for magician in magicians:
+	print(magician.title() + " , that was a great trick!")
+	print("I can’t wait to see your next trick, " + magician.title() + ".\n")
+	
+print("Thank you, everyone. That was a great magic show!"
+```
+
+Here are some more examples of basic for-loops. Including how you can implement the `range()` function.
+
+```
+# More basic for-loops
+A = [1, 2, 3, 4, 5]
+for value in A:
+    print(value)
+	
+dates = [1982, 1980, 1973]
+for date in dates:
+    print(date)
+	
+# A more complicated for-loop where you can access the index
+x = len(dates)
+for i in range(x):
+    print(i, dates[i]) 
+print("\n")    
+```
+
+### Nested For-Loops
+
+### Parallel For-Loops
+
+#### For-Loops for Dictionaries
+
+
+
+## While-Loops
