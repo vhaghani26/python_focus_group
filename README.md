@@ -115,6 +115,16 @@ Recording: TBD
 * Boolean Types (Boolean)
 * Comparison Operators
 * Logic Operators
+
+## Session_10
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_10/session10.md
+
+Recording: TBD
+
+* For-Loops
+* While-Loops
+
 __________________________________
 
 
