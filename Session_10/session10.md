@@ -107,8 +107,7 @@ for date in dates:
 # A more complicated for-loop where you can access the index
 x = len(dates)
 for i in range(x):
-    print(i, dates[i]) 
-print("\n")    
+    print(i, dates[i])  
 ```
 
 ### Nested For-Loops
@@ -116,7 +115,5 @@ print("\n")
 ### Parallel For-Loops
 
 #### For-Loops for Dictionaries
-
-
 
 ## While-Loops
