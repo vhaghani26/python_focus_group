@@ -128,7 +128,7 @@ Recording: TBD
 __________________________________
 
 
-## Topic Bank
+# Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
 
@@ -159,11 +159,9 @@ and/or/not
 
 ## Making a Function
 
-## Objects
+## Argparse
 
-## Classes
-
-### Creating a Class
+## Conda
 
 ## Reading Files with Open
 
@@ -201,8 +199,10 @@ and/or/not
 
 ### Basic Operations in 2D
 
-## Argparse
+## Objects
 
-## Conda
+## Classes
+
+### Creating a Class
 
 ## Snakemake
