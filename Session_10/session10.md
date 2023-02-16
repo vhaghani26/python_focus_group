@@ -143,6 +143,43 @@ for sex in sexes:
 
 ### Parallel For-Loops
 
-#### For-Loops for Dictionaries
+There may be other times where you have two sets of data that you need to iterate through at the same time. I use this quite often in my own work, but for simplicity, I will use an example where we associate a list of numbers and letters to each other. Notice the difference in variable assignment compared to a traditional for-loop. The variables are assigned respective to the data input in the `zip()` function, but you can still call the variables whatever you want. All that matters is the order that the variables and data are listed.
+
+```
+# Parallel for-loop
+listA = [1, 2, 3, 4, 5]
+listB = ["A", "B", "C", "D", "E"]
+
+for A, B in zip(listA, listB):
+	print(f'Variable A is {A} and variable B is {B}. Here is AB: {A}{B}')
+
+# Rename variables
+for something1, something2 in zip(listA, listB):
+	print(something1, something2)
+
+# Switch the order of the lists
+for A, B in zip(listB, listA):
+	print(A, B)
+```
+
+### For-Loops for Dictionaries
+
+While parallel for-loops are helpful for two lists or other mapping/sequencing data types, dictionaries have their own method of iteration. You can access the keys and values individually or both at the same time! This is done using the `keys()`, `values()`, and `items()` functions, respectively.
+
+```
+ages = {"Viki": 24, "Logan": 25, "Osman": 30}
+
+# Access keys only
+for name in ages.keys():
+	print(name)
+
+# Access values only
+for age in ages.values():
+	print(age)
+
+# Access keys and values
+for name, age in ages.items():
+	print(f'{name} is {age} years old.')
+```
 
 ## While-Loops
