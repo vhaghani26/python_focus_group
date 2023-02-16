@@ -10,9 +10,11 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ## Getting the Data Type
 
-After several sessions of learning about different data types, we'll finally come to a close and move on. There are still some more data types that you may run into over time (e.g. a data frame), but we now have a great basis to work off of for our coding skills. To come to a close with the "Data Types" unit, we'll cover how to differentiate different data types. We've already seen it before, but I'll introduce it formally since it's helpful to check your data type. This will usually be used in response to some sort of type error. To do so, you can use the `type()` function. Let's make some variables containing different data types and determine the types:
+After several sessions of learning about different data types, we'll finally come to a close and move on. There are still some more data types that you may run into over time (e.g. a data frame), but we now have a great basis to work off of for our coding skills. To come to a close with the "Data Types" unit, we'll cover how to differentiate different data types. We've already seen it before, but I'll introduce it formally since it's helpful to check your data type. This will usually be used in response to some sort of type error. To do so, you can use the `type()` function. Let's make some variables containing different data types in a script called `data_types.py` and determine the types:
 
 ```
+#!/usr/bin/env python3
+
 # Create variables with different data types
 type1 = "Hello World"
 type2 = 3
@@ -183,3 +185,40 @@ for name, age in ages.items():
 ```
 
 ## While-Loops
+
+Make another script called `while_loops.py`.
+
+While-loops are similar to for-loops, but instead of executing a statement a set number of times, a while loop will only run if a condition is met. 
+
+```
+#!/usr/bin/env python3
+
+# Basic while-loop
+i = 0
+while i < 10:
+	print(i)
+	i += 1
+
+# Another while-loop
+x = 11
+y = 1
+while y < x:
+	print(y)
+	y += 1
+```
+
+
+Be careful with while-loops, however, as it is easy to get stuck in one. Below is an example of a never ending while-loop. Press cmd/ctrl + C to interreupt the broken loop when you run it.
+
+```
+# Broken while-loop
+i = 0
+while i < 10:
+	print(i)
+```
+
+## Exit Ticket
+
+Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
+
+Congratulations, you finished Session 10! 
