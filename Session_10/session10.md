@@ -188,18 +188,18 @@ for name, age in ages.items():
 
 Make another script called `while_loops.py`.
 
-While-loops are similar to for-loops, but instead of executing a statement a set number of times, a while loop will only run if a condition is met. 
+While-loops are similar to for-loops, but instead of executing a statement a set number of times, a while loop will only run if a condition is met. This is especially helpful if you want to iterate a certain number of times.
 
 ```
 #!/usr/bin/env python3
 
-# Basic while-loop
+# Basic while-loop with 10 iterations
 i = 0
 while i < 10:
 	print(i)
 	i += 1
 
-# Another while-loop
+# A while-loop with two variables
 x = 11
 y = 1
 while y < x:
