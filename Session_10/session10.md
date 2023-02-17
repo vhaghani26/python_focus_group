@@ -110,6 +110,13 @@ for date in dates:
 x = len(dates)
 for i in range(x):
     print(i, dates[i])  
+	
+# The range() function
+squares = []
+for value in range(1,11):
+	square = value**2
+	squares.append(square)
+print(squares)
 ```
 
 ### Nested For-Loops
