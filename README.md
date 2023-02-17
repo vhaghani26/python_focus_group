@@ -136,25 +136,6 @@ All sections below are topics I plan to integrate into sessions.
 
 ### Adding an `elif` Statement
 
-## Logic Operators
-
-and/or/not
-
-## Comparison Operations
-
-| Operation | Meaning |
-|-----------|---------|
-| `<` | strictly less than |
-| `<=` | less than or equal |
-| `>` | strictly greater than |
-| `>=` | greater than or equal |
-| `==` | equal (since only one `=` is a variable assignment) |
-| `!=` | not equal |
-| `is` | object identity |
-| `is not` | negated object identity |
-
-[Source](https://docs.python.org/3/library/stdtypes.html)
-
 ## Components of a Function
 
 ## Making a Function
