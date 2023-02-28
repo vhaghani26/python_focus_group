@@ -87,6 +87,8 @@ git clone https://github.com/vhaghani26/python_focus_group.git python_focus_grou
 
 Enter your user information when prompted. This command means that we are creating the local directory, `python_focus_group` (which we specify at the end of the command), and cloning the contents of the GitHub repository into this local directory. You don't have anything in your GitHub repo at the moment, but this is important because it connects your local directory to GitHub. 
 
+Please note that in rare instances, you may get an error, such as an [`xcrun` error](https://ma.ttias.be/mac-os-xcrun-error-invalid-active-developer-path-missing-xcrun/). I recommend searching the error verbatim and trying some recommended solutions. Often times, this will fix whatever errors you run into.
+
 ## Files
 
 Enter `python_focus_group/`. Remember that we can use the `cd` command to do this. The command should look like this:
@@ -183,7 +185,9 @@ The `-m` flag indicates a message, and the stuff inside the quotation marks is t
 git push
 ```
 
-This prompts you to enter your username and password, and it will sync all of your changes in your GitHub repository! Congratulations! You pushed your files to GitHub.
+This prompts you to enter your username and password, and it will sync all of your changes in your GitHub repository. I would like to note here that you may receive an error related to GitHub Personal Access Tokens. See the section below on how to address this before continuing if you run into that issue.
+
+Congratulations! You pushed your files to GitHub. 
 
 An alternative to pushing all changes at once is to do it manually with specific commit messages (this can be helpful). You can do it sequentially like so:
 
