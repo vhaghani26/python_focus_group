@@ -12,7 +12,7 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 What exactly is a conditional? Well, a conditional is when you want to carry out a certain set of actions only if something (data in this case) meets a certain condition. For example, if the weather is sunny out, then I will wear shorts. Otherwise, I will wear long pants. 
 
-Now what about data? In many situations, our data is dynamic and we want to carry out different operations given a set of conditions. As such, one of the most widely used and powerful tools in bioinformatics is the use of conditionals. Let's dive in and see what we can do with conditionals!
+Now what about data? In many situations, our data is dynamic and we want to carry out different operations given a set of conditions. As such, one of the most widely used and powerful tools in bioinformatics is the use of conditionals. Additionally, you can define conditions based on nearly all data types. Let's dive in and see what we can do with conditionals!
 
 Make a new file calle `conditionals.py` and let's get started! 
 
@@ -23,7 +23,7 @@ Imagine you are at a club that requires you to be 18 years old to enter. Let's s
 
 age = 19
 
-if age > 18:
+if age >= 18:
     print("You may enter!")
 else:
     print("You are too young to enter.")
@@ -40,11 +40,35 @@ else:
     {alternative code to execute if the condition is not met}
 ```
 
+Aside from simply carrying out code, you can also use the variable in the code:
+
+```
+age = 14
+print("Dad: Happy birthday! How old are you turning this year?")
+print(f"Son: Thank you. I’m turning {age} this year")
+if age >= 16:
+	print("Dad: Good, now go get a job")
+else:
+	print(f"Dad: Wow, only {16-age} more years until you can get a job")
+```
+
 ## Adding `elif` to Conditionals
 
-There may be times when you have more than two possible paths to execute depending on the data. In this case, you can add an `elif` statement. `elif` stands for "else if," essentially meaning "if it doesn't match the first condition, see if it matches this one." It makes more sense in action, so let's take a look.
+There may be times when you have more than two possible paths to execute depending on the data. In this case, you can add an `elif` statement. `elif` stands for "else if," essentially meaning "if it doesn't match the first condition, see if it matches this one." It makes more sense in action, so let's take a look. Below, we will check to see the status of `x` in relation to `y`.
 
+```
+x = 5
+y = 10
 
+if x > y:
+    print("x is greater than y")
+elif x < y:
+    print("x is less than y")
+else:
+    print("x is equal to y")
+```
+
+Change the values of `x` and `y` and see how the outputs change.
 
 ## `and` vs. `or` in Conditionals
 
@@ -52,12 +76,12 @@ In other cases, you may want there to be a combination of conditions to be met. 
 
 **1. Using `and`**
 
-The use of `and` means that BOTH conditions must be satisfied in order for the code to execute. Using the previous example of the club, let's say that the club only allows people from age 18-20. Anyone who is 21 needs to go to another club. This means that people entering the club have to be older than 18 **AND** younger than 21. See below:
+The use of `and` means that BOTH conditions must be satisfied in order for the code to execute. Using the previous example of the club, let's say that the club only allows people from age 18-20. Anyone who is 21 needs to go to another club. This means that people entering the club have to be 18 or older **AND** younger than 21. See below:
 
 ```
 age = 20
 
-if age > 18 and age < 21:
+if age >= 18 and age < 21:
     print("You may enter!")
 else:
     print("This club is not for you.")
@@ -70,7 +94,7 @@ We can also introduce an `elif` statement here for practice:
 ```
 age = 20
 
-if age > 18 and age < 21:
+if age >= 18 and age < 21:
     print("You may enter!")
 elif age < 18:
     print("You're too young!")
@@ -136,16 +160,67 @@ Notice that since we did not meet the condition, the code moves on without execu
 
 ## Conditionals within Loops
 
+One of the most common uses of conditionals is inside a loop. This is similar to the concept of a nested for-loop, but instead contains a conditional embedded below the for-loop. Let's take the below example, where we want to sort a list of numbers based on if it is a single- or double-digit number.
 
+```
+# Original list
+my_numbers = [74, 60, 4, 93, 2, 1, 54]
 
+# New lists
+single_digits = []
+double_digits = []
 
+for num in my_numbers:
+    if num < 10:
+        single_digits.append(num)
+    else:
+        double_digits.append(num)
 
+print(single_digits)
+print(double_digits)
+```
 
+As you continue learning to code, you'll increasingly see that there are so many different ways to accomplish the same task. Below are some alternative implementations of the above code. You can see that some ways may be more efficient than others.
 
+```
+# Original list
+my_numbers = [74, 60, 4, 93, 2, 1, 54]
 
+# New lists
+single_digits = []
+double_digits = []
 
+for num in my_numbers:
+    if num >= 10:
+        double_digits.append(num)
+    else:
+        single_digits.append(num)
 
+print(single_digits)
+print(double_digits)
+```
 
+And 
+
+```
+# Original list
+my_numbers = [74, 60, 4, 93, 2, 1, 54]
+
+# New lists
+single_digits = []
+double_digits = []
+
+for num in my_numbers:
+    # Convert the number to a string to assess length
+    num = str(num)
+    if len(num) == 1:
+        single_digits.append(int(num))
+    else:
+        double_digits.append(int(num))
+
+print(single_digits)
+print(double_digits)
+```
 
 ## Exit Ticket
 
