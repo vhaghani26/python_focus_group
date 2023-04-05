@@ -125,16 +125,24 @@ Recording: TBD
 * For-Loops
 * While-Loops
 
+## Session_11
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_11/session11.md
+
+Recording: TBD
+
+* Conditionals (If-Else Statements)
+* Adding `elif` to Conditionals
+* `and` vs. `or` in Conditionals
+* Removing `else` from Conditionals
+* Conditionals within Loops
+
 __________________________________
 
 
 # Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
-
-## If-Else Statements
-
-### Adding an `elif` Statement
 
 ## Components of a Function
 
