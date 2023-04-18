@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2022-03-16
+Last Updated: 2023-04-18
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -227,6 +227,19 @@ print(my_fav_artists_popped)
 ```
 
 I'd like to note that the list does contain my favorite artists, but the replacements and removals are not reflective of my true opinions. Sorry Billy Joel, Prince, and Depeche Mode.
+
+#### Printing List Elements Using `*`
+
+Sometimes, we may want to view list elements without printing it in Python list formatting. This may be helpful down the line when you interact with the command line through Python scripts. Let's see the following:
+
+```
+my_nums = [1, 2, 3, 4, 5]
+
+print(my_nums)
+print(*my_nums)
+```
+
+Notice that by preceeding the list with `*`, the format of the output has changed. 
 
 #### Turning Strings into Lists
 
