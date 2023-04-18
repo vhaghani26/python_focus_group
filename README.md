@@ -137,16 +137,21 @@ Recording: TBD
 * Removing `else` from Conditionals
 * Conditionals within Loops
 
+## Session_12
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_12/session12.md
+
+Recording: TBD
+
+* Functions
+* Making a Function
+* Function Descriptions
 __________________________________
 
 
 # Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
-
-## Components of a Function
-
-## Making a Function
 
 ## Argparse
 
