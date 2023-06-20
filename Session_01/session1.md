@@ -4,7 +4,7 @@ By: Viktoria Haghani & Osman Sharifi
 
 Session Date: 2021-12-14
 
-Last Updated: 2021-12-16
+Last Updated: 2023-06-16
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -88,6 +88,16 @@ git clone https://github.com/vhaghani26/python_focus_group.git python_focus_grou
 Enter your user information when prompted. This command means that we are creating the local directory, `python_focus_group` (which we specify at the end of the command), and cloning the contents of the GitHub repository into this local directory. You don't have anything in your GitHub repo at the moment, but this is important because it connects your local directory to GitHub. 
 
 Please note that in rare instances, you may get an error, such as an [`xcrun` error](https://ma.ttias.be/mac-os-xcrun-error-invalid-active-developer-path-missing-xcrun/). I recommend searching the error verbatim and trying some recommended solutions. Often times, this will fix whatever errors you run into.
+
+## GitHub Personal Access Tokens
+
+As of the most recent update of this document, password usage at the command line has been completely replaced by the use of personal access tokens. Before moving on, let's create a GitHub personal access token. Please follow [these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for the **Classic Token**. Once it has been created, save it and use it in place of a password when you Git push.
+
+Regarding the selected access options that pop up, I use the following and have yet to run into any hiccups:
+
+![github](https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/token_options.png)
+
+Remember, this will now act as your password when you `git push` (but not when you log into GitHub online). 
 
 ## Files
 
@@ -185,7 +195,7 @@ The `-m` flag indicates a message, and the stuff inside the quotation marks is t
 git push
 ```
 
-This prompts you to enter your username and password, and it will sync all of your changes in your GitHub repository. I would like to note here that you may receive an error related to GitHub Personal Access Tokens. See the section below on how to address this before continuing if you run into that issue.
+This prompts you to enter your username and password, and it will sync all of your changes in your GitHub repository. Use the personal access token you set up earlier as the password. 
 
 Congratulations! You pushed your files to GitHub. 
 
@@ -209,9 +219,7 @@ git push
 
 If you commit multiple changes, you can git push between everything or once at the end.
 
-## GitHub Personal Access Tokens
 
-There may be some cases in which your GitHub password is not accepted when you use `git push`. If so, you will get an error that says something about a personal access token. If you get this error, follow [these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a personal access token. Once it has been created, save it and use it in place of a password when you Git push.
 
 ## Exit Ticket: `git_test.txt`
 

@@ -15,8 +15,8 @@ Recording: NA
 * Using the Terminal
 * Directories
 * GitHub
-* Files
 * GitHub Personal Access Tokens
+* Files
 * UNIX Cheat Sheet
 
 ## Session_02
