@@ -146,14 +146,26 @@ Recording: TBD
 * Functions
 * Making a Function
 * Function Descriptions
+
+## Session_13
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_13/session13.md
+
+Recording: TBD
+
+* Argparse
+* Argparse Set-Up
+* Required Arguments
+* Optional Arguments
+	* Default Values
+* Switches
+* Argparse Template
 __________________________________
 
 
 # Topic Bank
 
 All sections below are topics I plan to integrate into sessions.
-
-## Argparse
 
 ## Conda
 
