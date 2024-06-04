@@ -1,4 +1,4 @@
-# Session 14: Screen
+# Session 14: `screen`
 
 By: Viktoria Haghani
 
@@ -8,7 +8,7 @@ Last Updated: 2024-06-04
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. 
 
-## Introduction 
+## Introduction to `screen`
 
 Up to now, we have learned a mixture of tools to use Python and the Python language itself. Today, we'll be learning about another tool that will help with our use of Python. Let's say you write a Python script and it takes a few hours to run. Do you leave your terminal open, computer on, and desperately hope your internet doesn't cut out and kill your entire job? No! You use `screen`.
 
