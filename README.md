@@ -171,6 +171,21 @@ Recording: TBD
 * Installation
 * Using `screen`
 * `screen` Cheat Sheet
+
+## Session_15
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/session_15.md
+
+Recording: TBD
+
+* Why should you use Conda?
+* Installing Conda
+* Mamba
+* Creating Environments
+* Activating an Environment
+* Installing Packages
+* Deactivating an Environment
+* Advanced Conda Documentation
 __________________________________
 
 
@@ -178,43 +193,11 @@ __________________________________
 
 All sections below are topics I plan to integrate into sessions.
 
-## Conda
-
 ## Reading Files with Open
 
 ## Writing Files with Open
 
-## Using `loc`
-
-### Creating a New Data Frame Using `loc` Slicing
-
-## Using `iloc`
-
-### Creating a New Data Frame Using `iloc` Slicing
-
-## Using `ix`
-
-## Loading Data with Pandas
-
-## Working with and Saving Data with Pandas
-
-## Manipulating Pandas Arrays
-
-## Array Dimensionality
-
-## Numpy 1D Arrays
-
-### The Basics and Array creation
-
-### Basic Operations
-
-### Universal Functions
-
-## Numpy 2D Arrays
-
-### Indexing and Slicing in 2D
-
-### Basic Operations in 2D
+## Polars Dataframe Stuff
 
 ## Objects
 
