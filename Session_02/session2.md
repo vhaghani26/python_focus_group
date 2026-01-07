@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: 2022-01-11
 
-Last Updated: 2022-01-18
+Last Updated: 2025-01-07
 
 Session Recording: https://www.youtube.com/watch?v=OItmKM8uuyI
 
@@ -168,11 +168,7 @@ Because this is just practice with no content, feel free to remove `linked_file/
 
 ## File Permissions
 
-This section is adapted directly from Ian Korf.
-
-While file permissions may not affect daily work, it is still important to know and understand. A file can have 3 kinds of permissions: read, write, and execute. These are abbreviated as `rwx`. Read and write are obvious, but execute is a little weird. Programs and directories need executable permission to access them. Generally, you want read and write access to the files you create. However, if you have some incredibly important data file, you might want to protect it from being edited, so you may want to remove write permission and make it read-only.
-
-In addition to having 3 types of permissions, every file also has 3 types of people that can access it: the owner (you), the group you belong to (e.g. a laboratory), or the public. For the purposes of learning how to program, we can treat these all the same. However, you can imagine that some files should not be readable by others (for example, your private poetry efforts). Navigate into `session_02` and examine the file permissions on `hello_world.py`, the script we will be editing shortly. 
+While file permissions may not affect daily work, it is still important to know and understand. A file can have 3 kinds of permissions: read, write, and execute. These are abbreviated as `rwx`. In addition to having 3 types of permissions, every file also has 3 types of people that can access it: the owner (you), the group you belong to (e.g. a laboratory), or the public. Navigate into `session_02` and examine the file permissions on `hello_world.py`, the script we will be editing shortly. 
 
 ```
 ls -lF hello_world.py
@@ -181,46 +177,201 @@ ls -lF hello_world.py
 This will produce something like the following.
 
 ```
--rw-r--r--  1 vhaghani  vhaghani     0 Dec 16 13:56 hello_world.py
+-rw-r--r--  1 vhaghani  kdfinkgrp     0 Dec 16 13:56 hello_world.py
 ```
 
-After the leading dash, there are 3 triplets of letters. The first triplet shows user permissions. In the example code above, you should see that I have read and write permissions, but not execute. The next triplets are for group and public. Both have read permission, but not write or execute. Let's first turn on all permissions for everyone using the `chmod` command and then list again.
+### Permission Strings
+
+When you see something like **`drwxr-xr-x`**, this "permission string" tells you everything about who can do what with a file or directory. Let's break down what each part means.
+
+Every permission string consists of 10 characters that follow a consistent pattern:
 
 ```
-chmod 777 hello_world.py
-ls -lF hello_world.py # Remember you can use your up arrow to rerun previously run commands
+Type Owner Group Others
+d    rwx   r-x   r-x
 ```
 
-Notice that you can now see `rwx` for owner, group, and public.
+**Character 1: File Type**
+- `-` = Regular file (like a text document or image)
+- `d` = Directory (folder)
+- `l` = Symbolic link (shortcut to another file)
+
+**Characters 2-4: Owner Permissions**
+These control what the file's owner (usually the person who created it) can do.
+
+**Characters 5-7: Group Permissions**
+These control what members of the file's group can do. On shared systems (e.g. HIVE) you will know what group you belong to based on your PI (`kdfinkgrp`, `jhalmaigrp`) and in order to access things with only group permissions, you need to be added to the group.
+
+**Characters 8-10: Others/World Permissions**
+These control what everyone else (the public) on the system can do.
+
+Each permission triple (like `rwx`) uses the same three letters:
+
+- **r** = Read permission
+  - For files: Can view the file's contents
+  - For directories: Can list what's inside the directory
+- **w** = Write permission
+  - For files: Can modify or delete the file
+  - For directories: Can add, remove, or rename files in the directory
+- **x** = Execute permission
+  - For files: Can run the file as a program/script
+  - For directories: Can enter/access the directory (crucial for navigating)
+
+This table summarizes the aboove information, explaining the meaning of each position in a permission string.
+
+| Position | Example | Name | Meaning/Values |
+| :--- | :--- | :--- | :--- |
+| 1 | `d` | File Type | `d` = Directory, `-` = File, `l` = Symbolic Link |
+| 2-4 | `rwx` | Owner (User) | Permissions for the file's owner |
+| 5-7 | `r-x` | Group | Permissions for members of the file's group |
+| 8-10 | `r-x` | Other | Permissions for all other users |
+
+#### Common Permission Patterns
+
+Here are some typical permission strings you'll encounter:
+
+| Permission String | What It Means |
+|-------------------|---------------|
+| `-rw-------` | Only the owner can read and write (private file) |
+| `-rw-r--r--` | Owner can read/write, everyone else can only read |
+| `-rwxr-xr-x` | Owner can read/write/execute, others can read/execute (typical for programs) |
+| `drwx------` | Only the owner can access this directory |
+| `drwxr-xr-x` | Owner has full access, others can list and enter directory |
+| `lrwxrwxrwx` | A symbolic link (permissions don't apply the same way) |
+
+### Numeric Permission Codes
+
+This table shows how the read (`r`), write (`w`), and execute (`x`) permissions correspond to numeric values (0-7). These numbers are used with the `chmod` command to change permissions.
+
+| Digit | Binary (rwx) | Permissions |
+| :--- | :--- | :--- |
+| 0 | 000 | `---` (no permissions) |
+| 1 | 001 | `--x` (execute only) |
+| 2 | 010 | `-w-` (write only) |
+| 3 | 011 | `-wx` (write + execute) |
+| 4 | 100 | `r--` (read only) |
+| 5 | 101 | `r-x` (read + execute) |
+| 6 | 110 | `rw-` (read + write) |
+| 7 | 111 | `rwx` (read + write + execute) |
+
+### Understanding Numeric Permission Codes
+
+The numeric codes (like 755 or 644) used with `chmod` are just a shorthand way to represent the same rwx permissions. Each digit corresponds to one of the three permission groups.
+
+#### How the Numbers Work
+
+The numbers use a simple calculation based on binary values:
+- Read (r) = 4
+- Write (w) = 2  
+- Execute (x) = 1
+
+Add the values together for the permissions you want:
+- Read + Write = 4 + 2 = 6
+- Read + Execute = 4 + 1 = 5
+- Read + Write + Execute = 4 + 2 + 1 = 7
+
+#### Three-Digit Permission Codes
+
+A three-digit code like `755` represents:
+- First digit (7) = Owner permissions
+- Second digit (5) = Group permissions  
+- Third digit (5) = Others permissions
+
+So `755` means:
+- Owner: 7 = 4+2+1 = rwx (read, write, execute)
+- Group: 5 = 4+1 = r-x (read, execute, no write)
+- Others: 5 = 4+1 = r-x (read, execute, no write)
+
+#### Common Numeric Permissions
+
+Here are the most frequently used permission codes:
+
+| Code | Meaning | When to Use |
+|------|---------|-------------|
+| `644` | `-rw-r--r--` | Regular files you want to share (data files, documents) |
+| `755` | `-rwxr-xr-x` | Scripts/programs you want to share and execute |
+| `600` | `-rw-------` | Private files (only you can read/write) |
+| `700` | `drwx------` | Private directories (only you can access) |
+| `750` | `drwxr-x---` | Directories shared with your group |
+| `777` | `-rwxrwxrwx` | **Dangerous!** Anyone can do anything |
+
+### Practical Examples with `chmod`
+
+Let's see how to use what we've learned in practice:
+
+**Example 1: Making a Script Executable**
 
 ```
--rwxrwxrwx  1 vhaghani  vhaghani     0 Dec 16 13:56 hello_world.py*
+# Create a Python script
+echo 'print("Hello World!")' > myscript.py
+
+# Check current permissions (probably 644)
+ls -l myscript.py
+
+# Make it executable for you, readable+executable for others
+chmod 755 myscript.py
+
+# Check the permission string again
+ls -l myscript.py
 ```
 
-There is also an asterisk after the program name indicating that the file is now executable. The `-F` option in `ls` shows you what kind of file something is with a trailing character. If the file is a directory, there will be a trailing `/`.
-
-You won't need to get complicated with permissions. This is just a helpful tidbit of information that may be useful one day. The following 3 are all you need right now.
-
-* `chmod 444` file is read only
-* `chmod 666` file may be read and edited
-* `chmod 777` file may be read, edited, and used as Unix command
-
-Furthermore, the `chmod` command has two different syntaxes. The more human readable one looks like this.
+**Example 2: Securing Sensitive Data**
 
 ```
-chmod u-x hello_world.py
-ls -lF hello_world.py
+# Make a file private (only you can read/write)
+chmod 600 sensitive_data.txt
+
+# Make a directory private (only you can access)
+chmod 700 private_research/
 ```
 
-The above command says: "change the user (u) to remove (-) the execute (x) permission from file hello_world.py". You add permissions with +, like so:
+**Example 3: Sharing with Your Research Group**
 
 ```
-chmod u+x hello_world.py
-ls -lF hello_world.py
+# Group members can read and execute, but not modify
+chmod 750 shared_scripts/
+
+# Group members can read but not modify files
+chmod 640 shared_data.csv
 ```
 
-The less readable `chmod` format is assigning all parameters in octal format. 4 is the read permission. 2 is the write permission. 1 is the execute permission. Each rwx corresponds to one octal number from 0 to 7. So `chmod 777` turns on all permissions for all types of people and `chmod 000` turns them all off.
+### Important Considerations
 
-You will not use this frequently, but it is here for your reference if need be.
+1. **Start restrictive, then loosen permissions**: It's safer to begin with strict permissions (`640` for files, `750` for directories) and gradually grant more access as needed
+2. **Directory permissions matter for access**: Even if a file has `644` permissions, if its parent directory doesn't have execute permission for you, you can't access the file
+3. **The execute bit is different for directories**: For directories, `x` means "can enter/search" the directory. Without it, you can't `cd` into it or access anything inside
+4. **Be careful with recursive changes**: Using `chmod -R` applies permissions to everything in a directory tree. Double-check before using it
+5. **For Python scripts**: You typically want `755` (readable and executable by all) for scripts you want to run
+
+### Revisiting `ls -lF` Output
+
+Earlier, we ran `ls -lF hello_world.py`. Now we can interpret every part of the output:
+
+```
+-rw-r--r--  1 vhaghani  kdfinkgrp   0 Dec 16 13:56 hello_world.py
+││          │ │         │           │ │      │     └─►  File name
+││          │ │         │           │ │      └─►  Time of last modification (hour:minute)
+││          │ │         │           │ └─►  Month and day of last modification
+││          │ │         │           └─►  Size of the file in bytes
+││          │ │         └─►  Group that owns the file (often a research lab or project group)       
+││          │ └─►  Owner (user) of the file
+││          └─►  Number of hard links (normally “1” for a regular file)
+│└─►  Permission string
+└─►  File type indicator 
+```
+
+Based on this output, we can determine the following:
+ - The owner (vhaghani) can read and edit the file but cannot run it as a program
+ - Members of the group kdfinkgrp can only read the file
+ - All other users on the system can also only read the file
+
+### Troubleshooting Permission Problems
+
+If you encounter "Permission denied" errors:
+
+1. **Check file permissions**: `ls -l filename`
+2. **Check directory permissions**: `ls -ld directoryname` (note the `-d` flag)
+3. **Are you the owner?**: Use `ls -l` to see if you own the file
+4. **Do you need execute permission?**: For scripts or directories you want to enter
 
 Congratulations! You finished Session 2!
