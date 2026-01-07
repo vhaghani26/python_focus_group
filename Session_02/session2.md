@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: 2022-01-11
 
-Last Updated: 2025-01-07
+Last Updated: 2026-01-07
 
 Session Recording: https://www.youtube.com/watch?v=OItmKM8uuyI
 

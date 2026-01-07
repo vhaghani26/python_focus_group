@@ -44,7 +44,7 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/ses
 Recording: https://youtu.be/uOv00Z2nxUg
 
 * GitHub Desktop
-* Installing Python
+* Installing Python via Conda
 * Verifying Python Installation
 * Python at the Command Line
 * Python Scripts

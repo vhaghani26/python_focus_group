@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: 2022-01-18
 
-Last Updated: 2022-01-18
+Last Updated: 2026-01-07
 
 Session Recording: https://youtu.be/uOv00Z2nxUg
 
@@ -136,22 +136,22 @@ Once you have pushed it, go to your GitHub repo online (i.e. using a browser) an
 
 Congratulations! You learned how to use GitHub Desktop! :)
 
-## Installing Python
+## Installing Python via Conda
 
-Now that we have set up GitHub and made some files, we are going to try making our first Python script. This requires us to install Python. Based on your operating system, the instructions for installation vary. I have included some helpful sources that will walk you through how to install Python. 
+Now that we have set up GitHub and made some files, we are going to try making our first Python script. This requires us to install Python. One of the easiest ways to install Python is with `conda`. We will dive into more detail about `conda` much later, so for now, simply follow the instructions so that we can get Python installed.
 
-**Note for Cluster Users**: The default version of Python in the cluster is OLD, so you need to specify `anaconda3` so you are using Python 3 instead of Python 2 (the default). 
+**Note**: If you are on HIVE, you do not need to download anything; you can just run `module load conda` and it will automatically load. If you are on a personal device, you will need to follow the installation instructions below.
 
-### Mac OS
-[How to Install Python3 on Mac](https://www.youtube.com/watch?v=0hGzGdRQeak) (I recommend this source, as it's easier to follow and requires less command-line knowledge)
+Go to the [Anaconda website](https://www.anaconda.com/download#downloads) and download whatever version is appropriate for your computer setup. Since I use Ubuntu via WSL2 (even though I'm on Windows), I download the Linux version. Once you have downloaded it, change into the directory containing the file and run it. The example below uses my personal setup:
 
-[Installing Python 3 on Mac OS X](https://docs.python-guide.org/starting/install3/osx/)
+```
+cd /mnt/c/Users/vicky/Downloads/
+sh Anaconda3-2023.03-1-Linux-x86_64.sh
+```
 
-### Linux
-[Installing Python 3 on Linux](https://docs.python-guide.org/starting/install3/linux/)
+Read the license agreement and answer "yes" (without quotes) to accept the terms. Use the default location for the install by pressing Enter. It will take a little time to install. When the installer asks if you want to initialize Anaconda3 by running conda init, answer "yes."
 
-### Windows
-[How to Install Python 3 on Ubuntu 18.04 or 20.04](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
+Close your terminal and open a new one. You should see `(base)` at the start of each prompt. This means you're in the `base` Conda environment, which comes with a Python installation.
 
 ## Verifying Python Installation
 
