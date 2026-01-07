@@ -1,4 +1,4 @@
-# Session 2: File and Directory Manipulation in UNIX and First Python Script
+# Session 2: File and Directory Manipulation in UNIX
 
 By: Viktoria Haghani
 
