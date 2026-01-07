@@ -267,7 +267,7 @@ git push
 In your main `python_focus_group` directory, you should have a file called `README.md`. Your assignment is to navigate to the file and edit it to reflect the content in your repository, then Git push it. An example of the text you can include is:
 
 ```
-This repository is for the LaSalle Lab Python Focus Group, where we are learning how to code using Python.
+This repository is for the Python Focus Group, where we are learning how to code using Python.
 
 ## Session_01
 foo.txt: A file containing random phrases that was created using `touch`
