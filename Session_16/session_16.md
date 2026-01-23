@@ -212,7 +212,7 @@ A **binary** file is one that's not human-readable. You can't just read off the 
 
 In our first data analysis project, we will be using a dataset about the California least tern. The California least tern is a endangered subspecies of seabird that nests along the coast of California and Mexico. The California Department of Fish and Wildlife (CDFW) monitors least tern nesting sites across the state to estimate breeding pairs, fledglings, and predator activity in each annual breeding season.
 
-The CDFW publishes most of the data it collects to the [California Open Data portal][https://data.ca.gov/]. In this project, we will use a cleaned 2000-2023 version of the California least tern data. 
+The CDFW publishes most of the data it collects to the [California Open Data portal](https://data.ca.gov/). In this project, we will use a cleaned 2000-2023 version of the California least tern data. 
 
 Let's use Polars to read the California least tern data set. The default file name is `2000-2023_ca_least_tern.csv`, which suggests it's a **CSV file**. The Polars function to read a CSV file is `read_csv`. The function's first and only required argument is the path to the CSV file. The path to the California least tern data set is `01_raw_data/2000-2023_ca_least_tern.csv`, because we stored the file in the `01_raw_data` directory. When we load the data, we will save the result from the `read_csv` function in a variable called `terns`. We can use this variable to access the data in subsequent code. 
 
