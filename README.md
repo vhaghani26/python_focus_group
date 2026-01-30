@@ -205,6 +205,16 @@ Recording: TBD
 	* Loading the Terns Data
 	* Inspecting a Data Frame
 * Documentation for 2000-2023 California Least Tern Data Set
+
+## Session_17
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_17/Session_17.ipynb
+
+Recording: TBD
+
+* Summarizing Data in a Data Frame
+* Working with Different Data Types
+
 __________________________________
 
 
@@ -248,68 +258,3 @@ and are usually not intended to be accessed directly.
 
 
 _________
-
-
-### Summarizing Data
-
-The `.glimpse` method provides a structural summary of a data frame. The method
-lists the data frame's shape and column names, as well as the type of data in
-each column and a few example values. Try calling `.glimpse` on the `terns`
-data frame:
-
-```{code-cell}
-terns.glimpse()
-```
-
-The next chapter explains data types in more detail. For now, just take note
-that there are multiple types (`i64`, `str`, and `f64` in the `terns` data
-frame).
-
-In contrast to the `.glimpse` method, the `.describe` method provides a
-statistical summary of a data frame:
-
-```{code-cell}
-terns.describe()
-```
-
-### Summarizing Columns
-
-You can select individual columns with **bracket notation**. Put the name of
-the column in quotes and place that inside of square brackets `[]`. For
-example, to select the `total_nests` column:
-
-```{code-cell}
-terns["total_nests"]
-```
-
-Polars provides a variety of methods to compute on columns. For instance, you
-can use the `.mean` method to compute the mean:
-
-```{code-cell}
-terns["total_nests"].mean()
-```
-
-Similarly, you can use the `.min` method to compute the smallest value in a
-column:
-
-```{code-cell}
-terns["total_nests"].min()
-```
-
-<!--
-Functions from other packages will usually work with Polars, but might be less
-efficient. Here's how to find smallest value in the column with the `np.min`
-function from NumPy:
-
-```{code-cell}
-np.min(terns["total_nests"])
-```
--->
-
-For columns of categories, statistics like means and minimums aren't defined.
-Instead, it's often informative to count the number of observations of each
-category. You can do this with the `.value_counts` method:
-
-```{code-cell}
-terns["year"].value_counts()
-```
