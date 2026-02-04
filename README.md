@@ -4,6 +4,10 @@
 
 The purpose of forming this Python Focus Group is to teach people how to code in Python. Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX, and a number of other sources that will be linked in subsequent sessions.
 
+## Survey
+
+I enjoy teaching and look for opportunities to improve where I can, and I can only do so with your feedback. Additionally, if I decide to pursue teaching professionally later on (e.g. at a community college) then having teaching reviews is extremely helpful. As such, if you attend or watch any of the sessions, I'd really appreciate if you could fill out [this survey](https://forms.gle/wVjumSgXeLSF9X8G7). It should only take a minute or two!
+
 ## Session_01
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/session1.md
