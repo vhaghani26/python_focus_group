@@ -8,7 +8,7 @@ The purpose of forming this Python Focus Group is to teach people how to code in
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/session1.md
 
-Recording: NA
+Recording: https://youtu.be/LumSgtw8PIg
 
 * Terminals
 * Opening the Terminal
