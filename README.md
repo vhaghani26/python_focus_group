@@ -27,7 +27,7 @@ Recording: https://youtu.be/LumSgtw8PIg
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_02/session2.md
 
-Recording: https://www.youtube.com/watch?v=OItmKM8uuyI
+Recording: https://youtu.be/21bK1e_1dOI 
 
 * File and Directory Manipulation
 * Renaming a Directory
