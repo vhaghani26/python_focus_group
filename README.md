@@ -45,7 +45,7 @@ Recording: https://youtu.be/21bK1e_1dOI
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/session3.md
 
-Recording: https://youtu.be/uOv00Z2nxUg
+Recording: https://youtu.be/U1ln_0ESYBk
 
 * GitHub Desktop
 * Installing Python via Conda
