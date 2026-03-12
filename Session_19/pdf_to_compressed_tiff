@@ -1,0 +1,22 @@
+import glob
+import os
+
+# Get the current working directory
+current_directory = os.getcwd()
+
+# List of sample names (all PDFs in the current working directory)
+SAMPLES = [os.path.basename(f)[:-4] for f in glob.glob(os.path.join(current_directory, "*.pdf"))]
+
+rule all:
+    input:
+        expand("{sample}.tiff", sample=SAMPLES)
+
+rule pdf_to_tiff:
+    input: "{sample}.pdf"
+    output: temp("{sample}_uncompressed.tiff")
+    shell: "magick -background white -density 600 -quality 90 {input} {output}"
+
+rule compress_tiff:
+    input: "{sample}_uncompressed.tiff"
+    output: "{sample}.tiff"
+    shell: "magick -compress LZW {input} {output}"
