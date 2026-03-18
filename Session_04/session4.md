@@ -1,4 +1,4 @@
-# Session 4: Text Editors, Python Comments, and Variables
+# Session 4: Text Editors, Python Comments, Variables, and BASH Aliases
 
 By: Viktoria Haghani
 
@@ -273,6 +273,50 @@ print(an_animal_1)
 Rerun your script. Now your output should be "Bear." 
 
 **Note**: Although it isn't a strict convention, and certainly not necessary for early/personal coding, there is a convention that variables that are completely capitalized represent global/absolute values (i.e. things that do not change anywhere in the script; variable is the same throughout the script) and lowercase variables can repesent dynamic values. This becomes more important when developing software, but there is no need to do this or worry about it any time soon. Personally, I just stick to using all lowercase letters separated by underscores.
+
+## Aliasing (in .bashrc/.profile)
+
+A bash alias is an extremely helpful thing to take advantage of. It is essentially a shortcut or keyboard abbreviation that you can customize to make your life easier at the command line. Typically, the aliases you create get put in a `.bashrc`, `.profile`, or `.zshrc` file depending on how your system is set up/what operating system you use. These files contain configuration information that manage how your profile/terminal work for you. Everything contained in the file your system uses is run upon starting the terminal. When you create an alias and put it in your configuration file, it will run the command upon starting your terminal. This means you are free to use your shortcuts at any time! The alias command takes on the following structure:
+
+```
+alias "the shortcut you want to use"="the actual/old command"
+```
+
+Note that if the shortcut does not contain any spaces, you do not need quotes around it. Last week, I mentioned that I would discuss how I change my directory by only typing `pfg`. This is because in my `.bashrc`, I put the following:
+
+```
+alias pfg="cd /mnt/c/Users/vicky/Documents/GitHub/python_focus_group"
+```
+
+In English, this means that if I type `pfg`, the command `cd /mnt/c/Users/vicky/Documents/GitHub/python_focus_group` gets run. My favorite aliases to add to my `.bashrc` or `.profile` are:
+
+```
+alias ls="ls -F" # Add one char of */=>@| to enteries to denote type (file, directory, alias)
+alias rm="rm -i" # Prompt user before every removal
+alias cp="cp -i" # Prompt before overwrite
+alias mv="mv -i" # Prompt before overwrite
+```
+
+Because the aliases listed above primarily qualify as "make the terminal stop you from doing something stupid," I'd highly recommend adding them into your file. The configuration bash files are ALWAYS located in your home directory. Navigate to your home directory and list ALL the directory contents (this is required in order to display files that begin with `.`):
+
+```
+cd ~
+ls -al
+```
+
+Most Mac users will have a `.zshrc` file. If this is not present, look for `.bashrc` or `.profile` instead. Since this part can be quite tricky, you can check out [these instructions](https://www.moncefbelyamani.com/which-shell-am-i-using-how-can-i-switch/) to find out shell you are using and how to switch if needed. Open the file your system uses or the one you'd like to use using your text editor or nano since this will be a quick edit. Find somewhere appropriate to put the aliases (I usually scroll to where I see aliases already listed), and add in the following to your file:
+
+```
+alias ls="ls -F" # Add one char of */=>@| to enteries to denote type (file, directory, alias)
+alias rm="rm -i" # Prompt user before every removal
+alias cp="cp -i" # Prompt before overwrite
+alias mv="mv -i" # Prompt before overwrite
+alias pfg="cd your/path/to/python_focus_goup/" # Use pfg to change into python_focus_group
+```
+
+To get your path to `python_focus_group/`, you can navigate to the directory and use `pwd`. Save your file and close it. Then, restart your terminal (close it and open a new one) so that the commands get executed when it restarts. 
+
+**Note**: [Here](https://linuxhint.com/differences_between_bash_zsh/) is some extra reading on the differences between the configuration file types.
 
 ## Exit Ticket: Update README.md and Git Push
 
