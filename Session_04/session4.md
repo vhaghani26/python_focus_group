@@ -4,7 +4,9 @@ By: Viktoria Haghani
 
 Session Date: 2022-02-01
 
-Last Updated: 2022-02-03
+Last Updated: 2026-03-18
+
+Session Recording: https://youtu.be/Cidyn4HKWuU
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -317,9 +319,3 @@ alias pfg="cd your/path/to/python_focus_goup/" # Use pfg to change into python_f
 To get your path to `python_focus_group/`, you can navigate to the directory and use `pwd`. Save your file and close it. Then, restart your terminal (close it and open a new one) so that the commands get executed when it restarts. 
 
 **Note**: [Here](https://linuxhint.com/differences_between_bash_zsh/) is some extra reading on the differences between the configuration file types.
-
-## Exit Ticket: Update README.md and Git Push
-
-Using a similar style from last week, update your README.md in `python_focus_group/`. Once you have finished for the day, push all of your stuff to GitHub. 
-
-Congratulations, you finished Session 4!

@@ -53,35 +53,32 @@ Recording: https://youtu.be/U1ln_0ESYBk
 * Python at the Command Line
 * Python Scripts
 
-## Session 4: Text Editors, Python Comments, and Variables
+## Session 4: Text Editors, Python Comments, Variables, and BASH Aliases
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/session4.md
 
-Recording: NA
+Recording: https://youtu.be/Cidyn4HKWuU
 
 * Text Editors
 * The `print()` Function
 * Comments in Python
 * Variables
+* Aliasing (in .bashrc/.profile)
 
-## Session 5: BASH Aliases, Text Types, and Text Operations
+___________________________________
+
+Everything below is still a work in progress
+
+## Session 5: Text Types and Text Operations
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/session5.md
 
 Recording: https://youtu.be/v7MOOiPRwZE
 
-* Aliasing (in .bashrc/.profile)
 * Text Types (Strings)
 * Escape Sequences
 * Manipulating Strings
 * Stripping Spaces
-
-## Session 6: Text Types (cont'd)
-
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/session6.md
-
-Recording: https://youtu.be/IvIlPjDzDTg
-
 * Indexing Strings
 * Strides
 * Assessing String Properties
@@ -89,16 +86,24 @@ Recording: https://youtu.be/IvIlPjDzDTg
 * Concatenating Strings
 * String Formatting (String Interpolation) 
 
-## Session 7: Numeric Types
+## Session 6: Numeric Types
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/session7.md
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/session6.md
 
-Recording: https://youtu.be/COkd1Q3uw58
+Recording: https://youtu.be/IvIlPjDzDTg
 
 * Numeric Types (Integers, Floats, Complexes) 
 * Setting the Specific Data Type (Type Casting)
 * Python Expressions
 * Complex Math Operations and First Module Import
+
+## Session 7: 
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/session7.md
+
+Recording: https://youtu.be/COkd1Q3uw58
+
+
 
 ## Session 8: Sequence Types
 
