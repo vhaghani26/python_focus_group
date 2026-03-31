@@ -135,12 +135,9 @@ Sometimes it is hard to differentiate, so if in doubt, Google it!
 
 ## Indexing Strings
 
-Go to `python_focus_group/` (you can now just type `pfg` to do so!). Create a new session directory, enter it, and make a file called `more_strings.py`:
+Now, make a file called `more_strings.py`:
 
 ```
-pfg
-mkdir session_06
-cd session_06
 touch more_strings.py
 ```
 
@@ -283,7 +280,7 @@ The `%s` indicates that the first element is a string. The `%.3f` means two thin
 print('%s %.3f %d %e' % (txt, num, 2.1, .1))
 ```
 
-Now for the fun reveal: this is ugly! It works, but it's more complicated than simply printing the arguments after variables have been assigned (it's more useful for more complicated situations). I've NEVER had to use this string format. I prefer f-strings (Method 3).
+Now for the fun reveal: this is ugly! It works, but it's more complicated than simply printing the arguments after variables have been assigned (it's more useful for more complicated situations). I rarely use this string format. I prefer f-strings (Method 3).
 
 ### Method 2: `str.format()`
 

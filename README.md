@@ -65,10 +65,6 @@ Recording: https://youtu.be/Cidyn4HKWuU
 * Variables
 * Aliasing (in .bashrc/.profile)
 
-___________________________________
-
-Everything below is still a work in progress
-
 ## Session 5: Text Types and Text Operations
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/session5.md
@@ -85,6 +81,9 @@ Recording: https://youtu.be/v7MOOiPRwZE
 * Replicating String Elements
 * Concatenating Strings
 * String Formatting (String Interpolation) 
+___________________________________
+
+Everything below is still a work in progress
 
 ## Session 6: Numeric Types
 
