@@ -69,7 +69,7 @@ Recording: https://youtu.be/Cidyn4HKWuU
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/session5.md
 
-Recording: https://youtu.be/v7MOOiPRwZE
+Recording: https://youtu.be/0NbJEQiVv14
 
 * Text Types (Strings)
 * Escape Sequences
