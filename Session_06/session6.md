@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: 2022-03-08
 
-Last Updated: 2026-03-18
+Last Updated: 2026-04-01
 
 Session Recording: https://youtu.be/COkd1Q3uw58
 
@@ -12,7 +12,7 @@ Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com
 
 ### Numeric Types (Integers, Floats, and Complexes)
 
-We spent the last two sessions learning about strings and string operations (aka text types). This week, we will begin taking a look at numeric types. Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` in a `session_07/` directory. Use your text editor to edit the file.
+We spent the last two sessions learning about strings and string operations (aka text types). This week, we will begin taking a look at numeric types. Numeric types are data types containing numbers. Let's make a new file called `numeric_types.py` in a `session_06/` directory. Use your text editor to edit the file.
 
 #### Integers
 
@@ -313,33 +313,3 @@ print(math.factorial(a))
 ```
 
 If you're ever doing more complicated math than this, many times there will be modules or libraries available for install. Remember Google (or your preferred search engine) is your friend for bioinformatics!
-
-## Exit Ticket
-
-Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
-
-Congratulations, you finished Session 7! 
-
-## Extra Practice
-
-This section is not intended to be part of the lesson, but rather extra practice after the session to help solidify some of the concepts learned.
-
-### Exercise
-
-Make a script that does the following:
-
-1. Determines the data type of the following variables: `var1 = "9.2"`, `var2 = 17`, and `var3 = 3.4`.
-2. Converts `var4 = "19"` to an integer.
-3. Converts `var5 = -26` to a string.
-4. Converts `var6 = 83` to a float.
-5. Calculates the sum of `var4` and `var5`.
-6. Calculates the difference between `var2` and `var1`.
-7. Finds the product of `var5` and `var3`.
-8. Raises `var3` to the power of `var1`.
-9. Assign `var7 = 9` and take the square root of it.
-10. Suppose you have a circle with a radius of 10 cm. What is the circumference of the circle? (Hint: Circumference = 2 * pi * radius)
-11. An employee documents their time driving to and from work since they get compensated for it. In the past week, they spent the following amount of time driving: 33, 37, 35, 31, 29, and 39 minutes. How many total hours is this?
-
-### Solution
-
-You can view the solution to the exercise [here](https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/extra_practice_solution_07.py). Your solution may look a little different, so as long as you get the proper outputs, you're good to go! 
