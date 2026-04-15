@@ -86,10 +86,23 @@ Recording: https://youtu.be/0NbJEQiVv14
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/session6.md
 
-Recording: https://youtu.be/IvIlPjDzDTg [need to update]
+Recording: https://youtu.be/cqcyLz3Vor8
 
 * Numeric Types (Integers, Floats, Complexes) 
 * Setting the Specific Data Type (Type Casting)
 * Python Expressions
 * Complex Math Operations and First Module Import
-* Sequence Types (Tuples, Lists, Ranges)
+* Sequence Types (Tuples, Lists)
+
+## Session 7: Mapping Types and Comparison and Logic Operators
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/session9.md
+
+Recording: TBD
+
+* Ranges
+* Mapping Types (Dictionaries)
+* Set Types (Set, Frozenset)
+* Boolean Types (Boolean)
+* Comparison Operators
+* Logic Operators

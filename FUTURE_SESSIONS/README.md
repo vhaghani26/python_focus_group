@@ -1,17 +1,5 @@
 Everything below is a work in progress.
 
-## Session 9: Mapping Types and Comparison and Logic Operators
-
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/session9.md
-
-Recording: TBD
-
-* Mapping Types (Dictionaries)
-* Set Types (Set, Frozenset)
-* Boolean Types (Boolean)
-* Comparison Operators
-* Logic Operators
-
 ## Session 10: Determining Data Types and Loops
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_10/session10.md

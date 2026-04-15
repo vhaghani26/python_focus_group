@@ -4,9 +4,9 @@ By: Viktoria Haghani
 
 Session Date: 2022-03-08
 
-Last Updated: 2026-04-08
+Last Updated: 2026-04-15
 
-Session Recording: https://youtu.be/COkd1Q3uw58
+Session Recording: https://youtu.be/cqcyLz3Vor8
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -612,40 +612,6 @@ print(max(listD))
 print(sum(listD))
 ```
 
-#### For-Loops
-
-For-loops are an entire discussion on their own and they can apply to other data types, so while we won't be covering them today, I wanted to note that for-loops can be applied to lists, and this is ultimately what makes lists as powerful as they are.
-
 #### A Last Note About Lists
 
 There are several miscellaneous functions you can use to manipulate lists. I couldn't cover them all in one session if I tried, so my advice is that if you want to know if you can manipulate a list in a certain way, Google "how to do X to a list in Python." You'll usually get an answer! 
-
-### Ranges
-
-The last sequencing type is a range. The `range()` function returns a sequence of numbers. Ranges become immensely useful in for-loops (which we'll learn in a later session). For now, we'll take a quick look at what it does. Make a new file called `ranges.py`.
-
-```
-#!/usr/bin/env python3
-
-# Turn our range into a list
-numbers = list(range(1,6))
-print(numbers)
-```
-
-Let's take a look at our output more closely. Notice that our list starts with "1" and ends with "5." This is the same behavior we notice with indexing; our last digit has an off-by-one behavior. This means we have to add one to the last digit to get the range we want. For example, if we want the numbers 1-20 in a list, we have to use the following:
-
-```
-# Turn our range into a list containing numbers 1-20
-range1_20 = list(range(1,21))
-print(range1_20)
-```
-
-We can also tell Python to skip numbers in a given range. This is very similar in notation to the strides we learned about when we learned about strings. Essentially, the notation is `(first number in range, last number in range + 1, every Xth value you want)`. Now let's put this in action. Let's try to view all even numbers in the range 1 through 10.
-
-```
-# Even numbers from 1-10
-even_numbers=list(range(2,11,2))
-print(even_numbers)
-```
-
-If we look more closely at the information in the range function, we see that we start at 2. Why not 1? This is because adding a value to skip other values accounts for the first value already. This command is basically us saying "Starting at 2 and ending at 11, skip every 2nd number." In this case, beginning our range with 1 means that our second element, 2, would be skipped instead. Be mindful of how indexes and ranges work, as they're not as intuitive as they sound.

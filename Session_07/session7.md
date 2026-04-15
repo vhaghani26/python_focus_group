@@ -1,14 +1,42 @@
-# Session 9: Mapping Types and Comparison and Logic Operators
+# Session 7: Mapping Types and Comparison and Logic Operators
 
 By: Viktoria Haghani
 
-Session Date: TBD
-
-Last Updated: 2023-02-16
+Last Updated: 2026-04-15
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
-### Mapping Types (Dictionaries)
+## Ranges
+
+The last sequencing type is a range. The `range()` function returns a sequence of numbers. Ranges become immensely useful in for-loops (which we'll learn in a later session). For now, we'll take a quick look at what it does. Make a new file called `ranges.py`.
+
+```
+#!/usr/bin/env python3
+
+# Turn our range into a list
+numbers = list(range(1,6))
+print(numbers)
+```
+
+Let's take a look at our output more closely. Notice that our list starts with "1" and ends with "5." This is the same behavior we notice with indexing; our last digit has an off-by-one behavior. This means we have to add one to the last digit to get the range we want. For example, if we want the numbers 1-20 in a list, we have to use the following:
+
+```
+# Turn our range into a list containing numbers 1-20
+range1_20 = list(range(1,21))
+print(range1_20)
+```
+
+We can also tell Python to skip numbers in a given range. This is very similar in notation to the strides we learned about when we learned about strings. Essentially, the notation is `(first number in range, last number in range + 1, every Xth value you want)`. Now let's put this in action. Let's try to view all even numbers in the range 1 through 10.
+
+```
+# Even numbers from 1-10
+even_numbers=list(range(2,11,2))
+print(even_numbers)
+```
+
+If we look more closely at the information in the range function, we see that we start at 2. Why not 1? This is because adding a value to skip other values accounts for the first value already. This command is basically us saying "Starting at 2 and ending at 11, skip every 2nd number." In this case, beginning our range with 1 means that our second element, 2, would be skipped instead. Be mindful of how indexes and ranges work, as they're not as intuitive as they sound.
+
+## Mapping Types (Dictionaries)
 
 Dictionaries are a type of collection in Python. It has keys and values, where a key is analogous to the index. To create a dictionary, we use curly brackets: `{}`. The keys have to be immutable and unique (since they act as an index), but the values can be immutable, mutable, and duplicates. Each key and value pair is separated by a comma. Let's make a dictionary!
 
