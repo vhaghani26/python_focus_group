@@ -96,7 +96,7 @@ Recording: https://youtu.be/cqcyLz3Vor8
 
 ## Session 7: Mapping Types and Comparison and Logic Operators
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/session9.md
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/session7.md
 
 Recording: TBD
 
