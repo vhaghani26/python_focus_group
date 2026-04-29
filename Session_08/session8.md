@@ -1,10 +1,8 @@
-# Session 10: Determining Data Types and Loops 
+# Session 8: Determining Data Types and Loops 
 
 By: Viktoria Haghani
 
-Session Date: TBD
-
-Last Updated: 2023-02-16
+Last Updated: 2026-04-29
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. More specific references can be found in the text.
 
@@ -125,8 +123,8 @@ Another common use of for-loops is to nest them in order to work in combinations
 
 ```
 # Nested for-loop
-groupA = ["Janine", "Jessica", "Jules"]
-groupB = ["Osman", "Dag", "Logan"]
+groupA = ["Klaudia", "Yomira", "Nik", "Victoria"]
+groupB = ["Anber", "Julian", "Casiana", "Camille"]
 
 for person1 in groupA:
 	for person2 in groupB:
@@ -176,7 +174,7 @@ for A, B in zip(listB, listA):
 While parallel for-loops are helpful for two lists or other mapping/sequencing data types, dictionaries have their own method of iteration. You can access the keys and values individually or both at the same time! This is done using the `keys()`, `values()`, and `items()` functions, respectively.
 
 ```
-ages = {"Viki": 24, "Logan": 25, "Osman": 30}
+ages = {"Viki": 28, "Zoscia": 24, "Elizabeth": 30}
 
 # Access keys only
 for name in ages.keys():
@@ -255,9 +253,3 @@ while squares[i] == 'orange':
     i += 1
 print(new_squares)
 ```
-
-## Exit Ticket
-
-Update your `README.md` and Git push all your work from this session. Try pushing changes for files individually so you can customize comments.
-
-Congratulations, you finished Session 10! 

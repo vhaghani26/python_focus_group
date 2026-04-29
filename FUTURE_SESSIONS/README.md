@@ -1,13 +1,6 @@
 Everything below is a work in progress.
 
-## Session 10: Determining Data Types and Loops
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_10/session10.md
-
-Recording: TBD
-
-* For-Loops
-* While-Loops
 
 ## Session 11: Conditionals
 

@@ -98,7 +98,7 @@ Recording: https://youtu.be/cqcyLz3Vor8
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/session7.md
 
-Recording: TBD
+Recording: https://youtu.be/sQjle_M-0dY
 
 * Ranges
 * Mapping Types (Dictionaries)
@@ -106,3 +106,12 @@ Recording: TBD
 * Boolean Types (Boolean)
 * Comparison Operators
 * Logic Operators
+
+## Session 8: Determining Data Types and Loops
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_08/session8.md
+
+Recording: TBD
+
+* For-Loops
+* While-Loops
