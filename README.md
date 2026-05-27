@@ -111,7 +111,19 @@ Recording: https://youtu.be/sQjle_M-0dY
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_08/session8.md
 
-Recording: TBD
+Recording: https://youtu.be/vmmjBNDLbns
 
 * For-Loops
 * While-Loops
+
+## Session 9: Conditionals
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/session9.md
+
+Recording: TBD
+
+* Conditionals (If-Else Statements)
+* Adding `elif` to Conditionals
+* `and` vs. `or` in Conditionals
+* Removing `else` from Conditionals
+* Conditionals within Loops
