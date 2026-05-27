@@ -2,17 +2,7 @@ Everything below is a work in progress.
 
 
 
-## Session 11: Conditionals
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_11/session11.md
-
-Recording: TBD
-
-* Conditionals (If-Else Statements)
-* Adding `elif` to Conditionals
-* `and` vs. `or` in Conditionals
-* Removing `else` from Conditionals
-* Conditionals within Loops
 
 ## Session 12: Functions
 
