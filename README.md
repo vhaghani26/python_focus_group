@@ -127,3 +127,25 @@ Recording: TBD
 * `and` vs. `or` in Conditionals
 * Removing `else` from Conditionals
 * Conditionals within Loops
+
+## Session 10: Functions
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_10/session10.md
+
+Recording: TBD
+
+* Functions
+* Making a Function
+* Function Descriptions
+
+## Session 11: Writing Our Own Function to Read FASTA Files 
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_11/session11.md
+
+Recording: TBD
+
+* What is a FASTA file?
+* Assigning and Initializing Variables
+* Reading Inputs
+* Creating Outputs
+* Reading File Inputs

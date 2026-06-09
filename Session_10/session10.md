@@ -1,10 +1,10 @@
-# Session 12: Functions 
+# Session 10: Functions 
 
 By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2023-04-18
+Last Updated: 2026-06-09
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. 
 
@@ -123,7 +123,7 @@ def associate_ages(a_dictionary):
     for name, age in a_dictionary.items():
         print(f'{name} is {age} years old.')
 
-ages = {"Viki": 25, "Logan": 25, "Osman": 30}
+ages = {"Chris": 25, "Rainer": 25, "Arman": 30}
 associate_ages(ages)
 ```
 
@@ -218,9 +218,3 @@ help(add1)
 ```
 
 Notice how your description appears! This is referred to as the documentation string.
-
-## Exit Ticket
-
-Update your `README.md` and Git push all your work from this session.
-
-Congratulations, you finished Session 12! 

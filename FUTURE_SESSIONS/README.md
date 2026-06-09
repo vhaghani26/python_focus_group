@@ -2,18 +2,6 @@ Everything below is a work in progress.
 
 
 
-
-
-## Session 12: Functions
-
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_12/session12.md
-
-Recording: TBD
-
-* Functions
-* Making a Function
-* Function Descriptions
-
 ## Session 13: Argparse
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_13/session13.md
