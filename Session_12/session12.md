@@ -1,10 +1,10 @@
-# Session 13: Argparse
+# Session 12: Argparse
 
 By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2024-05-14
+Last Updated: 2026-06-22
 
 Reference materials include Dr. Ian Korf's [MCB 185 material](https://github.com/vhaghani26/Learning_Python/tree/master/MCB%20185%20(Korf%20Course)) and [Python Basics for Data Science](https://www.edx.org/course/python-basics-for-data-science?index=product&queryID=4d4d882866dc3e8628ed7728b4662847&position=1) course by IBM hosted on edX. 
 
@@ -242,6 +242,79 @@ python3 smiley_argparse.py --num 10
 ```
 
 This should show you, even with a simple script, how helpful `argparse` can be! Now, if you haven't already, take a look back at the script towards the beginning of the lesson. Look through it and notice how the arguments are set up and used in the script.
+
+## Genome Download Script
+
+Now that we have learned the necessary components, let's revisit this script and see if we understand it now:
+
+```
+#!/usr/bin/env python3
+
+import argparse
+import os
+
+#####################
+## Set Up Argparse ##
+#####################
+
+# Initialize argparse
+parser = argparse.ArgumentParser(
+    description='Download and process a genome to create a GENOME.fa file')
+
+parser.add_argument('--genome', required=True, type=str,
+    metavar='<str>', help='Abbreviated UCSC Genome Browser genome name (e.g. dm6, hg19, hg38, mm9, mm10, rn6, ce11, sacCer3, danRer11)')
+    
+parser.add_argument('--out_dir', required=True, type=str,
+    metavar='<str>', help='Where to output GENOME/GENOME.fa file to')  
+    
+# Finalization of argparse
+arg = parser.parse_args()
+
+#####################
+## Define Function ##
+#####################
+
+def download_genome(genome, out_dir):
+    genome_links = {
+        'dm6': 'https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz',
+        'hg19': 'https://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz',
+        'hg38': 'https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chromFa.tar.gz',
+        'mm9': 'https://hgdownload.soe.ucsc.edu/goldenPath/mm9/bigZips/chromFa.tar.gz',
+        'mm10': 'https://hgdownload.cse.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz',
+        'rn6': 'https://hgdownload.cse.ucsc.edu/goldenPath/rn6/bigZips/rn6.fa.gz',
+        'ce11': 'https://hgdownload.soe.ucsc.edu/goldenPath/ce11/bigZips/chromFa.tar.gz',
+        'sacCer3': 'https://hgdownload.cse.ucsc.edu/goldenPath/sacCer3/bigZips/chromFa.tar.gz',
+        'danRer11': 'https://hgdownload.cse.ucsc.edu/goldenPath/danRer11/bigZips/danRer11.fa.gz'
+    }
+    
+    link = genome_links[genome]
+    output_directory = os.path.join(out_dir, genome)
+    os.makedirs(output_directory, exist_ok=True)
+    
+    os.system(f'wget {link} -P {output_directory}')
+    
+    if link.endswith(f'{genome}/bigZips/{genome}.fa.gz'):
+        output_file = os.path.join(output_directory, f'{genome}.fa.gz')
+        os.system(f'gunzip -f {output_file}')
+        
+    if link.endswith(f'{genome}/bigZips/chromFa.tar.gz'):
+        output_file = os.path.join(output_directory, 'chromFa.tar.gz')
+        os.system(f'tar -xzf {output_file} -C {output_directory}')
+        os.system(f'cat {output_directory}/*.fa > {output_directory}/{genome}.fa')
+        os.system(f'rm -f {output_directory}/chr*.fa')
+        
+    if link.endswith('hg38.chromFa.tar.gz'):
+        output_file = os.path.join(output_directory, 'chromFa.tar.gz')
+        os.system(f'tar -xzf {output_file} -C {output_directory}')
+        os.system(f'cat {output_directory}/chroms/*.fa > {output_directory}/{genome}.fa')
+        os.system(f'rm -rf {output_directory}/chroms/')
+        
+#####################
+## Download Genome ##
+#####################
+
+download_genome(arg.genome, arg.out_dir)
+```
 
 ## Argparse Template
 

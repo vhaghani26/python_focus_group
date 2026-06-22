@@ -149,3 +149,18 @@ Recording: TBD
 * Reading Inputs
 * Creating Outputs
 * Reading File Inputs
+
+## Session 12: Argparse
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_12/session12.md
+
+Recording: TBD
+
+* Argparse
+* Argparse Set-Up
+* Required Arguments
+* Optional Arguments
+	* Default Values
+* Switches
+* Genome Download Script
+* Argparse Template

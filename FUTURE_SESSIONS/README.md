@@ -2,19 +2,7 @@ Everything below is a work in progress.
 
 
 
-## Session 13: Argparse
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_13/session13.md
-
-Recording: TBD
-
-* Argparse
-* Argparse Set-Up
-* Required Arguments
-* Optional Arguments
-	* Default Values
-* Switches
-* Argparse Template
 
 ## Session 14: `screen`
 
