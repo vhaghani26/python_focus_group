@@ -142,7 +142,7 @@ Recording: TBD
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_11/session11.md
 
-Recording: TBD
+Recording: https://youtu.be/yiePiI0f-IQ
 
 * What is a FASTA file?
 * Assigning and Initializing Variables
@@ -163,4 +163,5 @@ Recording: TBD
 	* Default Values
 * Switches
 * Genome Download Script
+* Revisiting Our FASTA Function
 * Argparse Template

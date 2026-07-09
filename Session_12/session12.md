@@ -316,6 +316,156 @@ def download_genome(genome, out_dir):
 download_genome(arg.genome, arg.out_dir)
 ```
 
+## Revisiting Our FASTA Function
+
+Last session, we made this function:
+
+```
+import gzip
+
+def read_fasta(fasta_file):
+    # Initialize dictionary
+    fasta_contents = {}
+    
+    # The name of the sequence
+    name = None
+    # The contents of the sequence
+    seqs = []
+	
+	# Unzip file if needed
+	if fasta_file.endswith('.gz'):
+		fhandle = gzip.open(fasta_file, 'rt')
+	else:
+		fhandle = open(fasta_file, 'rt')
+			
+	# Open the fasta file
+	with fhandle:
+		# Iterate through sequence lines
+		for line in fhandle:
+			# Strip any whitespace or line break characters at the end of the line
+			line = line.rstrip()
+			# Assign sequence headers as name
+			if line.startswith('>'):
+				# Remove > symbol by stripping the first character
+				name = line[1:]
+				# Reset seqs
+				seqs = []
+			else:
+				seqs.append(line)
+
+			# Format proper output
+			if name:
+				seq = ''.join(seqs)
+				fasta_contents[name] = seq
+        
+    return fasta_contents
+```
+
+We created a file called `sequences.fasta` containing this data:
+
+```
+>SCP_Construct
+CTCGAGGTACTTATATAAGGGGGTGGG
+GGCGCGTTCGTCCTCAGTCGCGATCGA
+ACACTCGAGCCGAGCAGACGTGCCTAC
+GGACCG
+>CDKL5_sgRNA_1
+GGGGGAGAACATACTCGGGG
+>CDKL5_sgRNA_2
+AGAGCATCGGACCGAAGCGG
+>CDKL5_sgRNA_3
+CCCAGGTTGCTAGGGCTTGG
+```
+
+And when running the function, we ran:
+
+```
+# Run function
+for name, seq in read_fasta("sequences.fasta").items():
+    print(f'{name}: {seq}')
+```
+
+This means that any time we want to read in a new file, we have to open the script, edit the file name when running the function, save, close, and rerun it. This is bad practice; it is called *hard coding*, the practice of embedding specific data, values, or logic directly into a program or script's source code. This is where `argparse` is appropriate. Let's edit our script to incorporate `argparse` and make it pretty. To see the sequential build up of the script, please watch the session recording.
+
+```
+#!/usr/bin/env python3
+
+'''
+python3 readfasta.py --fasta {input}
+'''
+
+####################
+## Import Modules ##
+####################
+
+import gzip
+import argparse
+
+#####################
+## Set Up Argparse ##
+#####################
+
+# Initialize argparse
+parser = argparse.ArgumentParser(
+    description='Associate FASTA sequence headers with their sequences')
+
+# Required argument(s)
+parser.add_argument('--fasta', required=True, type=str,
+    metavar='<str>', help='FASTA file input')
+   
+# Finalization of argparse
+arg = parser.parse_args()
+
+#####################
+## Define Function ##
+#####################
+
+def read_fasta(fasta_file):
+    # Initialize dictionary
+    fasta_contents = {}
+    
+    # The name of the sequence
+    name = None
+    # The contents of the sequence
+    seqs = []
+	
+	# Unzip file if needed
+	if fasta_file.endswith('.gz'):
+		fhandle = gzip.open(fasta_file, 'rt')
+	else:
+		fhandle = open(fasta_file, 'rt')
+			
+	# Open the fasta file
+	with fhandle:
+		# Iterate through sequence lines
+		for line in fhandle:
+			# Strip any whitespace or line break characters at the end of the line
+			line = line.rstrip()
+			# Assign sequence headers as name
+			if line.startswith('>'):
+				# Remove > symbol by stripping the first character
+				name = line[1:]
+				# Reset seqs
+				seqs = []
+			else:
+				seqs.append(line)
+
+			# Format proper output
+			if name:
+				seq = ''.join(seqs)
+				fasta_contents[name] = seq
+        
+    return fasta_contents
+
+######################
+## Execute Function ##
+######################
+	
+# Run function
+for name, seq in read_fasta(arg.fasta).items():
+    print(f'{name}: {seq}')
+```
+
 ## Argparse Template
 
 Given how powerful `argparse` is, I use it in just about every single script I write. As such, I typically open an old script and just copy and paste the `argparse` set up. Here, I will provide an easy template that includes required arguments, optional arguments, and switches, so they can be added, deleted, and modified as needed.
