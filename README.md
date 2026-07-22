@@ -154,7 +154,7 @@ Recording: https://youtu.be/yiePiI0f-IQ
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_12/session12.md
 
-Recording: TBD
+Recording: https://youtu.be/9-NffbtYjco
 
 * Argparse
 * Argparse Set-Up
