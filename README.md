@@ -14,14 +14,14 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_01/ses
 
 Recording: https://youtu.be/LumSgtw8PIg
 
-* Terminals
-* Opening the Terminal
-* Using the Terminal
-* Directories
-* GitHub
-* GitHub Personal Access Tokens
-* Files
-* UNIX Cheat Sheet
+- Terminals
+- Opening the Terminal
+- Using the Terminal
+- Directories
+- GitHub
+- GitHub Personal Access Tokens
+- Files
+- UNIX Cheat Sheet
 
 ## Session 2: File and Directory Manipulation in UNIX
 
@@ -29,17 +29,17 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_02/ses
 
 Recording: https://youtu.be/21bK1e_1dOI 
 
-* File and Directory Manipulation
-* Renaming a Directory
-* Renaming a File
-* Moving Files
-* Moving Directories
-* Copying Files
-* Wildcards at the Command Line
-* Deleting Files
-* Deleting Directories
-* Linking Files & Directories
-* File Permissions
+- File and Directory Manipulation
+- Renaming a Directory
+- Renaming a File
+- Moving Files
+- Moving Directories
+- Copying Files
+- Wildcards at the Command Line
+- Deleting Files
+- Deleting Directories
+- Linking Files & Directories
+- File Permissions
 
 ## Session 3: GitHub Desktop and Getting Python Started
 
@@ -47,11 +47,11 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_03/ses
 
 Recording: https://youtu.be/U1ln_0ESYBk
 
-* GitHub Desktop
-* Installing Python via Conda
-* Verifying Python Installation
-* Python at the Command Line
-* Python Scripts
+- GitHub Desktop
+- Installing Python via Conda
+- Verifying Python Installation
+- Python at the Command Line
+- Python Scripts
 
 ## Session 4: Text Editors, Python Comments, Variables, and BASH Aliases
 
@@ -59,11 +59,11 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_04/ses
 
 Recording: https://youtu.be/Cidyn4HKWuU
 
-* Text Editors
-* The `print()` Function
-* Comments in Python
-* Variables
-* Aliasing (in .bashrc/.profile)
+- Text Editors
+- The `print()` Function
+- Comments in Python
+- Variables
+- Aliasing (in .bashrc/.profile)
 
 ## Session 5: Text Types and Text Operations
 
@@ -71,16 +71,16 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_05/ses
 
 Recording: https://youtu.be/0NbJEQiVv14
 
-* Text Types (Strings)
-* Escape Sequences
-* Manipulating Strings
-* Stripping Spaces
-* Indexing Strings
-* Strides
-* Assessing String Properties
-* Replicating String Elements
-* Concatenating Strings
-* String Formatting (String Interpolation) 
+- Text Types (Strings)
+- Escape Sequences
+- Manipulating Strings
+- Stripping Spaces
+- Indexing Strings
+- Strides
+- Assessing String Properties
+- Replicating String Elements
+- Concatenating Strings
+- String Formatting (String Interpolation) 
 
 ## Session 6: Numeric and Sequence Types
 
@@ -88,11 +88,11 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_06/ses
 
 Recording: https://youtu.be/cqcyLz3Vor8
 
-* Numeric Types (Integers, Floats, Complexes) 
-* Setting the Specific Data Type (Type Casting)
-* Python Expressions
-* Complex Math Operations and First Module Import
-* Sequence Types (Tuples, Lists)
+- Numeric Types (Integers, Floats, Complexes) 
+- Setting the Specific Data Type (Type Casting)
+- Python Expressions
+- Complex Math Operations and First Module Import
+- Sequence Types (Tuples, Lists)
 
 ## Session 7: Mapping Types and Comparison and Logic Operators
 
@@ -100,12 +100,12 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_07/ses
 
 Recording: https://youtu.be/sQjle_M-0dY
 
-* Ranges
-* Mapping Types (Dictionaries)
-* Set Types (Set, Frozenset)
-* Boolean Types (Boolean)
-* Comparison Operators
-* Logic Operators
+- Ranges
+- Mapping Types (Dictionaries)
+- Set Types (Set, Frozenset)
+- Boolean Types (Boolean)
+- Comparison Operators
+- Logic Operators
 
 ## Session 8: Determining Data Types and Loops
 
@@ -113,8 +113,8 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_08/ses
 
 Recording: https://youtu.be/vmmjBNDLbns
 
-* For-Loops
-* While-Loops
+- For-Loops
+- While-Loops
 
 ## Session 9: Conditionals
 
@@ -122,11 +122,11 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_09/ses
 
 Recording: https://youtu.be/yKtclsn1oJ0
 
-* Conditionals (If-Else Statements)
-* Adding `elif` to Conditionals
-* `and` vs. `or` in Conditionals
-* Removing `else` from Conditionals
-* Conditionals within Loops
+- Conditionals (If-Else Statements)
+- Adding `elif` to Conditionals
+- `and` vs. `or` in Conditionals
+- Removing `else` from Conditionals
+- Conditionals within Loops
 
 ## Session 10: Functions
 
@@ -134,9 +134,9 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_10/ses
 
 Recording: TBD
 
-* Functions
-* Making a Function
-* Function Descriptions
+- Functions
+- Making a Function
+- Function Descriptions
 
 ## Session 11: Writing Our Own Function to Read FASTA Files 
 
@@ -144,11 +144,11 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_11/ses
 
 Recording: https://youtu.be/yiePiI0f-IQ
 
-* What is a FASTA file?
-* Assigning and Initializing Variables
-* Reading Inputs
-* Creating Outputs
-* Reading File Inputs
+- What is a FASTA file?
+- Assigning and Initializing Variables
+- Reading Inputs
+- Creating Outputs
+- Reading File Inputs
 
 ## Session 12: Argparse
 
@@ -156,12 +156,34 @@ Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_12/ses
 
 Recording: https://youtu.be/9-NffbtYjco
 
-* Argparse
-* Argparse Set-Up
-* Required Arguments
-* Optional Arguments
-	* Default Values
-* Switches
-* Genome Download Script
-* Revisiting Our FASTA Function
-* Argparse Template
+- Argparse
+- Argparse Set-Up
+- Required Arguments
+- Optional Arguments
+	- Default Values
+- Switches
+- Genome Download Script
+- Revisiting Our FASTA Function
+- Argparse Template
+
+## Session 13: Working on Hive: `SLURM`, `srun`, and `screen`
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_13/session13.md
+
+Recording: TBD
+
+- Accessing Hive
+  - Requesting a Hive Account
+  - Using the OnDemand Interface
+  - Using the CLI Interface
+- Requesting Resources on Hive
+  - Interactive SRUN Sessions
+  - SBATCH Scripts (SLURM Submissions)
+    - SLURM Script Template
+- Managing Jobs
+  - Monitor Jobs with `squeue`
+  - Cancel Jobs with `scancel`
+- Introduction to `screen`
+  - Installation
+  - Using `screen`
+  - `screen` Cheat Sheet
