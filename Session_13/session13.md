@@ -4,6 +4,8 @@ By: Viktoria Haghani
 
 Last Updated: 2026-07-23
 
+Session Recording: https://youtu.be/o5dj7OxsDjs
+
 This material was adapted from [Dr. C. Titus Brown's material](https://github.com/ngs-docs/2021-GGG298/tree/latest/Week9-Slurm_and_Farm_cluster_for_doing_analysis) and the [UC Davis Bioinformatics Core's SLURM workshop](https://ucdavis-bioinformatics-training.github.io/2023-October-Slurm-Seminar/cluster_training/intro).
 
 **Note**: If you are not affiliated with UC Davis, then request an account on a cluster environment at your organization (if applicable) or skip to the `screen` section, as much of this session is relevant to UC Davis Hive users.

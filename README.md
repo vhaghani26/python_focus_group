@@ -170,7 +170,7 @@ Recording: https://youtu.be/9-NffbtYjco
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_13/session13.md
 
-Recording: TBD
+Recording: https://youtu.be/o5dj7OxsDjs
 
 - Accessing Hive
   - Requesting a Hive Account
