@@ -187,3 +187,18 @@ Recording: https://youtu.be/o5dj7OxsDjs
   - Installation
   - Using `screen`
   - `screen` Cheat Sheet
+  
+## Session 14: Conda and Mamba
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_14/session14.md
+
+Recording: TBD
+
+* Why should you use Conda?
+* Installing Conda
+* Mamba
+* Creating Environments
+* Activating an Environment
+* Installing Packages
+* Deactivating an Environment
+* Advanced Conda Documentation

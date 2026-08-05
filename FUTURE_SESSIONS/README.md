@@ -1,34 +1,4 @@
-Everything below is a work in progress.
 
-
-
-
-
-## Session 14: `screen`
-
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_14/session_14.md
-
-Recording: TBD
-
-* Introduction to `screen`
-* Installation
-* Using `screen`
-* `screen` Cheat Sheet
-
-## Session 15: Conda and Mamba
-
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/session_15.md
-
-Recording: TBD
-
-* Why should you use Conda?
-* Installing Conda
-* Mamba
-* Creating Environments
-* Activating an Environment
-* Installing Packages
-* Deactivating an Environment
-* Advanced Conda Documentation
 
 ## Session 16: Data Analysis Tools and the JupyterLab Interface
 

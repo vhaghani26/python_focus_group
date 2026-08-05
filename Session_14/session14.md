@@ -1,4 +1,4 @@
-# Session 15: Conda and Mamba
+# Session 14: Conda and Mamba
 
 By: Viktoria Haghani
 
