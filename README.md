@@ -192,7 +192,7 @@ Recording: https://youtu.be/o5dj7OxsDjs
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_14/session14.md
 
-Recording: TBD
+Recording: https://youtu.be/MMIyKh3lG40
 
 * Why should you use Conda?
 * Installing Conda
@@ -202,3 +202,22 @@ Recording: TBD
 * Installing Packages
 * Deactivating an Environment
 * Advanced Conda Documentation
+
+## Session 15: Data Analysis Tools and the JupyterLab Interface
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/session_15.md
+
+Recording: TBD
+
+* Packages for Working with Data Frames
+* Packages for Research Computing in Python
+* The JupyterLab Interface
+* Starting a Data Analysis Project
+	* Project Organization
+	* Initializing the Project
+	* Creating a Jupyter Notebook
+	* Using Jupyter Notebooks
+	* Reading Files
+	* Loading the Terns Data
+	* Inspecting a Data Frame
+* Documentation for 2000-2023 California Least Tern Data Set

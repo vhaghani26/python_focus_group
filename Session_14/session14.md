@@ -2,9 +2,9 @@
 
 By: Viktoria Haghani
 
-Session Date: TBD
+Last Updated: 2026-08-20
 
-Last Updated: 2026-01-07
+Session Recording: https://youtu.be/MMIyKh3lG40
 
 Reference materials include teaching material from Dr. Ian Korf and Dr. C. Titus Brown.
 

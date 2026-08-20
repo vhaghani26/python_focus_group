@@ -1,23 +1,6 @@
 
 
-## Session 16: Data Analysis Tools and the JupyterLab Interface
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/session_16.md
-
-Recording: TBD
-
-* Packages for Working with Data Frames
-* Packages for Research Computing in Python
-* The JupyterLab Interface
-* Starting a Data Analysis Project
-	* Project Organization
-	* Initializing the Project
-	* Creating a Jupyter Notebook
-	* Using Jupyter Notebooks
-	* Reading Files
-	* Loading the Terns Data
-	* Inspecting a Data Frame
-* Documentation for 2000-2023 California Least Tern Data Set
 
 ## Session 17: Working with a Data Frame
 
