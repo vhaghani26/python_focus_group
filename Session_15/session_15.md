@@ -4,7 +4,7 @@ By: Viktoria Haghani
 
 Session Date: TBD
 
-Last Updated: 2026-01-23
+Last Updated: 2026-09-15
 
 Reference materials include teaching material from Dr. Ian Korf, Dr. C. Titus Brown, and Dr. Nick Ulle.
 
@@ -12,7 +12,9 @@ Reference materials include teaching material from Dr. Ian Korf, Dr. C. Titus Br
 
 Python is general-purpose programming language, so data structures and functions specialized for research computing are not built-in. Instead, the community provides these through packages, which is why we learned about Conda in the last session. Nevertheless, and to the community's credit, Python is a leading language for research computing and data science. This section introduces some of the fundamental packages for research computing. 
 
-For data science, **data frames**, which represent tables of data, are another fundamental data structure. Several competing packages provide data frames and related functions. See some of these below.
+For data science, **data frames**, which represent tables of data, are another fundamental data structure. Think about an RNA-seq gene count matrix, where you have row names that correspond to the gene names, column names that correspond to the samples in the experiment, and the values within the data frame are the gene counts. This is an example of a commonly used data frame structure in bioinformatics.
+
+Several competing packages provide data frames and related functions. See some of these below.
 
 ### [NumPy](https://numpy.org/)
 
@@ -41,6 +43,8 @@ Other notable packages for research computing in Python:
 ### [Jupyter](https://jupyter.org/)
 
 Jupyter provides interactive notebooks that use **IPython** and **IRkernel**, a more convenient command-line prompt for Python and R, respectively. Fun fact, "Jupyter" is short for "Julia, Python, Text, and R."
+
+I really want to stress the importance of Jupyter. It is extremely widely used, and one of the big benefits is that it renders very nicely on GitHub. [Here is an example](https://github.com/vhaghani26/Mouse_FAE_RNAseq_WGBS/blob/main/rnaseq/05_DEG_Analysis.ipynb) of some work I have previously done for a mouse RNA-seq experiment. Notice that I added documentation at the top, I'm able to add comments, and you can actually see the real outputs of the code embedded into the notebook.
 
 ### [SciPy](https://scipy.org/)
 
