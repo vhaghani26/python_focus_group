@@ -80,19 +80,19 @@ jupyter lab
 
 Notice that when you run this command, lots of things will print out at your terminal. You want to copy and paste the link that it sends you into your browser.
 
-![launchjupyter](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/jupyterlab.png)
+![launchjupyter](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/jupyterlab.png)
 
 Upon doing so, your browser should load the JupyterLab interface. Don't worry if the text in the panes isn't exactly the same on your computer; it depends on your operating system and version of JupyterLab.
 
-![jupyterinterface](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/jupyterlabinterface.png)
+![jupyterinterface](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/jupyterlabinterface.png)
 
 Start by opening up a Python **console**. In JupyterLab, look for the "Python 3" button in the "Console" section of the pane on the right. If there are multiple Python 3 buttons, click on the one that mentions "IPython" or "ipykernel". The console is a interactive, text-based interface to Python. If you enter a Python expression in the console, Python will compute and display the result. After you open the console, your window should look like this:
 
-![pythonconsole](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/pythonconsole.png)
+![pythonconsole](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/pythonconsole.png)
 
 At the bottom of the console, the text box beginning with `[ ]:` is called the **prompt**. The prompt is where you'll type Python expressions. In our terminal, this is commonly denoted by a `$`. Let's start by asking Python to compute the sum `2 + 2` by typing the code the prompt and then pressing `Shift`-`Enter`. Your code and the result from Python should look like this:
 
-![pythonpromptoutput](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/pythonpromptoutput.png)
+![pythonpromptoutput](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/pythonpromptoutput.png)
 
 The Python console displays your code and the result on separate lines. Both begin with the tag `[1]` to indicate that they are the first expression and result. Python will increment the tag each time you run an expression. The tag numbers will restart from 1 each time you open a new Python console.
 
@@ -133,7 +133,7 @@ I use this system because it helps maintain clarity regarding the workflow and t
 
 ## Initializing the Project
 
-We are going to start our own data analysis project using some sample data. In the GitHub repository you created, create a directory called `01_raw_data/`. Now, go to the GitHub repository for the Python Focus Group and download this dataset into `01_raw_data/`: `https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/2000-2023_ca_least_tern.csv`. 
+We are going to start our own data analysis project using some sample data. In the GitHub repository you created, create a directory called `01_raw_data/`. Now, go to the GitHub repository for the Python Focus Group and download this dataset into `01_raw_data/`: `https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/2000-2023_ca_least_tern.csv`. 
 
 If you look at GitHub desktop now, it should show that you can commit your directory with the CSV file. As a general rule of thumb, **you do not want any data hosted on GitHub**. GitHub is for documenting your code and analysis process. Luckily, we can give GitHub instructions on ignoring this directory. We can do so by creating a file called `.gitignore` and adding the raw data directory into it. The contents of your `.gitignore` file should just be:
 
@@ -169,7 +169,7 @@ As a quick aside, Markdown is a simple language you can use to add formatting to
 
 Your notebook should now look like this:
 
-![moduleimportnotebook](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/moduleimportnotebook.png)
+![moduleimportnotebook](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/moduleimportnotebook.png)
 
 ## Reading Files
 
@@ -238,7 +238,7 @@ type(terns)
 
 By now, your notebook should look something like this:
 
-![inspectdata](https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/inspectdata.png)
+![inspectdata](https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/inspectdata.png)
 
 At the end of this page, you should see some documentation on the dataset. Does what we loaded match what we expect from the data? Yes, everything looks good here!
 
