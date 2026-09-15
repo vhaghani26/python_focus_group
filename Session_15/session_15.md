@@ -100,7 +100,7 @@ Now try typing the code `3 - 1` in the prompt and pressing `Shift`-`Enter`. The 
 
 # Starting a Data Analysis Project
 
-We already know how to run Python scripts at the terminal, but let's try working in Jupyter notebooks now. You are going to create a new GitHub repository called `Terns_Data_Analysis`. You should do so in the browser on GitHub. Once you create your repository, use GitHub Desktop to clone it locally so we can work in the repository.
+We already know how to run Python scripts at the terminal, but let's try working in Jupyter notebooks now. **You are going to create a new GitHub repository called `Terns_Data_Analysis`.** You should do so in the browser on GitHub. Once you create your repository, use GitHub Desktop to clone it locally so we can work in the repository.
 
 ## Project Organization
 
@@ -129,11 +129,20 @@ README.md
 samples.yaml
 ```
 
-I use this system because it helps maintain clarity regarding the workflow and the order of operations. The directory labeled **00** contains configuration-related files, ensuring that all settings and parameters are defined from the beginning. Think of these like the necessary context to begin. The **01_raw_sequences** folder is designated for storing raw data, providing a clear starting point for data processing. As the workflow progresses, each subsequent directory numerically reflects the order in which processes are executed, allowing anyone reviewing the project to easily understand the flow. Scripts are also labeled with numerical prefixes; for instance, **05.1_assign_gene_names.py** indicates that this script is executed during the fifth stage of the analysis. This systematic approach not only enhances reproducibility but also facilitates collaboration, making it simpler for others to follow and comprehend the various stages involved in the project. 
+I use this system because it helps maintain clarity regarding the workflow and the order of operations.
+
+The directory labeled **00** contains configuration-related files, ensuring that all settings and parameters are defined from the beginning. Think of these like the necessary context to begin.
+
+The **01_raw_sequences** folder is designated for storing raw data, providing a clear starting point for data processing. As the workflow progresses, each subsequent directory numerically reflects the order in which processes are executed, allowing anyone reviewing the project to easily understand the flow.
+
+Scripts are also labeled with numerical prefixes; for instance, **05.1_assign_gene_names.py** indicates that this script is executed during the fifth stage of the analysis. This systematic approach not only enhances reproducibility but also facilitates collaboration, making it simpler for others to follow and comprehend the various stages involved in the project. 
 
 ## Initializing the Project
 
-We are going to start our own data analysis project using some sample data. In the GitHub repository you created, create a directory called `01_raw_data/`. Now, go to the GitHub repository for the Python Focus Group and download this dataset into `01_raw_data/`: `https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/2000-2023_ca_least_tern.csv`. 
+We are going to start our own data analysis project using some sample data.
+
+1. In the GitHub repository you created, create a directory called `01_raw_data/`
+2. Now, go to the GitHub repository for the Python Focus Group and download this dataset into `01_raw_data/`: `https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/2000-2023_ca_least_tern.csv`
 
 If you look at GitHub desktop now, it should show that you can commit your directory with the CSV file. As a general rule of thumb, **you do not want any data hosted on GitHub**. GitHub is for documenting your code and analysis process. Luckily, we can give GitHub instructions on ignoring this directory. We can do so by creating a file called `.gitignore` and adding the raw data directory into it. The contents of your `.gitignore` file should just be:
 
