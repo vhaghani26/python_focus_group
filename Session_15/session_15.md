@@ -1,4 +1,4 @@
-# Session 16: Data Analysis Tools and the JupyterLab Interface
+# Session 15: Data Analysis Tools and the JupyterLab Interface
 
 By: Viktoria Haghani
 
