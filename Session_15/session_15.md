@@ -174,7 +174,7 @@ While looking at the notebook, you can see that it is subdivided into **cells**.
 
 It is always recommended to have nicely organized code. Generally, when we import modules, we do so at the top of the script. Let's create a markdown cell with `# Import Modules` as the heading, then insert a code cell where we will import the modules we need, specifically `import polars as pl`.
 
-As a quick aside, Markdown is a simple language you can use to add formatting to your text. For example, surrounding a word with asterisks, as in `Let *sleeping* dogs lie`, makes the surrounded word italic. You can find a short, interactive tutorial about Markdown [here][https://www.markdowntutorial.com/]. If you "run" a text cell by pressing `Shift`-`Enter`, the notebook will display the text with any formatting you added.
+As a quick aside, Markdown is a simple language you can use to add formatting to your text. For example, surrounding a word with asterisks, as in `Let *sleeping* dogs lie`, makes the surrounded word italic. You can find a short, interactive tutorial about Markdown [here](https://www.markdowntutorial.com/). If you "run" a text cell by pressing `Shift`-`Enter`, the notebook will display the text with any formatting you added.
 
 Your notebook should now look like this:
 
