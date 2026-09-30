@@ -69,7 +69,7 @@ This is by no means an exhaustive list. You're likely to encounter many more pac
 There are many different ways to edit and run Python code, but we'll use JupyterLab. JupyterLab is an **integrated development environment** (IDE), which means it's a comprehensive program for writing, editing, searching, and running code. You can do all of these things without JupyterLab, but JupyterLab makes the process easier. In the last session, we created an environment called `data_analysis`. Let's go ahead and activate this since we will be using some of the software we installed:
 
 ```
-mamba activate data_analysis
+conda activate data_analysis
 ```
 
 Now, let's launch JupyterLab:
