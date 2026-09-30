@@ -2,16 +2,7 @@
 
 
 
-## Session 17: Working with a Data Frame
 
-Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_17/Session_17.ipynb
-
-Recording: TBD
-
-* Summarizing Data in a Data Frame
-* Working with Different Data Types
-* Selecting Columns
-* Filtering Rows
 
 ## Session 18: Data Visualization
 

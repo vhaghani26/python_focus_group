@@ -207,7 +207,7 @@ Recording: https://youtu.be/MMIyKh3lG40
 
 Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_15/session_15.md
 
-Recording: TBD
+Recording: https://youtu.be/lA02dMEUpwY
 
 * Packages for Working with Data Frames
 * Packages for Research Computing in Python
@@ -221,3 +221,14 @@ Recording: TBD
 	* Loading the Terns Data
 	* Inspecting a Data Frame
 * Documentation for 2000-2023 California Least Tern Data Set
+
+## Session 16: Working with a Data Frame
+
+Notes: https://github.com/vhaghani26/python_focus_group/blob/main/Session_16/Session_16.ipynb
+
+Recording: TBD
+
+* Summarizing Data in a Data Frame
+* Working with Different Data Types
+* Selecting Columns
+* Filtering Rows
